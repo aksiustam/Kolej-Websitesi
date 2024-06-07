@@ -1,0 +1,32 @@
+
+.dashboard_tab_button {
+    margin-bottom: 50px;
+  }
+  
+  .dashboard_tab_button li a {
+    border: 1px solid #e8e8e8;
+    border-bottom: none;
+    color: #212121;
+    font-weight: 500;
+    font-size: 15px;
+    display: block;
+    padding: 18px 8px;
+    text-transform: uppercase;
+  }
+  
+  .dashboard_tab_button li a:last-child {
+    border-bottom: 1px solid #e8e8e8;
+  }
+  
+  .dashboard_tab_button li a i {
+    font-size: 14px;
+    text-align: center;
+    width: 20px;
+  }
+  
+  .dashboard_tab_button li a.active,
+  .dashboard_tab_button li a:hover {
+    background-color: #02afa6;
+    border-color: #000000;
+    color: #000000;
+  }

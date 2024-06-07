@@ -1,0 +1,157 @@
+.contactUsBanner {
+  background-image: url("../../assets/Images/ContactUs/ContactUsBackgroundBanner.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 180px 0px;
+  background-attachment: fixed;
+}
+.contactContain{
+  margin: 80px 0px;
+
+}
+.contactIconBgShadow {
+  background-color: #ffffff;
+  border-radius: 0px;
+  padding: 40px 55px;
+  position: relative;
+  transition: 0.4s ease;
+}
+.contactIconBgShadow:hover {
+  box-shadow: 0 0 10px #e2e1e1;
+}
+.contactIconBgShadow i {
+  font-size: 60px;
+  color: #9b0000;
+}
+.contactIconBgShadow h2 {
+  font-size: 24px;
+  margin: 15px 0px;
+}
+.contactIconBgShadow h6 {
+  color: #666666;
+  cursor: pointer;
+}
+.iframeContactUs {
+  margin-top: 80px;
+  display:block !important;
+}
+/* ________________________________________________Contact Us______________________________________ */
+/* .contactUs {
+  padding: 60px 0px;
+} */
+.aboutUsBannerImg {
+  background-image: url("../../assets/Images/ContactUs/ContactUsBanner.png");
+background-attachment: fixed;
+}
+
+.formContactus .form-control {
+  padding: 12px;
+}
+.formContactus input,
+.formContactus textarea {
+  box-shadow: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 0px;
+  margin: 10px 0px;
+}
+.formContactus textarea {
+  min-height: 150px;
+}
+.formContactus .form-control:focus {
+  box-shadow: none;
+}
+
+/* ********************************************Responsive************************************************ */
+
+@media (min-width: 1200px) and (max-width: 1410px) {
+
+}
+/* ***************************************************** 992 - 1199 ***************************************************** */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .contactIconBgShadow h2 {
+    font-size: 22px;
+  }
+  .iframeContactUs {
+    margin-top: 60px;
+  }
+}
+/* ***************************************************** 768 - 991 ***************************************************** */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+.contactIconBgShadow{
+  padding: 20px 15px;
+}
+.contactIconBgShadow i {
+    font-size: 34px;
+}
+.contactIconBgShadow h2 {
+    font-size: 22px;
+}
+.contactIconBgShadow p{
+  font-size: 16px;
+}
+.contactContain {
+  margin: 60px 0px;
+}
+.iframeContactUs {
+  margin-top: 50px;
+}
+}
+/* ***************************************************** 576 - 767 ***************************************************** */
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+  .contactIconBgShadow h2 {
+    font-size: 19px;
+    margin: 10px 0px;
+}
+.contactIconBgShadow  p{
+  font-size: 15px;
+}
+  .contactContain{
+    margin: 50px 0px;
+  }
+  .contactIconBgShadow{
+    padding: 3px;
+  }
+  .contactIconBgShadow i{
+    font-size: 30px;
+  }
+  .iframeContactUs {
+    margin-top: 40px;
+  }
+
+ 
+}
+/* ***************************************************** 320 - 575 ***************************************************** */
+
+@media (min-width: 320px) and (max-width: 575px) {
+
+
+.contactContain{
+  margin: 40px 0px;
+}
+  .contactIconBgShadow {
+    margin: 10px 0px;
+  padding:10px 10px;
+  }
+  .contactIconBgShadow i {
+    font-size: 38px;
+  }
+  .contactIconBgShadow h2 {
+    font-size: 18px;
+    margin: 10px 0px;
+}
+.contactIconBgShadow p{
+  margin: 0px;
+  font-size: 14px;
+}
+.iframeContactUs {
+  margin-top: 30px;
+}
+}

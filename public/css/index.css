@@ -1,0 +1,1356 @@
+
+body {
+  margin: 0;
+  letter-spacing: 0.4px;
+}
+@media (min-width: 1410px) {
+  .container {
+    max-width: 1380px;
+  }
+}
+
+/* ________________________Comman________________________ */
+.signupBanner {
+  background-image: url("/assets/Images/AboutUs/SignUp.png");
+  background-repeat: no-repeat;
+  padding: 33px;
+}
+.paragraph {
+  font-size: 14px;
+  line-height: 30px;
+  color: #707070;
+  margin: 0px;
+}
+.titleFont h3 {
+  font-size: 22px;
+  color: #9b0000;
+  margin: 0;
+  line-height: 33px;
+}
+.titleFont h2 {
+  font-size: 40px;
+  color: #000;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 1px;
+  margin: 10px 0px 20px 0px;
+}
+.spacing {
+  margin: 80px 0px;
+}
+.button {
+  background-color: #224096;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition: all 0.5s ease;
+  border-radius: 0px;
+  padding: 10px 20px;
+}
+.button a,
+.button {
+  text-decoration: none;
+  
+}
+.button:hover::before {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+.button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0px;
+  background: #224096;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.button:hover {
+  background-color: #E61E2B;
+  color: #fff;
+}
+/* banner effect */
+.ba_beffect {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.ba_beffect img {
+  max-width: 100%;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.ba_beffect::before {
+  transform: scale(0, 1);
+  -webkit-transform: scale(0, 1);
+  -moz-transform: scale(0, 1);
+  -o-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+}
+.ba_beffect::after {
+  transform: scale(1, 0);
+  -webkit-transform: scale(1, 0);
+  -moz-transform: scale(1, 0);
+  -o-transform: scale(1, 0);
+  -ms-transform: scale(1, 0);
+}
+.ba_beffect::before,
+.ba_beffect::after {
+  content: "";
+  border-radius: 0px;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
+  transition: opacity 0.35s ease 0s, transform 0.5s ease 0s;
+  -webkit-transition: opacity 0.35s ease 0s, transform 0.5s ease 0s;
+  -moz-transition: opacity 0.35s ease 0s, transform 0.5s ease 0s;
+  -o-transition: opacity 0.35s ease 0s, transform 0.5s ease 0s;
+  -ms-transition: opacity 0.35s ease 0s, transform 0.5s ease 0s;
+}
+.ba_beffect:hover::before,
+.ba_beffect:hover::after {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+}
+/* ______________________________Header______________________________ */
+
+.header {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid #ffffff1a;
+}
+.navbar-light .navbar-brand {
+  margin: 0;
+}
+.inverted {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.2);
+}
+.navbar {
+  margin: 5px 0px;
+}
+
+.navbar-expand-lg {
+  display: block;
+}
+.header .navbar-expand-lg .navbar-collapse {
+  flex-grow: unset;
+  flex-basis: unset;
+}
+
+.navbar-light.inverted .navbar-nav .nav-link a,
+.navbar-light.inverted .navbar-nav .nav-item a {
+  color: #000;
+}
+
+.header .inverted {
+  background-color: #ffffff !important;
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.4s top cubic-bezier(0.3, 0.73, 0.3, 0.74);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+.inner-header {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-light .navbar-nav .nav-link a,
+.navbar-light .navbar-nav .nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: 0.4s ease;
+  margin: 0px 10px;
+}
+.navbar-light .navbar-nav .nav-link.active a {
+  color: #9b0000;
+  font-weight: 600;
+}
+
+.header .fas {
+  color: #ffffff !important;
+}
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #ffffff;
+}
+.dropdown-item a {
+  color: #000000;
+  text-decoration: none;
+}
+.dropdown-item:hover {
+  color: #9b0000;
+}
+.dropdown-item:active {
+  background-color: #9b0000;
+}
+.navbar-light .navbar-nav .show > .nav-link {
+  color: #ffffff;
+}
+.dropdown-menu {
+  border-radius: 0px !important;
+}
+.navbar-light .navbar-nav .nav-link a:hover,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #9b0000 !important;
+}
+.navbar-light .navbar-nav .nav-link a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -5px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #9b0000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.navbar-light .navbar-nav .nav-link a:hover:after {
+  width: 100%;
+  left: 0;
+}
+.header .fas {
+  color: #000;
+  margin-left: -10px;
+}
+
+.dropdown-item a {
+  color: #000000;
+  text-decoration: none;
+}
+/* toggle */
+.navbar-toggler-icon:after {
+  content: "\f0c9";
+  font-family: "fontAwesome";
+  color: white;
+}
+
+.header .inverted .navbar-toggler-icon:after {
+  content: "\f0c9";
+  font-family: "fontAwesome";
+  color: black;
+  border: none;
+}
+.navbar-light .navbar-toggler {
+  border: none;
+  padding: 0px;
+}
+.w3-overlay {
+  display: none;
+}
+.navbar-toggle {
+  display: none;
+}
+.header button {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+.header .inverted button {
+  color: #000;
+  /* background-color: transparent;
+  border: none; */
+}
+.btn-navbar:focus-visible {
+  outline: none;
+}
+.btn-navbar .btn-primary:focus,
+.btn-primary:active,
+.btn-primary:hover {
+  background-color: transparent;
+  color: #fff;
+}
+.header button:focus {
+  background-color: transparent;
+  color: #000;
+  box-shadow: none;
+}
+.hidden-lg {
+  display: none;
+}
+/* ______________________________________scroll-button______________________________________ */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+  z-index: 1;
+}
+
+.scroll-icon:hover {
+  background-color: #000;
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
+  transition: 0.3s ease-in;
+}
+
+.scroll-icon {
+  background-color: #9b0000;
+  padding: 12px 16px;
+  color: #fff;
+  border-radius: 0px;
+}
+.otherPageBanner h2 {
+  color: #ffffffa8;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.5px;
+}
+.otherPageBanner h6 {
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 62px;
+  color: #ffffffff;
+}
+/* ___________________________Footer_____________________________ */
+.footer {
+  background-color: #000000;
+  padding: 55px 0px;
+}
+.Footerbox img {
+  margin-bottom: 30px;
+}
+.footer-text {
+  color: #fff;
+  line-height: 35px;
+}
+.footer-text p {
+  font-size: 14px;
+  line-height: 35px;
+  max-width: 350px;
+  color: #b7b1b1;
+}
+.footer-text .list-unstyled a {
+  font-size: 14px;
+  color: #b7b1b1;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+.footer-text .list-unstyled a:hover {
+  color: #9b0000;
+}
+.footer-text h3 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.social-icon li {
+  width: 40px;
+  background-color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s ease;
+  margin-right: 10px;
+}
+.social-icon li:hover {
+  background-color: #9b0000;
+}
+.social-icon i {
+  font-size: 18px;
+  color: black;
+  transition: 0.4s ease;
+  padding: 10px 0px;
+}
+.social-icon li:hover i {
+  color: #fff;
+}
+
+.footer-bottom {
+  background-color: #9b0000;
+  padding: 15px;
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+}
+.F-copywrite {
+  font-size: 14px;
+  margin: 0;
+}
+.contactUs {
+  padding: 60px 0px;
+}
+
+.quickContact {
+  max-width: 100%;
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+
+.quickContact p,
+.quickContact span {
+  color: #b7b1b1;
+  font-size: 14px;
+}
+
+.contactUsIconContain {
+  cursor: pointer;
+}
+.contactUsIconContain span {
+  display: inline-block;
+  max-width: 288px;
+  vertical-align: top;
+  margin-left: 20px;
+}
+.contactUsIconContain i {
+  color: #b7b1b1;
+}
+.contactUsIconContain:hover i {
+  color: #9b0000;
+}
+
+/* ------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------Sign Up--------------------------------------------
+------------------------------------------------------------------------------------------ */
+.signupBanner {
+  /* background-image: url("../../assets/Images/AboutUs/SignUp.png"); */
+  background-repeat: no-repeat;
+  padding: 33px;
+}
+.form-container {
+  margin: 100px auto;
+  width: 1000px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 0px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-content-left {
+  border-radius: 0px 0px 0px 0px;
+  position: relative;
+}
+
+.form-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 0px 0px 0px 0px;
+  transform: translate(-50%, -50%);
+}
+
+.form-success {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 80px;
+  color: #9b0000;
+}
+.SuccessIcon {
+  align-items: center;
+}
+.form-content-right {
+  border-radius: 0px 0px 0px 0px;
+  position: relative;
+  background-color: #232f41;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form h1 {
+  font-size: 15px;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.SignUpInTitle {
+  font-size: 25px !important;
+  text-align: center !important;
+}
+.form-inputs {
+  width: 80%;
+}
+
+.form-inputs p {
+  font-size: 0.8rem;
+  margin-top: -35px !important;
+  color: #f00e0e;
+  margin-bottom: 15px !important;
+}
+.form .form-input-login span {
+  color: #f00e0e !important;
+  cursor: pointer;
+}
+
+.form-input {
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  border: none;
+}
+
+.form-input::placeholder {
+  color: #595959;
+  font-size: 12px;
+}
+
+.form-input-btn {
+  width: 80%;
+  height: 40px;
+  border-radius: 0px;
+  background-color: #9b0000;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-input-btn:hover {
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  background-color: #000;
+}
+
+.form-input-login {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: #fff;
+  width: 80%;
+  text-align: center;
+}
+
+.form-input-login a {
+  text-decoration: none;
+  color: #27cdff;
+  font-weight: 600;
+}
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.form .icon {
+  padding: 12px;
+  background: #9b0000;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.input-field {
+  width: 100%;
+  border-radius: 0px 0px 0px 0px;
+  outline: none;
+  padding-bottom: 1px;
+}
+.signupSocial h2 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+/* ----------------------------------------------------------------------
+----------------------------------------------------------------------AboutUsText----------------------------------------------------------------------
+---------------------------------------------------------------------- */
+
+.AboutUs {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.AboutUsText {
+  padding: 50px;
+}
+.AboutUsText h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+.AboutUsText p {
+  line-height: 1.9;
+  color: #8d8d8d;
+  font-weight: 300;
+  font-size: 18px;
+}
+.MainPartMiddel {
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.AboutUsImgMainDiv {
+  padding: 0;
+}
+.AboutUsFirstMainPart {
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 2%;
+}
+.AboutUsFirstTitle {
+  font-size: 40px;
+  line-height: 1.5;
+  text-align: center;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-weight: 300;
+  text-align: left;
+}
+.AboutUsFirstTitle p {
+  color: #9b0000;
+}
+.AboutUsFirstText {
+  font-size: 18px;
+  color: #8d8d8d;
+  line-height: 1.5;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight: 300;
+  text-align: justify;
+}
+.AboutUsFirstText span {
+  color: #ff9898;
+}
+.popup-content {
+  position: absolute;
+  z-index: 999;
+  pointer-events: auto;
+  top: 75px;
+  left: 0px !important;
+  right: 0px !important;
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 100%;
+  }
+
+  /* __________________________Navbar____________________________________ */
+  .navbar-light .navbar-nav .nav-link a,
+  .navbar-light .navbar-nav .nav-link {
+    color: #000 !important;
+  }
+  .navbar-nav {
+    margin: 0 15px;
+  }
+  .header .inverted {
+    padding: 4px 0px;
+    margin: 0;
+  }
+  .navbar {
+    margin: 0px 0px;
+  }
+  .navbar-brand {
+    order: 2;
+  }
+  .button {
+    order: 3;
+  }
+  .header .ourSurvice {
+    order: 3;
+  }
+  .navbar-nav .dropdown-menu {
+    padding: 0px;
+  }
+
+  .header .navbar-expand-lg .navbar-collapse,
+  .dropdown-menu {
+    position: absolute;
+    top: 50px;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    border-radius: 0px !important;
+    border: 1px solid #fff;
+  }
+  .dropdown-toggle {
+    position: relative;
+  }
+  /* .navbar-light .navbar-toggler-icon {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(194deg)
+      brightness(103%) contrast(107%);
+  } */
+  .navbar-light .navbar-nav .nav-link a,
+  .navbar-light .navbar-nav .nav-link {
+    margin: 0 !important;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  /* .navbar-light.inverted .navbar-toggler-icon {
+    filter: invert(0%) sepia(100%) saturate(14%) hue-rotate(327deg)
+      brightness(101%) contrast(100%);
+  } */
+  .navbar-light.inverted .navbar-nav .nav-link a,
+  .navbar-light.inverted .navbar-nav .nav-link,
+  .dropdown-item a {
+    color: #000 !important;
+  }
+
+  .navbar-light .navbar-toggler-icon {
+    background-image: none;
+    height: 100%;
+    width: 100%;
+    padding-top: 12px;
+    font-size: 25px;
+  }
+  .aboutSlider .slick-prev {
+    left: 30px !important;
+  }
+  .aboutSlider .slick-next {
+    left: 80px !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .w3-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+  }
+
+  #stamenu .menu-vertical {
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    z-index: 4;
+    background: #fff;
+    width: 280px;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-out 0s;
+  }
+  #stamenu.active .menu-vertical {
+    transform: translateX(0);
+  }
+  .sidenav .close-nav {
+    background-color: #1e1e1e;
+    padding: 12px 15px;
+    width: 100%;
+    display: inline-block;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  .sidenav .menu-responive {
+    padding: 0 12px;
+  }
+  .close-nav a {
+    color: #ffffff;
+  }
+}
+@media (min-width: 768px) {
+  .FooterVertical .btn {
+    display: none;
+  }
+  .FooterVertical .collapse {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  .footerLinkHeading {
+    position: relative;
+  }
+  .FooterVertical .btn {
+    text-shadow: none;
+    background: none;
+    background-image: none;
+    background-image: none;
+    border: 0;
+    box-shadow: none;
+    font-size: 12px;
+    position: absolute;
+    top: -3px;
+    right: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .FooterVertical .btn::after {
+    font-family: "FontAwesome";
+    content: "\f067";
+    font-size: 14px;
+    font-weight: normal;
+    float: right;
+    cursor: pointer;
+  }
+  .FooterVertical .btn[aria-expanded="true"]::after {
+    font-family: "FontAwesome";
+    content: "\f068";
+    font-size: 14px;
+    font-weight: normal;
+    float: right;
+    cursor: pointer;
+  }
+  .btn-primary:active:focus {
+    box-shadow: none;
+  }
+
+  .footer-text p {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 100%;
+  }
+  .footer-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .modal {
+    top: -50px;
+  }
+  .modal {
+    top: -50px;
+  }
+  .SignUpInTitle {
+    font-size: 20px !important;
+  }
+  .form-inputs {
+    width: 100%;
+  }
+
+  .form-inputs p {
+    margin-bottom: -5px;
+    font-size: 10px;
+  }
+  .form-container {
+    display: block;
+    width: auto;
+    padding: 0;
+    margin: 12px;
+    height: auto;
+  }
+  .form-content-right {
+    padding: 15px;
+    border-radius: 0px 0px 0px 0px;
+  }
+  .form {
+    display: block;
+    position: unset;
+    width: unset;
+    height: unset;
+    transform: unset;
+  }
+  .form h1 {
+    font-size: 11px;
+    text-align: start;
+    width: 100%;
+  }
+
+  .form-content-left {
+    display: none;
+  }
+  .form-input-btn {
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+  }
+  .form-label {
+    font-size: 13px;
+    margin-bottom: 2px;
+    margin-top: 5px;
+  }
+  .quickContact {
+    float: none;
+  }
+  .contactUsIconContain span {
+    max-width: 100%;
+  }
+}
+/* ********************************************Responsive************************************************ */
+/* ***************************************************** 1200 - 1410 ***************************************************** */
+
+@media (min-width: 1200px) and (max-width: 1410px) {
+  /* _____________________________ Comman _____________________________ */
+  .titleFont h2 {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.5px;
+    margin: 10px 0px 15px 0px;
+  }
+  .paragraph {
+    line-height: 25px;
+  }
+
+  /* _____________________________ Navbar _____________________________ */
+  .navbar-light .navbar-nav .nav-link a,
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 16px;
+    margin: 0px 8px;
+  }
+  /* _____________________________ Sign up _____________________________ */
+
+  .form-container {
+    margin: 80px auto;
+  }
+  .aboutSlider .slick-prev {
+    left: 30px !important;
+  }
+  .aboutSlider .slick-next {
+    left: 80px !important;
+  }
+  .otherPageBanner h2 {
+    font-size: 17px;
+  }
+  .otherPageBanner h6 {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  .title {
+    max-width: 40% !important;
+  }
+  /* ________________Banner______________ */
+  .faqBanner,
+  .planingBanner,
+  .contactUsBanner,
+  .servicesBanner,
+  .portfolioBanner {
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 110px 0px !important ;
+  }
+}
+/* ________________ Footer ______________ */
+.contactUsIconContain span {
+  max-width: 228px;
+}
+
+/* ***************************************************** 992 - 1199 ***************************************************** */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* _____________________________ Comman _____________________________ */
+  .titleFont h3 {
+    font-size: 20px;
+  }
+  .titleFont h2 {
+    font-size: 26px;
+    line-height: 35px;
+    margin: 5px 0px 10px 0px;
+  }
+  .paragraph {
+    line-height: 25px;
+  }
+
+  .otherPageBanner h2 {
+    font-size: 17px;
+  }
+  .otherPageBanner h6 {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .title {
+    max-width: 50% !important;
+  }
+  /* ________________Banner______________ */
+  .faqBanner,
+  .planingBanner,
+  .contactUsBanner,
+  .servicesBanner,
+  .portfolioBanner {
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 110px 0px !important ;
+  }
+
+  .navbar-light .navbar-nav .nav-link a,
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 15px;
+    margin: 0px 5px;
+  }
+  .header .button {
+    font-size: 14px;
+    margin: 3px 0;
+    padding: 0 10px;
+  }
+
+  /* _____________________________ Sign up _____________________________ */
+
+  .form-container {
+    width: 900px;
+    height: 500px;
+  }
+  /* _____________________________ Footer _____________________________ */
+  .footer-text p {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .Footerbox img {
+    margin-bottom: 25px;
+  }
+  .footer-text h3 {
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  .aboutSlider .slick-prev {
+    left: 30px !important;
+  }
+  .aboutSlider .slick-next {
+    left: 80px !important;
+  }
+  .contactUsIconContain span {
+    max-width: 183px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+}
+/* ***************************************************** 768 - 991 ***************************************************** */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* _____________________________ Comman _____________________________ */
+  .titleFont h3 {
+    font-size: 17px;
+  }
+  .titleFont h2 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0px 0px 5px 0px;
+  }
+  .paragraph {
+    line-height: 25px;
+  }
+  .button {
+    padding: 7px 8px;
+    font-size: 14px;
+  }
+  .spacing {
+    margin: 50px 0px;
+  }
+
+  .otherPageBanner h2 {
+    font-size: 17px;
+  }
+  .otherPageBanner h6 {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .title {
+    max-width: 50% !important;
+  }
+  /* ________________Banner______________ */
+  .header .button {
+    margin: 4px 0;
+  }
+  .faqBanner,
+  .planingBanner,
+  .contactUsBanner,
+  .servicesBanner,
+  .portfolioBanner {
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0px 80px 0px !important ;
+  }
+  /* _____________________________ Sign up _____________________________ */
+  .form-container {
+    width: 700px;
+    height: 550px;
+    margin: 50px auto;
+  }
+  .SignUpInTitle {
+    font-size: 22px !important;
+    margin: 0;
+  }
+  .form-input-btn {
+    margin-top: 0px;
+  }
+  .form-inputs {
+    width: 95%;
+  }
+  .form-input-btn {
+    width: 95%;
+    height: 40px;
+  }
+  /* _____________________________navbar_____________________________ */
+  .header .ourSurvice {
+    max-height: 40px;
+    margin-top: 5px;
+  }
+  .navbar-light .navbar-nav .nav-link a,
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 15px;
+    margin: 0px 10px;
+  }
+  .navbar-light .navbar-nav .nav-link a,
+  .navbar-light .navbar-nav .nav-link,
+  .dropdown-item a {
+    font-size: 16px;
+  }
+  .header .navbar-expand-lg .navbar-collapse,
+  .dropdown-menu {
+    top: 64px;
+  }
+  /* ________________ Footer ______________ */
+  .footer-text p {
+    line-height: 30px;
+  }
+  .footer-text {
+    line-height: 30px;
+  }
+  .footer-text h3 {
+    font-size: 17px;
+    margin-bottom: 25px;
+  }
+  .Footerbox img {
+    margin-bottom: 10px;
+  }
+  .contactUsIconContain span {
+    max-width: 199px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .footer-bottom {
+    padding: 12px;
+  }
+}
+/* ***************************************************** 576 - 767 ***************************************************** */
+
+@media (min-width: 576px) and (max-width: 767px) {
+  /* _____________________________ Comman _____________________________ */
+  .titleFont h3 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .titleFont h2 {
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0px 0px 5px 0px;
+  }
+  .paragraph {
+    line-height: 21px;
+    font-size: 13px;
+  }
+  .button {
+    padding: 6px 7px;
+    font-size: 13px;
+  }
+  .spacing {
+    margin: 35px 0px;
+  }
+
+  .otherPageBanner h2 {
+    font-size: 16px;
+  }
+  .otherPageBanner h6 {
+    font-size: 42px;
+    line-height: 40px;
+  }
+  .title {
+    max-width: 90% !important;
+  }
+  /* ________________Banner______________ */
+  .header .button {
+    margin: 4px 0;
+  }
+  .faqBanner,
+  .planingBanner,
+  .contactUsBanner,
+  .servicesBanner,
+  .portfolioBanner {
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0px 80px 0px !important ;
+  }
+
+  .Footerbox img {
+    margin-bottom: 15px;
+  }
+  .footer {
+    padding: 35px 0px;
+  }
+  .navbar-light .navbar-nav .nav-link a,
+  .navbar-light .navbar-nav .nav-link,
+  .dropdown-item a {
+    font-size: 16px;
+  }
+  .header .navbar-expand-lg .navbar-collapse,
+  .dropdown-menu {
+    top: 64px;
+  }
+  /* ________________ Footer ______________ */
+  .social-icon {
+    margin: 30px 0 0 0;
+  }
+  .footer-bottom {
+    padding: 10px;
+  }
+}
+/* ***************************************************** 320 - 575 ***************************************************** */
+
+@media (min-width: 320px) and (max-width: 575px) {
+  /* _____________________________ Comman _____________________________ */
+  .titleFont h3 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .titleFont h2 {
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0px 0px 5px 0px;
+    letter-spacing: 0px;
+  }
+  .paragraph {
+    line-height: 21px;
+    font-size: 13px;
+  }
+  .button {
+    padding: 6px 7px;
+    font-size: 13px;
+  }
+  .spacing {
+    margin: 25px 0px;
+  }
+
+  .otherPageBanner h2 {
+    font-size: 15px;
+  }
+  .otherPageBanner h6 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .title {
+    max-width: 90% !important;
+  }
+  .navbar-light .navbar-toggler-icon {
+    font-size: 20px;
+    padding-top: 10px;
+  }
+  /* ________________Banner______________ */
+  .faqBanner,
+  .planingBanner,
+  .contactUsBanner,
+  .servicesBanner,
+  .portfolioBanner {
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0px 30px 0px !important ;
+  }
+  .navbar-light .navbar-toggler {
+    padding: 0;
+  }
+  .header .navbar-expand-lg .navbar-collapse,
+  .dropdown-menu {
+    top: 40px;
+  }
+
+  .header .inverted .ourSurvice {
+    margin-top: 3px;
+  }
+  .navbar-light .navbar-nav .nav-link a,
+  .navbar-light .navbar-nav .nav-link,
+  .dropdown-item a {
+    font-size: 14px;
+  }
+
+  .signupBanner {
+    padding: 22px;
+  }
+  .footer {
+    padding: 20px 0px;
+  }
+  .social-icon {
+    margin: 0px;
+  }
+  .footer-text p {
+    margin-top: 10px;
+  }
+  .F-copywrite {
+    font-size: 12px;
+  }
+  .scroll-icon {
+    padding: 5px 7px;
+  }
+  .scroll-icon i {
+    font-size: 15px;
+    margin: 0px 4px;
+  }
+  /* ____________Footer____________ */
+  .Footerbox img {
+    margin-bottom: 0px;
+  }
+  .social-icon li {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+  }
+  .social-icon i {
+    font-size: 16px;
+  }
+
+  .footer-text {
+    line-height: 26px;
+  }
+  .footer-text h3 {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .footer-text p {
+    font-size: 13px;
+  }
+  .contactUsIconContain span {
+    max-width: 263px;
+    /* line-height: 24px; */
+  }
+  .footer-bottom {
+    padding: 10px;
+  }
+  .quickContact {
+    line-height: 25px;
+  }
+}

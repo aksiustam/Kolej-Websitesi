@@ -1,0 +1,1906 @@
+.mainBannerDiv {
+  position: relative;
+  overflow: hidden;
+}
+.bannerContain {
+  position: absolute;
+  top: 25%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  max-width: 55%;
+  color: #fff;
+}
+.bannerContain h1 {
+  font-size: 70px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 90px;
+}
+.bannerContain h5 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 35px;
+  margin: 25px 100px;
+  text-transform: capitalize;
+}
+.bannerBtn {
+  margin-top: 50px;
+}
+.bannerBtn .homeBannerBtn {
+  margin-right: 30px;
+}
+.homeBannerBtn {
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* _______________________________________about Us ________________________________________________ */
+.aboutCheckPoint {
+  cursor: pointer;
+}
+.aboutCheckPoint i {
+  color: #9b0000;
+  font-size: 20px;
+}
+.aboutCheckPoint span {
+  font-size: 20px;
+  color: #707070;
+  line-height: 50px;
+  margin-left: 5px;
+}
+.aboutUsPoint {
+  margin: 10px 0px 30px 0px;
+}
+.aboutRow {
+  align-items: center;
+}
+
+/* _______________________________________ We Provide ________________________________________________ */
+
+.weProvide .titleFont {
+  max-width: 45%;
+}
+.weProvideRow {
+  align-items: center;
+}
+.weProvideBtnCol {
+  text-align: right;
+}
+
+
+.weProBox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #9b0000;
+  transition: 0.3s ease;
+}
+
+.weProBox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 8px;
+  background-color: var(--theme-black);
+  transition: 0.3s ease;
+  border-radius: 0 0 10px 10px;
+}
+
+.weProBox:hover::before {
+  width: 100%;
+}
+
+.weProBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15px 32px;
+  transition: 0.5s ease;
+  background-color: #f5f5f5;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  min-height: 200px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.weProBox:hover {
+  background-color: var(--theme-main-orange);
+}
+
+.weProBoxImg {
+  padding: 5px;
+  transition: 0.4s ease;
+  margin: 5px;
+  margin-right: 20px;
+}
+
+.weProBox img {
+  margin: 0;
+  max-width: unset;
+  width: 50px;
+  height: 50px;
+  filter: invert(54%) sepia(71%) saturate(5395%) hue-rotate(343deg) brightness(101%) contrast(94%);
+}
+
+.weProBox:hover img {
+  filter: none;
+}
+
+.weProBoxText h6 {
+  font-size: 22px;
+  line-height: 35px;
+  color: var(--theme-black);
+}
+
+.weProBox:hover .weProBoxText h6 {
+  color: var(--theme-white);
+}
+
+.weProBox:hover {}
+
+.weProBox .paragraph {
+  line-height: 24px;
+}
+
+/* _________________________________________ Choose Us ________________________________________ */
+
+.chooseBanneImg {
+  background-image: url("/assets/Images/Choose/ChooseBanner.jpg");
+  padding: 60px 0;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.chooseBanneImg h2 {
+  color: #fff;
+}
+.chooseBanneImg .paragraph {
+  color: #d8d2d2;
+  margin-bottom: 50px;
+}
+.chooseBox {
+  background-color: #fff;
+  transition: 0.4s ease;
+  padding: 20px;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+.chooseBox img {
+  filter: none;
+  transition: 0.4s ease;
+}
+.chooseBox h3 {
+  font-size: 40px;
+  margin: 10px 0px;
+  color: #000;
+  transition: 0.4s ease;
+  font-weight: 500 !important;
+}
+.chooseBox h3 span{
+  font-weight: 500 ;
+}
+.chooseBox h6 {
+  font-size: 20px;
+  color: #707070;
+  margin: 0;
+  transition: 0.4s ease;
+}
+.chooseBox:hover {
+  background-color: #9b0000;
+}
+.chooseBox:hover img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(330deg)
+    brightness(101%) contrast(102%);
+  transform: rotateY(3.142rad);
+}
+.chooseBox:hover h3,
+.chooseBox:hover h6 {
+  color: #fff;
+}
+/* _________________________________________Home FAQ________________________________________ */
+.homeFAQ .accordion-item {
+  margin: 10px 0px;
+  margin-right: 50px;
+}
+.homeFAQ .accordion-item:not(:first-of-type),
+.homeFAQ .accordion-item {
+  border: none;
+  box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.08);
+}
+.homeFAQ .accordion-button:not(.collapsed) {
+  color: #9b0000;
+  box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 8%);
+}
+.homeFAQ .accordion-button {
+  background-color: #fff !important;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+.homeFAQ .accordion-item:first-of-type .homeFAQ .accordion-button,
+.homeFAQ .accordion-button,
+.homeFAQ .accordion-button:focus {
+  box-shadow: none;
+}
+.homeFAQ .accordion-body {
+  line-height: 30px;
+  color: #707070;
+  padding-top: 0px;
+  font-size: 16px;
+  background-color: #fff;
+}
+.homeFAQ .accordion-button:not(.collapsed)::after {
+  filter: invert(30%) grayscale(100%) brightness(70%) contrast(4);
+}
+.homeFAQRow {
+  align-items: center;
+}
+.accordion-button {
+  border: none;
+  box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 8%);
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+/* ________________________________________________ourPricing___________________________________________ */
+.pricingColorBox {
+  background-color: black;
+  padding: 20px;
+  transition: 0.4s ease;
+}
+.ourPricingCard {
+  margin-top: 40px;
+}
+.ourPricingCard .pricingCard {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: 0.5s ease !important;
+}
+.pricingColorBox h5,
+.pricingColorBox h3 {
+  color: #ffffff;
+  margin: 0;
+}
+.pricingColorBox h2,
+.pricingColorBox span {
+  color: #d8cece;
+  margin: 0;
+}
+.pricingColorBox h5 {
+  font-size: 30px;
+}
+.pricingColorBox span {
+  font-size: 30px;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.pricingColorBox h3 {
+  font-size: 50px;
+  margin: 5px 0px;
+}
+.pricingColorBox h2 {
+  font-size: 20px;
+}
+
+.pricingBoxList {
+  padding: 0px 60px;
+}
+.pricingBoxList i {
+  font-size: 12px;
+}
+.pricingBoxList span {
+  font-size: 16px;
+  margin-left: 5px;
+}
+.pricingBoxList li {
+  line-height: 40px;
+  transition: 0.4s ease;
+}
+.pricingBoxList li:hover {
+  color: #9b0000;
+}
+.pricingCard .list-unstyled {
+  margin-bottom: 30px;
+}
+.slick-slider [class*="col-"] {
+  padding: 0 15px;
+}
+.pricingSpacingBox {
+  padding: 40px 0px;
+  background-color: #FFF;
+}
+.pricingCard:hover .pricingColorBox {
+  background-color: #9b0000;
+}
+.pricingCard:hover {
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 8%);
+}
+.ourPricingCard .pricingCard:hover {
+  /* box-shadow: 0 0 10px #e2e1e1; */
+  transform: translateY(-10px);
+}
+/* __________________________________________________________ourTeam___________________________________________ */
+.beffect .bimg {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.9s;
+  -moz-transition: all 0.9s;
+  -o-transition: all 0.9s;
+  transition: all 0.9s;
+}
+.beffect img {
+  max-width: 100%;
+  width: 100%;
+  -webkit-transition: all 0.9s;
+  -moz-transition: all 0.9s;
+  -o-transition: all 0.9s;
+  transition: all 0.9s;
+}
+.beffect .bimg::after {
+  background: rgba(0, 0, 0, 0.5);
+  width: 0;
+  height: 0;
+  content: "";
+  position: absolute;
+  /* -webkit-transition: all 0.4s ease-in-out 0s; */
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0px;
+}
+.ourTeamCard:hover .beffect .bimg::after {
+  width: 100%;
+  height: 100%;
+  right: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.ourTeamMain .beffect .bimg::after {
+  border-radius: 0px 0px 0px 0px;
+}
+.ourTeamMain {
+  margin: 40px 0px 0px 0px;
+}
+.ourTeamMain .card {
+  box-shadow: none;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 0px;
+  border: none;
+  margin-bottom: 15px;
+}
+.ourTeamMain img {
+  border-radius: 0px 0px 0px 0px;
+}
+.ourTeamMain .slick-next {
+  display: block;
+  bottom: 0;
+  top: -50px;
+  right: 20px;
+  left: auto;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 0px !important;
+  background-color: #9b0000;
+  opacity: unset;
+  transition: 0.5s ease;
+  box-shadow: 0 0 10px #e2e1e1;
+}
+.ourTeamMain .slick-prev {
+  display: block;
+  bottom: 0;
+  top: -50px;
+  right: 70px;
+  left: auto;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 0px !important;
+  background-color: #9b0000;
+  opacity: unset;
+  transition: 0.5s ease;
+  box-shadow: 0 0 10px #e2e1e1;
+}
+.ourTeamMain .slick-next:hover,
+.ourTeamMain .slick-prev:hover {
+  background-color: #ffffff;
+}
+.ourTeamMain .slick-next::before {
+  content: "\f105";
+  font-family: FontAwesome;
+  font-size: 25px;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.ourTeamMain .slick-prev::before {
+  content: "\f104";
+  font-family: FontAwesome;
+  font-size: 25px;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.ourTeamMain .slick-arrow:hover::before {
+  color: black;
+}
+.ourTeamMain h2 {
+  font-size: 18px;
+}
+.ourTeamMain h6 {
+  font-size: 16px;
+}
+
+.ourTeamImgBox {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.ourTeamIcon {
+  position: absolute;
+  top: 0;
+  left: -15px;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.ourTeamCard:hover .ourTeamIcon {
+  opacity: 1;
+  left: 0;
+  /* transition: 0.5s ease; */
+}
+.ourTeamIcon li {
+  width: 35px;
+  font-size: 18px;
+  background-color: white;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  border-radius: 0px;
+  padding: 3px;
+  transition: 0.4s ease;
+}
+.ourTeamIcon li:hover {
+  background-color: #9b0000;
+}
+.ourTeamIcon li:hover a {
+  color: #fff;
+}
+.ourTeamIcon li a {
+  color: #000;
+  padding: 4px;
+  transition: 0.4s ease;
+}
+
+.ourTeamIcon ul li:nth-child(1) {
+  transition: 1s;
+}
+.ourTeamIcon ul li:nth-child(2) {
+  transition: 1.3s;
+}
+.ourTeamIcon ul li:nth-child(3) {
+  transition: 1.6s;
+}
+.ourTeamIcon ul li:nth-child(4) {
+  transition: 1.9s;
+}
+
+.ourTeamMain .card-title {
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  line-height: 35px;
+  transition: 0.4s ease;
+  cursor: pointer;
+  margin: 0;
+}
+.ourTeamMain .card-title:hover {
+  color: #9b0000;
+}
+.ourTeamMain .card-subtitle {
+  font-size: 16px;
+  color: #666666;
+  text-align: center;
+  line-height: 30px;
+}
+/* _________________________________________ People Say ________________________________________ */
+.peopleSayBgColor {
+  background-color: #f5f5f5;
+  padding: 40px 0px;
+}
+.peopleSay img {
+  border-radius: 50px;
+  margin: 10px 0px;
+}
+.peopleDetails {
+  max-width: 58%;
+  margin: 0 auto;
+}
+.peopleDetails p {
+  font-size: 16px;
+  color: #707070;
+  line-height: 30px;
+  margin: 20px 0px;
+}
+.peopleDetails h3 {
+  font-size: 16px;
+  line-height: 30px;
+  margin: 0;
+  color: #9b0000;
+  cursor: pointer;
+}
+.peopleDetails h6 {
+  font-size: 14px;
+  line-height: 30px;
+  margin: 0;
+}
+
+.peopleSayBgColor .slick-next {
+  display: block;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 0px !important;
+  background-color: #9b0000;
+  opacity: unset;
+  transition: 0.5s ease;
+  box-shadow: 0 0 10px #e2e1e1;
+}
+.peopleSayBgColor .slick-prev {
+  display: block;
+
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 0px !important;
+  background-color: #9b0000;
+  opacity: unset;
+  transition: 0.5s ease;
+  box-shadow: 0 0 10px #e2e1e1;
+}
+.peopleSayBgColor .slick-next:hover,
+.peopleSayBgColor .slick-prev:hover {
+  background-color: #ffffff;
+}
+.peopleSayBgColor .slick-next::before {
+  content: "\f105";
+  font-family: FontAwesome;
+  font-size: 25px;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.peopleSayBgColor .slick-prev::before {
+  content: "\f104";
+  font-family: FontAwesome;
+  font-size: 25px;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.peopleSayBgColor .slick-arrow:hover::before {
+  color: black;
+}
+/* _____________________________________________________ourBlog__________________________________ */
+.blogCardBody .card-text {
+  margin-bottom: 20px;
+}
+/* .ourBlog {
+  margin: 80px 0px 60px 0px;
+} */
+.ourBlogCard {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.ourBlogCard .card-body {
+  padding: 30px;
+}
+.ourBlogContain .ourBlogContainIcon {
+  float: right;
+}
+.ourBlogContainIcon i {
+  color: #9b0000;
+  margin-right: 5px;
+}
+.ourBlogCard .card-title a {
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000 !important;
+  transition: 0.4s ease;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+}
+.ourBlogCard .card-title a:hover {
+  color: #9b0000 !important;
+}
+
+.ourBlogCard .card {
+  border-radius: 0px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+  border: none;
+  margin-bottom: 15px;
+}
+.slick-slider [class*="col-"] {
+  padding: 0 15px;
+}
+.ourBlogCard .slick-slide img {
+  display: block;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.ourBlog .slick-next {
+  display: block;
+  bottom: 0;
+  top: -50px;
+  right: 20px;
+  left: auto;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 0px;
+  background-color: #9b0000;
+  opacity: unset;
+  transition: 0.5s ease;
+  box-shadow: 0 0 10px #e2e1e1;
+}
+.ourBlog .slick-prev {
+  display: block;
+  bottom: 0;
+  top: -50px;
+  right: 70px;
+  left: auto;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 0px;
+  background-color: #9b0000;
+  opacity: unset;
+  transition: 0.5s ease;
+  box-shadow: 0 0 10px #e2e1e1;
+}
+.ourBlog .slick-next:hover,
+.ourBlog .slick-prev:hover {
+  background-color: #ffffff;
+}
+.ourBlog .slick-next::before {
+  content: "\f105";
+  font-family: FontAwesome;
+  font-size: 25px;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.ourBlog .slick-prev::before {
+  content: "\f104";
+  font-family: FontAwesome;
+  font-size: 25px;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.ourBlog .slick-arrow:hover::before {
+  color: black;
+}
+/* ______________________________________________________________Brand Logo_______________________________________________ */
+.brandLogo .slick-prev,
+.brandLogo .slick-next {
+  display: none !important;
+}
+.startedToday {
+  box-shadow: 0 -1px 7px -5px #333333de;
+  padding: 25px 0px;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.startedTodayMainDiv {
+  border-right: 1px solid #cecece;
+}
+.startedTodayMainDiv span {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+}
+.startedTodayMainDiv img {
+  display: inline-block;
+}
+.startedTodayMainDiv div {
+  display: inline-block;
+  max-width: 40%;
+  vertical-align: middle;
+  margin-left: 30px;
+}
+.startedTodayMainDivFloat .row {
+  align-items: center;
+}
+.startedTodayMainDiv .input-group {
+  margin: 0 !important;
+}
+.startedEmailBox .form-control {
+  border-radius: 0px;
+}
+.startedEmailBox .form-control:focus {
+  box-shadow: none;
+  border-color: #9b0000;
+}
+.startedTodaySideText p {
+  font-size: 14px;
+  max-width: 70%;
+  margin-left: 50px;
+  margin-bottom: 0;
+}
+.startedTodaySideTextCol {
+  align-items: center;
+  display: flex;
+}
+.startedToday::after {
+  content: url("/assets/Images/BrandLogo/Dots.png");
+  position: absolute;
+  right: 0;
+  bottom: -67px;
+}
+
+/* ********************************************Responsive************************************************ */
+@media (max-width: 991px) {
+  .startedToday::after{
+    display: none;
+  }
+  .startedTodayMainDiv div {
+    display: none;
+  }
+  .startedTodayMainDiv {
+    border-right: none;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1410px) {
+  /* _____________________________navbar_____________________________ */
+  /* _____________________________banner_____________________________ */
+  .bannerContain h1 {
+    font-size: 55px;
+    line-height: 60px;
+  }
+  .bannerContain {
+    max-width: 69%;
+  }
+  .bannerContain h5 {
+    line-height: 30px;
+    margin: 18px 100px;
+  }
+  /* _______________________________________about Us ________________________________________________ */
+
+  .aboutCheckPoint i {
+    color: #9b0000;
+    font-size: 18px;
+  }
+  .aboutCheckPoint span {
+    font-size: 18px;
+    line-height: 40px;
+    margin-left: 5px;
+  }
+  /* _________________________________________ Choose Us ________________________________________ */
+
+  .chooseBox h6 {
+    font-size: 17px;
+  }
+  /* _________________________________________ Home FAQ ________________________________________ */
+  .accordion-button {
+    padding: 14px;
+  }
+  .accordion-body {
+    font-size: 15px;
+    padding: 0px 14px 14px 14px;
+  }
+  /* _________________________________________ Our Pricing ________________________________________ */
+
+  .pricingColorBox h5 {
+    font-size: 27px;
+  }
+  .pricingColorBox h3 {
+    font-size: 45px;
+  }
+  .pricingColorBox span {
+    font-size: 26px;
+  }
+  .pricingBoxList {
+    padding: 0px 40px;
+  }
+  .pricingBoxList span {
+    font-size: 14px;
+  }
+  .pricingCard .list-unstyled {
+    margin-bottom: 22px;
+  }
+  .pricingSpacingBox {
+    padding: 34px 0px;
+  }
+  /* _________________________________________ we Provide ________________________________________ */
+  .weProBoxText h6 {
+    font-size: 17px;
+  }
+  .weProBoxText {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  /* _________________________________________ What People Say ________________________________________ */
+
+  .peopleDetails p {
+    font-size: 15px;
+    color: #707070;
+    line-height: 25px;
+    margin: 10px 0px;
+  }
+  /* _________________________________________ Our Blog ________________________________________ */
+
+  .ourBlogCard .card-title a {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  /* _________________________________________ Started Today Main ________________________________________ */
+
+  .startedTodayMainDiv div {
+    max-width: 50%;
+  }
+  .startedTodayMainDiv span {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .startedToday::after{
+    display: none;
+  }
+}
+/* ***************************************************** 992 - 1199 ***************************************************** */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* _____________________________navbar_____________________________ */
+  /* .navbar-light .navbar-nav .nav-link a {
+    font-size: 15px;
+    margin: 0px 10px;
+  } */
+
+  /* _____________________________banner_____________________________ */
+  .bannerContain h1 {
+    font-size: 46px;
+    line-height: 55px;
+  }
+  .bannerContain {
+    max-width: 69%;
+  }
+  .bannerContain h5 {
+    line-height: 27px;
+    margin: 11px 34px;
+  }
+  /* _______________________________________about Us ________________________________________________ */
+
+  .aboutCheckPoint i {
+    color: #9b0000;
+    font-size: 16px;
+  }
+  .aboutCheckPoint span {
+    font-size: 16px;
+    margin-left: 5px;
+    line-height: 35px;
+  }
+  .aboutUsPoint {
+    margin: 10px 0px 15px 0px;
+  }
+
+  /* _________________________________________ we Provide ________________________________________ */
+  .weProBoxText h6 {
+    font-size: 16px;
+  }
+  .weProBoxText {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+  .weProvide .titleFont {
+    max-width: 95%;
+  }
+  /* _________________________________________ Choose Us ________________________________________ */
+  .chooseBox {
+    padding: 12px;
+  }
+  .chooseBox h6 {
+    font-size: 15px;
+  }
+  .chooseBox h3 {
+    font-size: 30px;
+    margin: 6px 0px;
+  }
+  .chooseBanneImg .paragraph {
+    margin-bottom: 25px;
+  }
+  /* _________________________________________ Home FAQ ________________________________________ */
+  .homeFAQ .accordion-button {
+    padding: 10px;
+  }
+  .homeFAQ .accordion-body {
+    font-size: 14px;
+    padding: 0px 10px 10px 10px;
+  }
+  /* _________________________________________ Our Pricing ________________________________________ */
+
+  .pricingColorBox h5 {
+    font-size: 23px;
+  }
+  .pricingColorBox h3 {
+    font-size: 38px;
+  }
+  .pricingColorBox span {
+    font-size: 23px;
+  }
+  .pricingColorBox h2 {
+    font-size: 19px;
+  }
+  .pricingBoxList {
+    padding: 0px 20px;
+  }
+  .pricingBoxList span {
+    font-size: 13px;
+  }
+  .pricingCard .list-unstyled {
+    margin-bottom: 16px;
+  }
+  .pricingSpacingBox {
+    padding:  20px 0px;
+  }
+  /* _________________________________________ Our Team ________________________________________ */
+  .ourTeamMain .card-body {
+    padding: 10px;
+  }
+  /* _________________________________________ What People Say ________________________________________ */
+
+  .peopleDetails p {
+    font-size: 15px;
+    color: #707070;
+    line-height: 25px;
+    margin: 10px 0px;
+  }
+  .peopleDetails {
+    max-width: 80%;
+  }
+  /* _________________________________________ Our Blog ________________________________________ */
+
+  .ourBlogCard .card-title a {
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .ourBlogContain span {
+    font-size: 15px;
+  }
+  .ourBlogCard .card-body {
+    padding: 15px;
+  }
+  .blogCardBody .card-text {
+    margin-bottom: 14px;
+  }
+  /* _________________________________________ Started Today Main ________________________________________ */
+
+ 
+  .startedTodayMainDiv span {
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .startedTodaySideText p {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .startedTodayMainDiv div {
+    display: none;
+  }
+  .startedToday::after{
+    display: none;
+  }
+  .startedTodayMainDiv{
+    border-right: none;
+  }
+}
+/* ***************************************************** 768 - 991 ***************************************************** */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* _____________________________navbar_____________________________ */
+  /* .navbar-light .navbar-nav .nav-link a {
+  font-size: 15px;
+  margin: 0px 10px;
+} */
+  /* _____________________________banner_____________________________ */
+  /* _______________________________________about Us ________________________________________________ */
+  .aboutCheckPoint i {
+      color: var(--theme-main-orange);
+      font-size: 16px;
+  }
+  .aboutCheckPoint span {
+      font-size: 16px;
+      margin-left: 5px;
+      line-height: 35px;
+  }
+  .aboutUsPoint {
+      margin: 10px 0px 15px 0px;
+  }
+  /* _________________________________________ we Provide ________________________________________ */
+  .weProBox {
+      min-height: 150px;
+      display: block;
+  }
+  .weProBoxText h6 {
+      font-size: 18px;
+      line-height: 26px;
+  }
+  /* _________________________________________ Choose Us ________________________________________ */
+  .chooseBox {
+      padding: 12px;
+  }
+  .chooseBox h6 {
+      font-size: 15px;
+  }
+  .chooseBox h3 {
+      font-size: 30px;
+      margin: 6px 0px;
+  }
+  .chooseBanneImg .paragraph {
+      margin-bottom: 25px;
+  }
+  /* _________________________________________ Home FAQ ________________________________________ */
+  .homeFAQ .accordion-button {
+      padding: 10px;
+  }
+  .homeFAQ .accordion-body {
+      font-size: 14px;
+      padding: 0px 10px 10px 10px;
+  }
+  /* _________________________________________ Our Pricing ________________________________________ */
+  .pricingColorBox h5 {
+      font-size: 23px;
+  }
+  .pricingColorBox h3 {
+      font-size: 38px;
+  }
+  .pricingColorBox span {
+      font-size: 23px;
+  }
+  .pricingColorBox h2 {
+      font-size: 19px;
+  }
+  .pricingBoxList {
+      padding: 0px 20px;
+  }
+  .pricingBoxList span {
+      font-size: 13px;
+  }
+  .pricingCard .list-unstyled {
+      margin-bottom: 16px;
+  }
+  .pricingSpacingBox {
+      padding: 20px 0px;
+  }
+  /* _________________________________________ Our Team ________________________________________ */
+  .ourTeamMain .card-body {
+      padding: 10px;
+  }
+  /* _________________________________________ What People Say ________________________________________ */
+  .peopleDetails p {
+      font-size: 15px;
+      color: #707070;
+      line-height: 25px;
+      margin: 10px 0px;
+  }
+  .peopleDetails {
+      max-width: 80%;
+  }
+  /* _________________________________________ Our Blog ________________________________________ */
+  .ourBlogCard .card-title a {
+      font-size: 17px;
+      line-height: 25px;
+  }
+  .ourBlogContain span {
+      font-size: 15px;
+  }
+  .ourBlogCard .card-body {
+      padding: 15px;
+  }
+  .blogCardBody .card-text {
+      margin-bottom: 14px;
+  }
+  /* _________________________________________ Started Today Main ________________________________________ */
+  .startedTodayMainDiv span {
+      font-size: 17px;
+      line-height: 30px;
+  }
+  .startedTodaySideText p {
+      max-width: 100%;
+      margin-left: 0;
+  }
+  .startedTodayMainDiv div {
+      display: none;
+  }
+  .startedToday::after {
+      display: none;
+  }
+  .startedTodayMainDiv {
+      border-right: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* _____________________________ Slider _____________________________ */
+  .ourTeamMain .slick-prev,
+  .ourTeamMain .slick-next,
+  .ourBlog .slick-prev,
+  .ourBlog .slick-next {
+    width: 35px;
+    height: 35px;
+  }
+
+  .ourTeamMain .slick-prev::before,
+  .ourTeamMain .slick-next::before,
+  .peopleSayBgColor .slick-prev::before,
+  .peopleSayBgColor .slick-next::before,
+  .ourBlog .slick-prev::before,
+  .ourBlog .slick-next::before {
+    font-size: 20px;
+  }
+
+  /* _____________________________banner_____________________________ */
+  .bannerContain h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .bannerContain {
+    max-width: 70%;
+  }
+  .bannerContain h5 {
+    line-height: 22px;
+    margin: 10px 34px;
+    font-size: 16px;
+  }
+  /* _______________________________________about Us ________________________________________________ */
+
+  .aboutCheckPoint i {
+    color: #9b0000;
+    font-size: 13px;
+  }
+  .aboutCheckPoint span {
+    font-size: 13px;
+    margin-left: 5px;
+    line-height: 35px;
+  }
+  .aboutUsPoint {
+    margin: 10px 0px 15px 0px;
+  }
+
+  /* _________________________________________ we Provide ________________________________________ */
+  .weProBox {
+    display: inline-block;
+    padding: 20px;
+}
+.weProBoxImg {
+    margin: 0;
+    border: none;
+    display: inline-block;
+}
+.weProBox:hover .weProBoxText h6 {
+    color: var(--theme-main-orange);
+}
+.weProBox:hover .weProBoxImg {
+    background-color: var(--theme-main-orange);
+    /* margin-right: 50px; */
+}
+.weProBoxText h6 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+.weProBoxText {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+  .weProvide .titleFont {
+    max-width: 95%;
+  }
+  /* _________________________________________ Choose Us ________________________________________ */
+
+  .chooseBanneImg {
+    padding: 40px 0;
+  }
+
+  .chooseBox {
+    padding: 13px;
+  }
+  .chooseBox h6 {
+    font-size: 14px;
+  }
+  .chooseBox h3 {
+    font-size: 26px;
+    margin: 4px 0px;
+  }
+  .chooseBanneImg .paragraph {
+    margin-bottom: 25px;
+  }
+  /* _________________________________________ Home FAQ ________________________________________ */
+  .homeFAQ .accordion-button {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .homeFAQ .accordion-body {
+    font-size: 14px;
+    padding: 0px 10px 10px 10px;
+    line-height: 20px;
+  }
+  /* _________________________________________ Our Pricing ________________________________________ */
+  .ourPricingCard {
+    margin-top: 20px;
+  }
+
+  .pricingColorBox h5 {
+    font-size: 20px;
+  }
+  .pricingColorBox h3 {
+    font-size: 30px;
+  }
+  .pricingColorBox span {
+    font-size: 19px;
+  }
+  .pricingColorBox h2 {
+    font-size: 18px;
+  }
+  .pricingBoxList li {
+    line-height: 30px;
+  }
+  .pricingBoxList {
+    padding: 0px 15px;
+  }
+  .pricingBoxList span {
+    font-size: 13px;
+  }
+  .pricingCard .list-unstyled {
+    margin-bottom: 16px;
+  }
+  .pricingSpacingBox {
+    padding:  20px 0px;
+  }
+  /* _________________________________________ Our Team ________________________________________ */
+  .ourTeamMain .card-body {
+    padding: 10px;
+  }
+  .ourTeamMain {
+    margin: 20px 0px 0px 0px;
+  }
+  .ourTeamMain .card-title {
+    line-height: 25px;
+    font-size: 16px;
+  }
+  .ourTeamMain .card-subtitle {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .peopleSayBgColor .slick-prev {
+    left: 10px;
+    width: 35px;
+    height: 35px;
+  }
+  .peopleSayBgColor .slick-next {
+    right: 10px;
+    width: 35px;
+    height: 35px;
+  }
+
+  /* _________________________________________ What People Say ________________________________________ */
+
+  .peopleDetails p {
+    font-size: 15px;
+    color: #707070;
+    line-height: 25px;
+    margin: 10px 0px;
+  }
+  .peopleDetails {
+    max-width: 80%;
+  }
+  /* _________________________________________ Our Blog ________________________________________ */
+  .ourBlogCard {
+    margin-top: 10px;
+  }
+
+  .ourBlogCard .card-title a {
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .ourBlogContain span {
+    font-size: 15px;
+  }
+  .ourBlogCard .card-body {
+    padding: 15px;
+  }
+  .blogCardBody .card-text {
+    margin-bottom: 14px;
+  }
+  /* _________________________________________ Started Today Main ________________________________________ */
+  .startedTodayMainDivFloat .row {
+    align-items: center;
+  }
+  .startedEmailBox .form-control {
+    font-size: 14px;
+  }
+  .startedToday {
+    margin-top: 50px;
+  }
+  .startedTodaySideTextCol {
+    padding: 0;
+  }
+  .startedTodayMainDiv div {
+    max-width: 60%;
+    margin-left: 10px;
+  }
+  .startedTodayMainDiv span {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .startedTodaySideText p {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+/* ***************************************************** 576 - 767 ***************************************************** */
+
+@media (min-width: 576px) and (max-width: 767px) {
+  /* _____________________________ Slider _____________________________ */
+  .ourTeamMain .slick-prev,
+  .ourTeamMain .slick-next,
+  .ourBlog .slick-prev,
+  .ourBlog .slick-next {
+    width: 33px;
+    height: 33px;
+  }
+
+  .ourTeamMain .slick-prev::before,
+  .ourTeamMain .slick-next::before,
+  .peopleSayBgColor .slick-prev::before,
+  .peopleSayBgColor .slick-next::before,
+  .ourBlog .slick-prev::before,
+  .ourBlog .slick-next::before {
+    font-size: 20px;
+  }
+
+  /* _____________________________banner_____________________________ */
+  .bannerContain h1 {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 0;
+  }
+  .bannerContain {
+    max-width: 80%;
+  }
+  .bannerContain h5 {
+    line-height: 20px;
+    margin: 6px 0px;
+    font-size: 13px;
+  }
+  /* _______________________________________about Us ________________________________________________ */
+
+  .aboutCheckPoint i {
+    color: #9b0000;
+    font-size: 13px;
+  }
+  .aboutCheckPoint span {
+    font-size: 11px;
+    margin-left: 6px;
+    line-height: 20px;
+  }
+  .aboutUsPoint {
+    margin: 5px 0px 10px 0px;
+  }
+
+  /* _________________________________________ we Provide ________________________________________ */
+  .weProBox {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    min-height: 160px
+}
+.weProBoxImg {
+    margin: 0;
+    border: none;
+    display: inline-block;
+}
+.weProBoxText h6 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+  .weProvide .titleFont {
+    max-width: 95%;
+  }
+
+  /* _________________________________________ Choose Us ________________________________________ */
+  .chooseBanneImg {
+    padding: 40px 0;
+    overflow: hidden;
+  }
+
+  .chooseBox {
+    padding: 13px;
+  }
+  .chooseBox h6 {
+    font-size: 14px;
+  }
+  .chooseBox h3 {
+    font-size: 26px;
+    margin: 4px 0px;
+  }
+  .chooseBanneImg .paragraph {
+    margin-bottom: 10px;
+  }
+  .chooseBanneImg .button {
+    margin-bottom: 15px;
+  }
+  /* _________________________________________ Home FAQ ________________________________________ */
+  .homeFAQ .accordion-button {
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .homeFAQ .accordion-body {
+    font-size: 13px;
+    padding: 0px 10px 10px 10px;
+    line-height: 20px;
+  }
+  .homeFAQ .accordion-item {
+    margin-right: 0;
+  }
+  /* _________________________________________ Our Pricing ________________________________________ */
+  .ourPricingCard {
+    margin-top: 20px;
+  }
+
+  .pricingColorBox h5 {
+    font-size: 20px;
+  }
+  .pricingColorBox h3 {
+    font-size: 30px;
+  }
+  .pricingColorBox span {
+    font-size: 19px;
+  }
+  .pricingColorBox h2 {
+    font-size: 18px;
+  }
+  .pricingBoxList li {
+    line-height: 30px;
+  }
+  .pricingBoxList {
+    padding: 0px 15px;
+  }
+  .pricingBoxList span {
+    font-size: 13px;
+  }
+  .pricingCard .list-unstyled {
+    margin-bottom: 16px;
+  }
+  .pricingSpacingBox {
+    padding:  20px 0px;
+  }
+  /* _________________________________________ Our Team ________________________________________ */
+  .ourTeamMain .card-body {
+    padding: 10px;
+  }
+  .ourTeamMain {
+    margin: 20px 0px 0px 0px;
+  }
+  .ourTeamMain .card-title {
+    line-height: 25px;
+    font-size: 16px;
+  }
+  .ourTeamMain .card-subtitle {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .peopleSayBgColor .slick-prev {
+    left: 10px;
+    width: 35px;
+    height: 35px;
+  }
+  .peopleSayBgColor .slick-next {
+    right: 10px;
+    width: 35px;
+    height: 35px;
+  }
+
+  /* _________________________________________ What People Say ________________________________________ */
+
+  .peopleDetails p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0px;
+  }
+  .peopleDetails {
+    max-width: 80%;
+  }
+  .peopleDetails h3 {
+    line-height: 20px;
+  }
+  /* _________________________________________ Our Blog ________________________________________ */
+  .blogCardBody hr {
+    margin: 10px 0;
+  }
+  .ourBlogCard {
+    margin-top: 10px;
+  }
+
+  .ourBlogCard .card-title a {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .ourBlogContain span {
+    font-size: 15px;
+  }
+  .ourBlogCard .card-body {
+    padding: 15px;
+  }
+  .blogCardBody .card-text {
+    margin-bottom: 14px;
+  }
+  /* _________________________________________ Started Today Main ________________________________________ */
+  .startedTodayMainDivFloat .row {
+    align-items: center;
+  }
+  .startedEmailBox .form-control {
+    font-size: 14px;
+  }
+  .startedToday {
+    margin-top: 50px;
+  }
+  .startedTodaySideTextCol {
+    padding-left: 0;
+  }
+  .startedTodayMainDiv div {
+    max-width: 60%;
+    margin-left: 10px;
+  }
+
+  .startedTodaySideText p {
+    max-width: 100%;
+    margin-left: 0;
+    font-size: 13px;
+  }
+  .startedEmailBox {
+    margin-top: 15px;
+  }
+}
+/* ***************************************************** 320 - 575 ***************************************************** */
+
+@media (min-width: 320px) and (max-width: 575px) {
+  /* _____________________________ Slider _____________________________ */
+  .ourTeamMain .slick-prev,
+  .ourTeamMain .slick-next,
+  .ourBlog .slick-prev,
+  .ourBlog .slick-next,
+  .aboutMenu .slick-prev,
+  .aboutMenu .slick-next {
+    width: 30px;
+    height: 30px;
+  }
+  .ourTeamMain .slick-prev,
+  .ourBlog .slick-prev {
+    right: 60px;
+  }
+  .ourTeamMain .slick-prev::before,
+  .ourTeamMain .slick-next::before,
+  .ourBlog .slick-prev::before,
+  .ourBlog .slick-next::before,
+  .aboutMenu .slick-prev::before,
+  .aboutMenu .slick-next::before {
+    font-size: 18px;
+  }
+
+  /* _______________________________________about Us ________________________________________________ */
+  .aboutus .titleFont {
+    margin-top: 5px;
+  }
+
+  .aboutCheckPoint i {
+    color: #9b0000;
+    font-size: 13px;
+  }
+  .aboutCheckPoint span {
+    font-size: 10px;
+    margin-left: 6px;
+    line-height: 20px;
+  }
+  .aboutUsPoint {
+    margin: 5px 0px 10px 0px;
+  }
+
+  /* _________________________________________ we Provide ________________________________________ */
+  .weProBox {
+    display: block;
+    padding: 20px;
+  }
+  .weProBoxImg {
+    margin: 0;
+    border: none;
+    display: inline-block;
+  }
+  .weProBoxText h6 {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .weProBoxText {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+  .weProvide .titleFont {
+    max-width: 95%;
+  }
+  /* _________________________________________ Choose Us ________________________________________ */
+  .chooseBanneImg {
+    padding: 30px 0;
+    overflow: hidden;
+  }
+  .chooseBox {
+    padding: 13px;
+  }
+  .chooseBanneImg .paragraph {
+    margin-bottom: 10px;
+  }
+  .chooseBanneImg .button {
+    margin-bottom: 15px;
+  }
+  .chooseBox h3 {
+font-weight: 500 !important;
+  }
+  /* _________________________________________ Home FAQ ________________________________________ */
+  .homeFAQ {
+    margin-bottom: 25px;
+  }
+  .homeFAQ .accordion-button {
+    padding: 8px;
+    font-size: 14px;
+    /* overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;  */
+
+
+  }
+  .homeFAQ .accordion-body {
+    font-size: 13px;
+    padding: 0px 10px 10px 10px;
+    line-height: 20px;
+  }
+  .homeFAQ .accordion-item {
+    margin-right: 0;
+  }
+  /* _________________________________________ Our Pricing ________________________________________ */
+  .ourPricingCard {
+    margin-top: 0px;
+  }
+  .pricingCard {
+    margin: 6px 0;
+  }
+  .pricingColorBox h5 {
+    font-size: 20px;
+  }
+  .pricingColorBox h3 {
+    font-size: 30px;
+  }
+  .pricingColorBox span {
+    font-size: 19px;
+  }
+  .pricingColorBox h2 {
+    font-size: 18px;
+  }
+  .pricingBoxList li {
+    line-height: 30px;
+  }
+  .pricingBoxList {
+    padding: 0px 15px;
+  }
+  .pricingBoxList span {
+    font-size: 13px;
+  }
+  .pricingCard .list-unstyled {
+    margin-bottom: 16px;
+  }
+  .pricingSpacingBox {
+    padding:  20px 0px;
+  }
+  /* _________________________________________ Our Team ________________________________________ */
+  .ourTeamMain .card-body {
+    padding: 10px;
+  }
+  .ourTeamMain {
+    margin: 20px 0px 0px 0px;
+  }
+  .ourTeamMain .card-title {
+    line-height: 25px;
+    font-size: 16px;
+  }
+  .ourTeamMain .card-subtitle {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  /* _________________________________________ What People Say ________________________________________ */
+  .peopleSayBgColor .slick-prev,
+  .peopleSayBgColor .slick-next {
+    display: none !important;
+  }
+  .peopleSayBgColor {
+    padding: 30px 0;
+  }
+  .peopleDetails p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0px;
+  }
+  .peopleDetails {
+    max-width: 75%;
+  }
+  .peopleDetails h3 {
+    line-height: 20px;
+  }
+  /* _________________________________________ Our Blog ________________________________________ */
+  .ourBlog .slick-prev,
+  .ourBlog .slick-next {
+    top: -25px;
+  }
+  .blogCardBody hr {
+    margin: 10px 0;
+  }
+  .ourBlogCard {
+    margin-top: 10px;
+  }
+
+  .ourBlogCard .card-title a {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .ourBlogContain span {
+    font-size: 15px;
+  }
+  .ourBlogCard .card-body {
+    padding: 15px;
+  }
+  .blogCardBody .card-text {
+    margin-bottom: 10px;
+  }
+  /* _________________________________________ Started Today Main ________________________________________ */
+  .startedTodayMainDivFloat .row {
+    align-items: center;
+  }
+  .startedEmailBox .form-control {
+    font-size: 14px;
+  }
+  .startedToday {
+    margin-top: 25px;
+  }
+  .startedTodaySideTextCol {
+    padding-left: 0;
+  }
+  .startedTodayMainDiv div {
+    max-width: 100%;
+    margin-left: 10px;
+  }
+  .startedTodayMainDiv span {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .startedTodaySideText p {
+    display: none;
+  }
+  .startedEmailBox {
+    margin-top: 15px;
+  }
+  .startedTodayMainDiv {
+    border: none;
+    text-align: center;
+  }
+  .startedTodayMainDiv img{
+    display: inline-block;
+    width: 30px;
+  }
+  .startedTodayMainDiv div {
+    display: inline;
+  }
+}
+@media (min-width: 320px) and (max-width: 399px) {
+  .header img {
+    height: 25px;
+  }
+  .navbar {
+    padding: 0;
+  }
+  /* _____________________________banner_____________________________ */
+  .bannerContain h6 {
+    font-size: 12px;
+    line-height: 10px;
+  }
+  .header .button {
+    max-height: 30px;
+    margin-top: 5px;
+  }
+  .bannerContain {
+    top: 40%;
+    left: 4%;
+    max-width: 100%;
+  }
+  .bannerContain h1 {
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .bannerContain h5 {
+    display: none;
+  }
+  .bannerBtn {
+    margin-top: 5px;
+  }
+
+  .button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .ourContact {
+    display: none;
+  }
+  /* _________________________________________ Choose Us ________________________________________ */
+
+  .chooseBox h6 {
+    font-size: 11px;
+  }
+  .chooseBox h3 {
+    font-size: 22px;
+    margin: 4px 0px;
+  }
+}
+@media (min-width: 400px) and (max-width: 575px) {
+  /* .header img {
+    height: 30px;
+  } */
+  .header .button {
+    max-height: 30px;
+    margin-top: 10px;
+  }
+  .navbar {
+    padding: 0;
+  }
+  /* _____________________________banner_____________________________ */
+
+  .bannerContain h6 {
+    font-size: 12px;
+    line-height: 10px;
+  }
+  .bannerContain {
+    top: 30%;
+    left: 4%;
+    max-width: 80%;
+  }
+  .bannerContain h1 {
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 13px;
+  }
+  .bannerContain h5 {
+    display: none;
+  }
+  .bannerBtn {
+    margin-top: 15px;
+  }
+  /* _________________________________________ Choose Us ________________________________________ */
+
+  .chooseBox h6 {
+    font-size: 15px;
+  }
+  .chooseBox h3 {
+    font-size: 23px;
+    margin: 4px 0px;
+  }
+}

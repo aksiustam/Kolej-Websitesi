@@ -1,0 +1,398 @@
+.blog :hover .blog-post-hover {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  transform: scale(1);
+}
+.recent {
+  position: relative;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.blog-post-hover {
+  opacity: 0;
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s ease;
+  transform: scale(1);
+  -webkit-transform: scale(0.8);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.blog-icon {
+  position: absolute;
+  font-size: 20px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  color: #FFF;
+}
+.blogCardMainClass {
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / 8%);
+  margin: 13px 0;
+}
+.blogSticky{
+  position: sticky;
+  top: 0;
+}
+.blogpageFstContainBlog img {
+  margin: 15px 0 !important;
+}
+.blogpageFstContainBlog h5 {
+  font-size: 22px;
+  color: #9b0000;
+  margin: 0;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.blogpageFstContainBlog h2 {
+  font-size: 27px;
+  font-family: 600;
+  margin: 0;
+  line-height: 38px;
+}
+.blogpageFstContainBlog h3 {
+  font-size: 16px;
+  color: #707070;
+  font-weight: 400;
+  line-height: 30px;
+  margin: 0;
+}
+.mainBlogBody {
+  padding: 15px;
+}
+.mainBlogBody h2 {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.mainBlogBody .ourBlogContainIcon {
+  margin: 0 5px;
+}
+
+
+
+
+
+/* ____________________________________ */
+.followUs h2,
+.popularTags h2 {
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+.sideblogbtn {
+  padding: 10px 0;
+}
+.blogpage img {
+  margin: 30px 0;
+}
+.bloghr {
+  height: 100%;
+  width: 1px;
+}
+.blogpagesidemaindiv {
+  margin-left: 50px;
+}
+.sideblogSubContain .row {
+  align-items: center;
+}
+.blogSlider .progress {
+  width: 100%;
+  margin: 10px 0px 15px 0px;
+}
+
+.blogSlider .scrollbar h3 {
+  font-size: 16px;
+}
+.popularTags {
+  margin: 0px 0 30px 0px;
+}
+.popularTags button {
+  margin: 3px;
+}
+.blogpageIcon {
+  background-color: #f5f5f5;
+  margin: 7px -5px;
+  cursor: pointer;
+  padding:  10px;
+}
+.blogpageIcon i {
+  width: 35px;
+  font-size: 18px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 0px;
+  padding: 7px 0px;
+  text-align: center;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+}
+.blogpageIcon:hover i {
+  color: #9b0000;
+}
+.followUs {
+  margin: 30px 0;
+}
+.blogpageIcon span {
+  font-size: 14px;
+  margin-left: 5px;
+}
+.blogsidefstpart .row{
+  align-items: center;
+}
+/* ________________Review__________________ */
+.Review-box .Review-icon-person {
+  color: #707070;
+  opacity: 0.5;
+  font-size: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.Course-review {
+  margin: 15px 0;
+}
+.Course-review h3 {
+  color: #9b0000;
+  font-size: 22px;
+  margin: 0;
+}
+.Course-review-star {
+  color: #ffb608;
+  font-size: 18px;
+}
+
+.Review-box {
+  display: inline-block;
+  border: 1px solid #c9c9c9;
+  background-color: #f9f9f9;
+  padding: 24px;
+  margin: 10px 0;
+}
+.Review-author {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.Review-content p {
+  display: inline-block;
+  margin: 0 auto;
+  margin-left: 62px;
+  vertical-align: top;
+}
+/* ********************************************Responsive************************************************ */
+
+@media (min-width: 1200px) and (max-width: 1410px) {
+}
+/* ***************************************************** 992 - 1199 ***************************************************** */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sideblogSubContain .paragraph{
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .blogpage img {
+    margin: 20px 0;
+  }
+  .blogpageIcon {
+    margin: 3px -9px;
+    padding: 6px;
+  }
+  .blogpageIcon i {
+    width: 30px;
+    font-size: 16px;
+  }
+  .blogpageIcon span {
+    font-size: 13px;
+  }
+}
+/* ***************************************************** 768 - 991 ***************************************************** */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .followUs {
+    margin: 0px 0;
+  }
+  .blogpage img {
+    margin: 10px 0;
+  }
+}
+/* ***************************************************** 576 - 767 ***************************************************** */
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .blogPage .ourBlogContain{
+    display: block !important;
+  }
+  .blogPage .ourBlogContain .ourBlogContainIcon {
+    float: none;
+    display: inline-block !important;
+  }
+  .blogPage .mainBlogBody .ourBlogContainIcon {
+    margin: 0 2px;
+  }
+.blogPage .mainBlogBody h2 {
+margin: 0;
+font-size: 17px;
+}
+.blogPage .ourBlogContain span {
+  font-size: 13px;
+}
+.blogPage .blogdate{
+margin-right: 25px;
+font-size: 14px;
+}
+.blogPage hr{
+  margin: 8px 0;
+}
+.blogpageFstContainBlog h2 {
+  font-size: 22px;
+  line-height: 30px;
+}
+.blogpageFstContainBlog h3 {
+  font-size: 15px;
+  line-height: 30px;
+}
+.blogpageFstContainBlog h5{
+  margin-bottom: 5px;
+}
+.blogpage img {
+  margin: 15px 0;
+}
+.sideblogSubContain .paragraph {
+  line-height: 18px;
+  font-size: 12px;
+}
+.Review-box{
+padding: 18px;
+}
+.Review-box .Review-icon-person {
+  font-size: 45px;
+}
+.Review-author h6{
+  margin: 0;
+}
+.Course-review-star {
+  color: #ffb608;
+  font-size: 15px;
+}
+.blogsidefstpart {
+  text-align: center ;
+}
+.blogSlider{
+  text-align: left;
+}
+.popularTags {
+  margin: 0px 0;
+}
+.followUs h2, .popularTags h2 {
+  margin: 0px 0px 5px 0;
+}
+}
+/* ***************************************************** 320 - 575 ***************************************************** */
+
+@media (min-width: 320px) and (max-width: 575px) {
+  .blogpageFstContainBlog h2 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .blogpageFstContainBlog h3 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .ourBlogContain span {
+    font-size: 14px;
+  }
+  .blogpageFstContainBlog h5,.Course-review h3  {
+    font-size: 18px;
+    margin: 0;
+  }
+  .blogpageFstContainBlog img {
+    margin: 10px 0 !important;
+  }  
+  .blogpage img {
+    margin: 15px 0;
+}
+.sideblogSubContain .paragraph{
+margin-bottom: 15px;
+}
+.Review-content p{
+  margin: 0;
+}
+.Review-box{
+  padding: 10px;
+}
+.blogSlider .scrollbar h3 {
+  font-size: 14px;
+}
+.blogSlider .progress {
+  width: 100%;
+  margin: 8px 0px 13px 0px;
+}
+.followUs {
+  margin: 30px 0;
+  margin-bottom: 15px;
+}
+.followUs h2, .popularTags h2 {
+  font-size: 20px;
+  color: #9b0000;
+}
+.blogpageIcon i {
+  width: 30px;
+  font-size: 15px;
+}
+.blogpageIcon{
+  padding: 5px;
+}
+.blogpageIcon span {
+  font-size: 12px;
+}
+.blogpage hr{
+  margin: 8px 0;
+ 
+}
+.blogPage .startedEmailBox {
+  margin-top: 0px !important;
+}
+.popularTags {
+  margin: 15px 0;
+}
+.mainBlogBody hr{
+margin: 10px 0;
+}
+}
+@media (min-width: 320px) and (max-width: 403px) {
+  .blogPage .ourBlogContain{
+    display: block !important;
+  }
+  .blogPage .ourBlogContain .ourBlogContainIcon {
+    float: none;
+    display: inline-block !important;
+  }
+  .blogPage .mainBlogBody .ourBlogContainIcon {
+    margin: 0 2px;
+  }
+  .blogPage .mainBlogBody h2 {
+  margin: 0;
+  font-size: 17px;
+  }
+  .blogPage .ourBlogContain span {
+  font-size: 13px;
+  }
+  .blogPage .blogdate{
+  margin-right: 100%;
+  font-size: 14px;
+  }
+  .blogPage hr{
+  margin: 8px 0;
+  }
+}
+@media (min-width: 404px) and (max-width: 575px) {}
+

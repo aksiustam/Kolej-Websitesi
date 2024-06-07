@@ -1,0 +1,254 @@
+.amazingExpertise .row {
+  align-items: center;
+  margin-top: 80px;
+}
+.amazingColContain {
+  margin-left: 50px;
+}
+.amazingColContain .scrollbar {
+  margin-top: 20px;
+}
+.servicesBanner {
+  background-image: url("../../assets/Images/Services/ServicesBanner.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 180px 0px;
+  background-attachment: fixed;
+}
+
+.title {
+  max-width: 30%;
+  margin: 0 auto;
+}
+.servicesCards {
+  margin-bottom: 80px;
+}
+.servicesExploreSolution h2 {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.servicesExploreSolution span {
+  color: #9b0000;
+  letter-spacing: 1px;
+}
+.servicesExploreSolution p {
+  font-size: 18px;
+  line-height: 25px;
+margin-top: 0px;
+}
+.servicesCards .featuresCard {
+  padding: 20px;
+}
+.featuresCard {
+  text-align: center;
+}
+.featuresCard i {
+  font-size: 50px;
+  transition: 0.4s ease;
+}
+.featuresCard:hover i {
+  /* color: #9b0000; */
+  transform: rotateY(3.142rad);
+}
+.servicesCards .featuresCardContain {
+  text-align: center;
+}
+.servicesCards .featuresCard {
+  margin: 0px 0px;
+}
+.servicesExploreSolution{
+  margin-bottom: 10px;
+}
+.servicesCards #open {
+  text-align: center;
+  /* color: #9b0000; */
+}
+
+.servicesCards h3 {
+  font-size: 23px;
+margin: 15px 0;
+transition: 0.4s ease;
+color: black;
+}
+.servicesCards h3:hover {
+  color: #9b0000;
+}
+#open i {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #000;
+}
+#open i:hover {
+  /* transform: none; */
+  color: #9b0000;
+}
+
+
+
+/* ____________ScrollBar________________ */
+.scrollbar {
+  left: 0;
+}
+.scrollbar h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0px 0px 0px 0px;
+}
+.progress {
+  background-color: #d8d8d8;
+  border-radius: 0px;
+  position: relative;
+  margin: 15px 0px 20px 0px;
+  height: 12px;
+  width: 500px;
+}
+
+.progress-done {
+  background: #9b0000;
+  border-radius: 0px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
+}
+
+
+/* ********************************************Responsive************************************************ */
+
+@media (min-width: 1200px) and (max-width: 1410px) {
+
+  .servicesExploreSolution h2 {
+    font-size: 35px;
+  }
+}
+
+/* ********************************************Responsive************************************************ */
+
+@media (min-width: 1200px) and (max-width: 1410px) {
+
+  .servicesCards h3 {
+    font-size: 20px;
+  }
+}
+/* ***************************************************** 992 - 1199 ***************************************************** */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .progress{
+width:100%
+}
+  .servicesExploreSolution h2 {
+    font-size: 36px;
+  }
+  .servicesExploreSolution p {
+    font-size: 17px;
+  }
+  .featuresCard i {
+    font-size: 45px;
+  }
+  .servicesCards h3 {
+    font-size: 18px;
+  }
+  .servicesCards .featuresCard {
+    padding: 12px;
+  }
+}
+
+/* ***************************************************** 768 - 991 ***************************************************** */
+
+@media (min-width: 768px) and (max-width: 991px) {
+.progress{
+width:100%
+}
+  .servicesExploreSolution h2 {
+    font-size: 30px;
+  }
+  .servicesExploreSolution p {
+    font-size: 16px;
+  }
+  .servicesCards h3 {
+    font-size: 18px;
+  }
+  .featuresCard i {
+    font-size: 40px;
+  }
+  .details .summary {
+    font-size: 15px;
+  }
+  .amazingColContain {
+    margin-left: 0px;
+  }
+}
+/* ***************************************************** 576 - 767 ***************************************************** */
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .progress{
+width:100%
+}
+  .amazingColContain {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  .servicesExploreSolution h2 {
+    font-size: 30px;
+  }
+  .servicesExploreSolution p {
+    font-size: 16px;
+    margin-top: 0px;
+  }
+  .servicesCards .featuresCard {
+    padding: 19px;
+  }
+  .servicesCards h3 {
+    font-size: 18px;
+  }
+}
+/* ***************************************************** 320 - 575 ***************************************************** */
+
+@media (min-width: 320px) and (max-width: 575px) {
+  
+  .progress{
+width:100%
+}
+  .amazingExpertise .row {
+    margin-top: 30px;
+  }
+  .amazingExpertise .titleFont h3{
+margin-top: 15px;
+  }
+
+  .servicesCards {
+    margin-bottom: 40px;
+}
+  .amazingColContain {
+    margin-left: 0px;
+}
+  .servicesExploreSolution h2 {
+    font-size: 25px;
+  }
+  .servicesExploreSolution p {
+    font-size: 13px;
+    line-height: 15px;
+    margin-top: 0px;
+  }
+  .servicesCards .featuresCard {
+    padding: 10px;
+    margin: 20px 0px;
+
+  }
+  .featuresCard i {
+    font-size: 30px;
+  }
+  .servicesCards h3 {
+    font-size: 15px;
+  }
+  .details .summary {
+    font-size: 12px;
+  }
+
+}

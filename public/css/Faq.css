@@ -1,0 +1,205 @@
+.faqBanner {
+  background-image: url("../../assets/Images/Faq/FaqBannerImg.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 180px 0px;
+  background-attachment: fixed;
+}
+.faqContain {
+  margin-top: 80px;
+}
+.faqContain .accordion-item{
+  border-radius: 0;
+}
+.accordion-button:not(.collapsed) {
+  color: #9B0000;
+}
+.accordion-button{
+  background-color: #fff !important;
+}
+.accordion-item:first-of-type .accordion-button,
+.accordion-button,
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-body {
+  line-height: 35px;
+  color: #666666;
+}
+.accordion-button:not(.collapsed)::after{
+  filter: invert(30%) grayscale(100%) brightness(70%) contrast(4);
+}
+
+/* _____________________________Our Testimonial_____________________________ */
+
+.ourTestimonialCol {
+  padding: 0px;
+}
+.ourTestimonialMain {
+  padding: 80px 0px;
+}
+.ourTestimonialCard {
+  margin-top: 40px;
+}
+.ourTestimonialCard .featuresCard {
+  padding: 20px 50px;
+  box-shadow: none;
+  border: 1px solid #e2e1e1;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.ourTestimonialCard .featuresCard:hover {
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 8%);
+  border: none;
+}
+.ourTestimonialCard .slick-slider {
+  padding: 0px;
+}
+.testimonialImg {
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  right: 0;
+  border-radius: 50px;
+}
+.testimonialQuote {
+  margin: 45px 0px 10px 0px;
+  filter: invert(0%) sepia(2%) saturate(20%) hue-rotate(317deg) brightness(91%)
+    contrast(97%);
+}
+
+.testimonialCard h6 {
+  font-size: 15px;
+  color: #000;
+  margin: 10px 0px 5px 0px;
+}
+.testimonialCard h2 {
+  font-size: 16px;
+  color: #9b0000;
+  margin: 0;
+}
+.ourTestimonialMain .slick-next {
+  display: block;
+  bottom: 0;
+  top: -50px;
+  right: 20px;
+  left: auto;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 0px !important;
+  background-color: #9b0000;
+  opacity: unset;
+  transition: 0.5s ease;
+  box-shadow: 0 0 10px #e2e1e1;
+}
+.ourTestimonialMain .slick-prev {
+  display: block;
+  bottom: 0;
+  top: -50px;
+  right: 70px;
+  left: auto;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 0px !important;
+  background-color: #9b0000;
+  opacity: unset;
+  transition: 0.5s ease;
+  box-shadow: 0 0 10px #e2e1e1;
+}
+.ourTestimonialMain .slick-next:hover,
+.ourTestimonialMain .slick-prev:hover {
+  background-color: #ffffff;
+}
+.ourTestimonialMain .slick-next::before {
+  content: "\f105";
+  font-family: FontAwesome;
+  font-size: 25px;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.ourTestimonialMain .slick-prev::before {
+  content: "\f104";
+  font-family: FontAwesome;
+  font-size: 25px;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.ourTestimonialMain .slick-arrow:hover::before {
+  color: black;
+}
+.featuresCard {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #e2e1e1;
+  border-radius: 0px;
+  padding: 44px;
+  position: relative;
+  transition: 0.4s ease;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* ********************************************Responsive************************************************ */
+
+@media (min-width: 1200px) and (max-width: 1410px) {
+}
+/* ***************************************************** 992 - 1199 ***************************************************** */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .accordion-body {
+    line-height: 30px;
+    font-size: 14px;
+  }
+  .faqContain {
+    margin-top: 60px;
+  }
+}
+/* ***************************************************** 768 - 991 ***************************************************** */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .accordion-button {
+    font-size: 14px;
+  }
+  .faqContain {
+    margin-top: 50px;
+  }
+}
+/* ***************************************************** 576 - 767 ***************************************************** */
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .accordion-button,
+  .accordion-body {
+    font-size: 13px;
+  }
+  .faqContain {
+    margin-top: 40px;
+  }
+}
+/* ***************************************************** 320 - 575 ***************************************************** */
+
+@media (min-width: 320px) and (max-width: 575px) {
+  .accordion {
+    margin: 15px 0px;
+  }
+  .accordion-button {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .accordion-body {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .accordion-item:first-of-type .accordion-button,
+  .accordion-button {
+    padding: 10px;
+  }
+  .accordion-body {
+    padding: 10px;
+    padding-top: 0px;
+  }
+  .faqContain {
+    margin-top: 30px;
+  }
+}

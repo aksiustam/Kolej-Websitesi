@@ -1,0 +1,115 @@
+.planingBanner {
+  background-image: url("../../assets/Images/Planing/Planingbanner.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 180px 0px;
+  background-attachment: fixed;
+}
+.planingIconMainDiv {
+  padding: 80px 0px 0px 0px;
+}
+.planingIcon {
+  text-align: center;
+  padding: 35px;
+  cursor: pointer;
+}
+.planingIcon:hover{
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 8%);
+  border-radius: 10px;
+}
+.planingIcon i {
+  font-size: 40px;
+  color: #9b0000;
+  transition: 0.3s ease;
+}
+.planingIcon:hover i{
+  transform: rotateY(3.142rad);
+}
+.planingIcon h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: 600;
+}
+.planingIcon h6 {
+  font-size: 18px;
+  line-height: 30px;
+  color: #666666;
+  font-weight: 300;
+}
+/* ********************************************Responsive************************************************ */
+
+@media (min-width: 1200px) and (max-width: 1410px) {
+
+  .contactIconBgShadow h2 {
+    font-size: 22px;
+  }
+}
+/* ***************************************************** 992 - 1199 ***************************************************** */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+  .planingIcon h2 {
+    font-size: 18px;
+  }
+  .planingIcon h6 {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .planingIconMainDiv {
+    padding: 60px 0px 0px 0px;
+  }
+}
+/* ***************************************************** 768 - 991 ***************************************************** */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .planingIcon{
+    padding: 5px;
+  }
+  .planingIcon h2 {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  .planingIcon h6 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .planingIconMainDiv {
+    padding: 50px 0px 0px 0px;
+  }
+}
+/* ***************************************************** 576 - 767 ***************************************************** */
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+  .planingIcon{
+    padding: 20px;
+  }
+  .planingIcon h6 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .planingIconMainDiv {
+    padding: 40px 0px 0px 0px;
+  }
+}
+/* ***************************************************** 320 - 575 ***************************************************** */
+
+@media (min-width: 320px) and (max-width: 575px) {
+  .planingIconMainDiv{
+    padding: 30px 0px 0px 0px;
+  }
+  .planingIcon h2 {
+    font-size: 18px;
+  }
+  .planingIcon h6 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .planingIcon {
+    padding: 15px;
+  }
+}
+
