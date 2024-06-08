@@ -1,0 +1,10 @@
+.parallel {
+    
+    transform: skew(-20deg);
+  }
+
+  .noparallel {
+    transform: skew(20deg);
+  }
+  
+  

@@ -71,87 +71,8 @@
 }
 
 
-.weProBox::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 0;
-  height: 3px;
-  background-color: #9b0000;
-  transition: 0.3s ease;
-}
 
-.weProBox::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 0;
-  height: 8px;
-  background-color: var(--theme-black);
-  transition: 0.3s ease;
-  border-radius: 0 0 10px 10px;
-}
 
-.weProBox:hover::before {
-  width: 100%;
-}
-
-.weProBox {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 15px 32px;
-  transition: 0.5s ease;
-  background-color: #f5f5f5;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  min-height: 200px;
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-.weProBox:hover {
-  background-color: var(--theme-main-orange);
-}
-
-.weProBoxImg {
-  padding: 5px;
-  transition: 0.4s ease;
-  margin: 5px;
-  margin-right: 20px;
-}
-
-.weProBox img {
-  margin: 0;
-  max-width: unset;
-  width: 50px;
-  height: 50px;
-  filter: invert(54%) sepia(71%) saturate(5395%) hue-rotate(343deg) brightness(101%) contrast(94%);
-}
-
-.weProBox:hover img {
-  filter: none;
-}
-
-.weProBoxText h6 {
-  font-size: 22px;
-  line-height: 35px;
-  color: var(--theme-black);
-}
-
-.weProBox:hover .weProBoxText h6 {
-  color: var(--theme-white);
-}
-
-.weProBox:hover {}
-
-.weProBox .paragraph {
-  line-height: 24px;
-}
 
 /* _________________________________________ Choose Us ________________________________________ */
 
@@ -826,13 +747,7 @@
     padding: 34px 0px;
   }
   /* _________________________________________ we Provide ________________________________________ */
-  .weProBoxText h6 {
-    font-size: 17px;
-  }
-  .weProBoxText {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+  
   /* _________________________________________ What People Say ________________________________________ */
 
   .peopleDetails p {
@@ -897,13 +812,7 @@
   }
 
   /* _________________________________________ we Provide ________________________________________ */
-  .weProBoxText h6 {
-    font-size: 16px;
-  }
-  .weProBoxText {
-    margin-left: 0px;
-    margin-right: 10px;
-  }
+  
   .weProvide .titleFont {
     max-width: 95%;
   }
@@ -1029,14 +938,7 @@
       margin: 10px 0px 15px 0px;
   }
   /* _________________________________________ we Provide ________________________________________ */
-  .weProBox {
-      min-height: 150px;
-      display: block;
-  }
-  .weProBoxText h6 {
-      font-size: 18px;
-      line-height: 26px;
-  }
+
   /* _________________________________________ Choose Us ________________________________________ */
   .chooseBox {
       padding: 12px;
@@ -1180,30 +1082,7 @@
   }
 
   /* _________________________________________ we Provide ________________________________________ */
-  .weProBox {
-    display: inline-block;
-    padding: 20px;
-}
-.weProBoxImg {
-    margin: 0;
-    border: none;
-    display: inline-block;
-}
-.weProBox:hover .weProBoxText h6 {
-    color: var(--theme-main-orange);
-}
-.weProBox:hover .weProBoxImg {
-    background-color: var(--theme-main-orange);
-    /* margin-right: 50px; */
-}
-.weProBoxText h6 {
-    font-size: 16px;
-    margin-top: 10px;
-}
-.weProBoxText {
-    margin-left: 0px;
-    margin-right: 10px;
-}
+  
   .weProvide .titleFont {
     max-width: 95%;
   }
@@ -1401,22 +1280,7 @@
   }
 
   /* _________________________________________ we Provide ________________________________________ */
-  .weProBox {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    min-height: 160px
-}
-.weProBoxImg {
-    margin: 0;
-    border: none;
-    display: inline-block;
-}
-.weProBoxText h6 {
-    font-size: 16px;
-    line-height: 20px;
-    margin-top: 10px;
-}
+  
   .weProvide .titleFont {
     max-width: 95%;
   }
@@ -1621,23 +1485,7 @@
   }
 
   /* _________________________________________ we Provide ________________________________________ */
-  .weProBox {
-    display: block;
-    padding: 20px;
-  }
-  .weProBoxImg {
-    margin: 0;
-    border: none;
-    display: inline-block;
-  }
-  .weProBoxText h6 {
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  .weProBoxText {
-    margin-left: 0px;
-    margin-right: 10px;
-  }
+ 
   .weProvide .titleFont {
     max-width: 95%;
   }

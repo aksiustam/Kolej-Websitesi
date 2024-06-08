@@ -2,7 +2,8 @@ import Banner from "@/app/component/Home/Banner";
 import AboutUs from "@/app/component/Home/AboutUs";
 import WeProvide from "@/app/component/Home/WeProvide";
 import ChooseUs from "@/app/component/Home/ChooseUs";
-import HomeFAQ from "@/app/component/Home/HomeFAQ";
+import BilgiAl from "./component/Home/BilgiAl";
+import InstaPage from "./component/Home/InstaPage";
 export default function Home() {
   return (
     <main>
@@ -10,14 +11,8 @@ export default function Home() {
       <AboutUs />
       <WeProvide />
       <ChooseUs />
-      <HomeFAQ />
-      {/* 
-      <OurPricing />
-      <OurTeam />
-      <PeopleSay />
-      <OurBlog />
-      <Brandlogo />
-      <StartedToday /> */}
+      <BilgiAl />
+      <InstaPage />
     </main>
   );
 }

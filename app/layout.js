@@ -6,6 +6,7 @@ import "./globals.css";
 
 import { AOSInit } from "./aos";
 import Header from "./component/layout/Header";
+import Footer from "./component/layout/Footer";
 import Script from "next/script";
 
 export const metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       <body className={notoSans.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

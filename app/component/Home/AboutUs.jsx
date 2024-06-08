@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function AboutUs() {
   return (
     <>
-      <div className="container">
+      <div className="container -tw-mt-6">
         <div className="aboutus spacing">
           <Row className="aboutRow">
             <Col xl={6} lg={6} md={6} sm={5} xs={12}>
@@ -23,56 +23,59 @@ export default function AboutUs() {
 
             <Col xl={6} lg={6} md={6} sm={7} xs={12} data-aos="fade-up">
               <div className="titleFont">
-                <h3>About Our Company</h3>
-                <h2>More Than 20 Years We Provide Designing Service For You</h2>
+                <h3>Konya Boğaziçi Koleji</h3>
+                <h2>
+                  DAHA İYİ BİR GELECEK İÇİN{" "}
+                  <span className="tw-text-red-600">BOĞAZİÇİ</span>
+                </h2>
               </div>
               <p className="paragraph">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the is the industry's standard
-                dummy text ever since the 1500s, when an unknown printer took a
-                galley of type and scrambled it to make.
+                Eğitime gönül vermenin ülke geleceğine ne denli fayda
+                sağlayacağının farkındalığına sahip olan Boğaziçi Koleji
+                eğitime, bilime, gelişime sevdalı bir kurumdur. Dimağındaki
+                çağdaş eğitim düsturuyla eğitime öncü hizmetler vermektedir.
               </p>
               <div className="aboutUsPoint">
                 <Row>
                   <Col xl={6} lg={6} md={6} sm={6} xs={6}>
                     <div className="aboutCheckPoint">
                       <i className="fas fa-check-circle"></i>
-                      <span>Brilient Client Service</span>
+                      <span>Bilgili</span>
                     </div>
                   </Col>
                   <Col xl={6} lg={6} md={6} sm={6} xs={6}>
                     <div className="aboutCheckPoint">
                       <i className="fas fa-check-circle"></i>
-                      <span>24/7 Support</span>
+                      <span>Evrensel</span>
                     </div>
                   </Col>
                   <Col xl={6} lg={6} md={6} sm={6} xs={6}>
                     <div className="aboutCheckPoint">
                       <i className="fas fa-check-circle"></i>
-                      <span>Friendly Support</span>
+                      <span>Duyarlı</span>
                     </div>
                   </Col>
                   <Col xl={6} lg={6} md={6} sm={6} xs={6}>
                     <div className="aboutCheckPoint">
                       <i className="fas fa-check-circle"></i>
-                      <span>Unique Design</span>
+                      <span>İşbirlikçi</span>
                     </div>
                   </Col>
                   <Col xl={6} lg={6} md={6} sm={6} xs={6}>
                     <div className="aboutCheckPoint">
                       <i className="fas fa-check-circle"></i>
-                      <span>Proffesional</span>
+                      <span>Açık Fikirli</span>
                     </div>
                   </Col>
                   <Col xl={6} lg={6} md={6} sm={6} xs={6}>
                     <div className="aboutCheckPoint">
                       <i className="fas fa-check-circle"></i>
-                      <span>Best Services</span>
+                      <span>Düşünen</span>
                     </div>
                   </Col>
                 </Row>
               </div>
-              <button className="button tw-text-white">More About Us</button>
+              <button className="button tw-text-white">Daha Fazla</button>
             </Col>
           </Row>
         </div>

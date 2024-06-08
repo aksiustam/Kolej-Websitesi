@@ -1,69 +1,69 @@
 "use client";
 import { useState } from "react";
 import { Row, Col, Collapse, Container, Button } from "react-bootstrap";
-import { GrFacebookOption } from "react-icons/gr";
-import { FaLinkedinIn, FaPinterestP } from "react-icons/fa";
-import { BsTwitter } from "react-icons/bs";
-import logo from "@/public/image/bogazlogo.png";
+import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+
+import logo from "@/public/assets/common/bogazlogo.png";
 import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {
   const [Useopen, UsesetOpen] = useState(false);
   const [Sopen, SsetOpen] = useState(false);
-  const [Copen, CsetOpen] = useState(false);
+
   return (
     <>
-      <div className="Footer">
+      <div className="Footer tw-bg-[#041D74] tw-pt-12">
         <Container>
           <Row className="Footerbox">
             <Col xl={4} lg={4} md={4}>
               <div className="F-col-1 footer-text">
-                <div className="tw-pb-2 tw-border-b-2 tw-border-white">
-                  <h2>
-                    <Image
-                      src={logo}
-                      alt="logo"
-                      width={210}
-                      height={45}
-                      className="mx-auto img-fluid"
-                    />
-                  </h2>
-                </div>
-
+                <div className="tw-text-[#b7b1b1]">İLETİŞİM BİLGİLERİ</div>
                 <p>
-                  DreamLand Anaokulu, Konya’da Montessori eğitimi ile okul
-                  öncesi eğitim sunan yenilikçi bir kurumdur.DreamLand
-                  öğrencilerin öğrenme süreçlerinde aktif rol almalarını teşvik
-                  eder ve doğayı anlamaları ile korumaları için kendi
-                  keşiflerini yapmalarına olanak tanır.
+                  Telefon: 0332 323 00 99
+                  <br />
+                  E-mail: konyabogazicikoleji@gmail.com <br /> Adres:
+                  Kılınçarslan Mahallesi, Denizli Sokak, No:20 Selçuklu/Konya
                 </p>
-                <ul className="list-unstyled social-icon">
+                <ul className="list-unstyled social-icon ">
                   <li className="d-inline-block ">
-                    <a href="/" className="d-block">
+                    <a
+                      href="https://www.facebook.com/konyabogazici"
+                      className="d-block !tw-bg-[#041D74]"
+                    >
                       <i>
-                        <GrFacebookOption />
+                        <FaFacebook size={35} color="white" />
                       </i>
                     </a>
                   </li>
                   <li className="d-inline-block">
-                    <a href="/" className="d-block">
+                    <a
+                      href="https://www.instagram.com/konyabogazicikolej/"
+                      className="d-block !tw-bg-[#041D74]"
+                    >
                       <i>
-                        <FaLinkedinIn />
+                        <FaInstagram size={35} color="white" />
                       </i>
                     </a>
                   </li>
                   <li className="d-inline-block">
-                    <a href="/" className="d-block">
+                    <a
+                      href="https://x.com/konyabogazici"
+                      className="d-block !tw-bg-[#041D74]"
+                    >
                       <i>
-                        <FaPinterestP />
+                        <FaSquareXTwitter size={35} color="white" />
                       </i>
                     </a>
                   </li>
                   <li className="d-inline-block">
-                    <a href="/" className="d-block">
+                    <a
+                      href="https://www.youtube.com/channel/UC6DDVun_Ylu-L_njbkjEjBw"
+                      className="d-block !tw-bg-[#041D74]"
+                    >
                       <i>
-                        <BsTwitter />
+                        <FaYoutube size={35} color="white" />
                       </i>
                     </a>
                   </li>
@@ -143,68 +143,28 @@ const Footer = () => {
             </Col>
             <Col xl={4} lg={4} md={4}>
               <div className="F-col-4 footer-text FooterVertical">
-                <h2 className="footerLinkHeading">
-                  İletişim
-                  <Button
-                    className="Footer-button"
-                    onClick={() => CsetOpen(!Copen)}
-                    aria-controls="example-collapse-text"
-                    aria-expanded={Copen}
-                  ></Button>
-                </h2>
-                <Collapse in={Copen}>
-                  <ul className="list-unstyled">
-                    <li>
-                      <h4>Adress :</h4>
-                      <span>Yazır, Batıhan Sk. 42250 Selçuklu/Konya</span>
-                    </li>
-                    <li>
-                      <h4>Telefon :</h4>
-                      <span>0530 607 71 68</span>
-                    </li>
-                  </ul>
-                </Collapse>
-              </div>
-              <div className="F-col-4 footer-text FooterVertical">
-                <h2 className="footerLinkHeading tw-mt-2 tw-border-b-2">
-                  GİRİŞ ÇIKIŞ SAATLERİ
-                  <Button
-                    className="Footer-button"
-                    onClick={() => CsetOpen(!Copen)}
-                    aria-controls="example-collapse-text"
-                    aria-expanded={Copen}
-                  ></Button>
-                </h2>
-                <Collapse in={Copen}>
-                  <ul className="list-unstyled">
-                    <li>
-                      <h4>Nöbetçi Öğretmen</h4>
-                      <span>07.15 - 18.45</span>
-                    </li>
-                    <li>
-                      <h4>Eğitim Öğretim</h4>
-                      <span>08.30 - 17.00</span>
-                    </li>
-                    <li>
-                      <h4>Öğretmen</h4>
-                      <span>08.00 - 17.30</span>
-                    </li>
-                    <li>
-                      <h4>Cumartesi (Sadece Kayıt)</h4>
-                      <span>10.00 - 17.00</span>
-                    </li>
-                    <li>
-                      <h4>Pazar Kapalı</h4>
-                    </li>
-                  </ul>
-                </Collapse>
+                <div className="tw-pb-2 tw-border-b-2 tw-border-white">
+                  <h2>
+                    <Image
+                      src={logo}
+                      alt="logo"
+                      width={220}
+                      height={30}
+                      className="mx-auto img-fluid"
+                    />
+                  </h2>
+                </div>
               </div>
             </Col>
           </Row>
-          <div className="Footer-bottom">
-            <h6 className="F-copywrite">Copyright © 2024 . AYD TANITIM</h6>
-          </div>
         </Container>
+        <div className="Footer-bottom tw-bg-red-600 tw-px-4 tw-py-4">
+          <Container>
+            <h6 className="F-copywrite tw-text-white">
+              Copyright © 2024 . AYD TANITIM
+            </h6>
+          </Container>
+        </div>
       </div>
     </>
   );
