@@ -1,0 +1,72 @@
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider      = "prisma-client-js"
+    binaryTargets = ["native", "debian-openssl-1.0.x"]
+}
+
+model Account {
+    id                String  @id @default(cuid())
+    userId            Int
+    type              String
+    provider          String
+    providerAccountId String
+    refresh_token     String?
+    access_token      String?
+    expires_at        Int?
+    token_type        String?
+    scope             String?
+    id_token          String?
+    session_state     String?
+    User              User    @relation(fields: [userId], references: [id])
+
+    @@unique([provider, providerAccountId])
+}
+
+model Galery {
+    id       Int     @id @default(autoincrement())
+    category String?
+    imageid  String?
+    imageurl String?
+}
+
+model Blog {
+    id        Int       @id @default(autoincrement())
+    name      String?
+    index     Int?
+    slug      String    @unique
+    desc      String?
+    quill     Json?
+    images    Json?
+    createdAt DateTime? @default(now())
+    updatedAt DateTime? @updatedAt
+}
+
+model Ayarlar {
+    id           Int       @id
+    banner1      Json?
+    banner2      Json?
+    banner3      Json?
+    InstaExpDate DateTime?
+    InstaToken   String?
+}
+
+model User {
+    id        Int       @id @default(autoincrement())
+    email     String
+    password  String?
+    createdAt DateTime? @default(now())
+    updatedAt DateTime? @updatedAt
+    role      Role      @default(ADMIN)
+    Account   Account[]
+
+    @@unique([email])
+}
+
+enum Role {
+    USER
+    ADMIN
+}

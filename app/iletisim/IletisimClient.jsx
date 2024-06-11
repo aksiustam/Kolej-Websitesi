@@ -5,13 +5,19 @@ import { Container, Row, Col } from "react-bootstrap";
 import Iframe from "react-iframe";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import "@/public/css/Portfolio.css";
 const IletisimClient = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
     <>
-      <Container className="tw-mt-12">
+      <div className="otherPageBanner portfolioBanner">
+        <div className="text-center title">
+          <h6 className="tw-text-shadow-md">İLETİŞİM</h6>
+        </div>
+      </div>
+      <Container className="tw-mt-16">
         <div className="Title">
           <Row>
             <Col xl={6} lg={6} md={6} sm={12}>

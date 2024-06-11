@@ -39,9 +39,9 @@ const AdminClient = () => {
     <>
       <div className="tw-flex tw-items-center tw-justify-center tw-py-24">
         <div className="tw-flex tw-flex-col tw-items-center tw-justify-center tw-gap-3 tw-w-96">
-          <div className="tw-flex tw-w-[300px] tw-h-[80px]">
+          <div className="tw-flex tw-w-[400px] tw-h-[100px]">
             <Image
-              src={"/image/bogazlogokare.png"}
+              src={"/assets/common/bogazlogokare.png"}
               alt={"LOGO"}
               fill
               className="!tw-relative tw-object-contain"

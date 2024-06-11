@@ -50,7 +50,7 @@ const BilgiAl = () => {
                   </div>
                 </div>
               </div>
-              <div className="tw-flex tw-items-center tw-justify-between">
+              <div className="tw-flex tw-items-center tw-justify-between  tw-flex-col md:tw-flex-row">
                 <div className="tw-flex">
                   <div className="form-inputs">
                     <div className="input-container tw-flex tw-items-center tw-justify-center tw-gap-3">

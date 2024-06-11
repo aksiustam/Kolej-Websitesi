@@ -6,6 +6,7 @@ import logo from "@/public/assets/common/bogazlogo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { CgScreenWide } from "react-icons/cg";
+import { usePathname } from "next/navigation";
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showBtn1, setShowBtn1] = useState(false);
@@ -59,131 +60,137 @@ const Header = () => {
         break;
     }
   };
+
+  const pathname = usePathname();
+  const checkadmin = pathname.startsWith("/admin");
+
   return (
     <>
-      <div className="header">
-        <div className="sticky-top " id="stamenu">
-          <Navbar expand="lg" collapseOnSelect>
-            <div className="container">
-              <div className="inner-header">
-                <Navbar.Brand href="/">
-                  <Image
-                    src={logo}
-                    alt="logo"
-                    width={130}
-                    height={35}
-                    className="img-fluid mx-auto "
-                  />
-                </Navbar.Brand>
-                <Button
-                  className="btn-navbar navbar-toggle"
-                  onClick={onToggle}
-                  data-toggle="collapse"
-                  data-target=".nabar-ex1-collapse"
-                >
-                  <i className="fa fa-bars" aria-hidden="true"></i>
-                </Button>
-
-                <div id="mySidenav" className="sidenav menu-vertical">
-                  <div className="close-nav hidden-md hidden-lg hidden-xl ">
-                    <span>Menu</span>
-                    <Button
-                      className="closebtn pull-right"
-                      onClick={onCloseNav}
-                    >
-                      <i className="fa fa-times" aria-hidden="true"></i>
-                    </Button>
-                  </div>
-
-                  <Nav
-                    className="justify-content-center"
-                    id="myOverlay"
-                    style={{ flex: 1 }}
+      {!checkadmin && (
+        <div className="header">
+          <div className="sticky-top " id="stamenu">
+            <Navbar expand="lg" collapseOnSelect>
+              <div className="container">
+                <div className="inner-header">
+                  <Navbar.Brand href="/">
+                    <Image
+                      src={logo}
+                      alt="logo"
+                      width={130}
+                      height={35}
+                      className="img-fluid mx-auto "
+                    />
+                  </Navbar.Brand>
+                  <Button
+                    className="btn-navbar navbar-toggle"
+                    onClick={onToggle}
+                    data-toggle="collapse"
+                    data-target=".nabar-ex1-collapse"
                   >
-                    <Link href="/" legacyBehavior passHref>
-                      <Nav.Link className="nav-links">Anasayfa</Nav.Link>
-                    </Link>
-                    <NavDropdown
-                      title="Kurumsal"
-                      id="collasible-nav-dropdown "
-                      show={showDropdown}
-                      onMouseLeave={() => handleMouseLeave("Menu1")}
-                      onMouseOver={() => handleMouseOver("Menu1")}
+                    <i className="fa fa-bars" aria-hidden="true"></i>
+                  </Button>
+
+                  <div id="mySidenav" className="sidenav menu-vertical">
+                    <div className="close-nav hidden-md hidden-lg hidden-xl ">
+                      <span>Menu</span>
+                      <Button
+                        className="closebtn pull-right"
+                        onClick={onCloseNav}
+                      >
+                        <i className="fa fa-times" aria-hidden="true"></i>
+                      </Button>
+                    </div>
+
+                    <Nav
+                      className="justify-content-center"
+                      id="myOverlay"
+                      style={{ flex: 1 }}
                     >
-                      <Link href="/hakkimizda" legacyBehavior passHref>
-                        <NavDropdown.Item>Hakkımızda</NavDropdown.Item>
+                      <Link href="/" legacyBehavior passHref>
+                        <Nav.Link className="nav-links">Anasayfa</Nav.Link>
                       </Link>
-                      <Link href="/kurucumuz" legacyBehavior passHref>
-                        <NavDropdown.Item>Kurucumuz</NavDropdown.Item>
+                      <NavDropdown
+                        title="Kurumsal"
+                        id="collasible-nav-dropdown "
+                        show={showDropdown}
+                        onMouseLeave={() => handleMouseLeave("Menu1")}
+                        onMouseOver={() => handleMouseOver("Menu1")}
+                      >
+                        <Link href="/hakkimizda" legacyBehavior passHref>
+                          <NavDropdown.Item>Hakkımızda</NavDropdown.Item>
+                        </Link>
+                        <Link href="/kurucumuz" legacyBehavior passHref>
+                          <NavDropdown.Item>Kurucumuz</NavDropdown.Item>
+                        </Link>
+                        <Link href="/ekibimiz" legacyBehavior passHref>
+                          <NavDropdown.Item>Ekibimiz</NavDropdown.Item>
+                        </Link>
+                        <Link href="/egitim-sistemimiz" legacyBehavior passHref>
+                          <NavDropdown.Item>Eğitim Sistemimiz</NavDropdown.Item>
+                        </Link>
+                      </NavDropdown>
+                      <Link href="/dersler/dindersi" legacyBehavior passHref>
+                        <Nav.Link className="nav-links">Dersler</Nav.Link>
                       </Link>
-                      <Link href="/ekibimiz" legacyBehavior passHref>
-                        <NavDropdown.Item>Ekibimiz</NavDropdown.Item>
+                      <Link href="/kuluplar" legacyBehavior passHref>
+                        <Nav.Link className="nav-links">Kulüpler</Nav.Link>
                       </Link>
-                      <Link href="/egitim-sistemimiz" legacyBehavior passHref>
-                        <NavDropdown.Item>Eğitim Sistemimiz</NavDropdown.Item>
+                      <Link href="/galeri" legacyBehavior passHref>
+                        <Nav.Link className="nav-links">Galeri</Nav.Link>
                       </Link>
-                    </NavDropdown>
-                    <Link href="/dersler" legacyBehavior passHref>
-                      <Nav.Link className="nav-links">Dersler</Nav.Link>
-                    </Link>
-                    <Link href="/kuluplar" legacyBehavior passHref>
-                      <Nav.Link className="nav-links">Kulüpler</Nav.Link>
-                    </Link>
-                    <Link href="/galeri" legacyBehavior passHref>
-                      <Nav.Link className="nav-links">Galeri</Nav.Link>
-                    </Link>
-                    <Link href="/haberler" legacyBehavior passHref>
-                      <Nav.Link className="nav-links">Haberler</Nav.Link>
-                    </Link>
+                      <Link href="/haberler" legacyBehavior passHref>
+                        <Nav.Link className="nav-links">Haberler</Nav.Link>
+                      </Link>
 
-                    <Link href="/iletisim" legacyBehavior passHref>
-                      <Nav.Link className="nav-links">İletişim</Nav.Link>
-                    </Link>
-                  </Nav>
+                      <Link href="/iletisim" legacyBehavior passHref>
+                        <Nav.Link className="nav-links">İletişim</Nav.Link>
+                      </Link>
+                    </Nav>
+                  </div>
+                  <div className="w3-overlay w3-animate-opacity"></div>
+                  <NavDropdown
+                    title="Boğaziçi Dijital"
+                    id="collasible-nav-dropdown"
+                    show={showBtn1}
+                    onMouseLeave={() => handleMouseLeave("Btn1")}
+                    onMouseOver={() => handleMouseOver("Btn1")}
+                    className="button tw-flex tw-items-center tw-justify-center tw-text-white tw-h-10 -tw-mr-12"
+                  >
+                    <CgScreenWide size={24} color="white" />
+                    <NavDropdown.Item href="https://ogrenci.bogazici.k12.tr">
+                      Öğrenci Girişi
+                    </NavDropdown.Item>
+
+                    <NavDropdown.Item href="https://ogrenci.bogazici.k12.tr/">
+                      Veli Girişi
+                    </NavDropdown.Item>
+
+                    <NavDropdown.Item href="https://asistan.bogazici.k12.tr/">
+                      Öğretmen Girişi
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <NavDropdown
+                    title="Boğaziçi Store"
+                    id="collasible-nav-dropdown"
+                    show={showBtn2}
+                    onMouseLeave={() => handleMouseLeave("Btn2")}
+                    onMouseOver={() => handleMouseOver("Btn2")}
+                    className="button tw-flex tw-items-center tw-justify-center tw-text-white tw-h-10"
+                  >
+                    <NavDropdown.Item href="https://bogazici.okulavm.com/kullanici/login">
+                      Kitap Satışı
+                    </NavDropdown.Item>
+
+                    <NavDropdown.Item href="https://ogrenci.bogazici.k12.tr/">
+                      Yemek Ödemesi
+                    </NavDropdown.Item>
+                  </NavDropdown>
                 </div>
-                <div className="w3-overlay w3-animate-opacity"></div>
-                <NavDropdown
-                  title="Boğaziçi Dijital"
-                  id="collasible-nav-dropdown"
-                  show={showBtn1}
-                  onMouseLeave={() => handleMouseLeave("Btn1")}
-                  onMouseOver={() => handleMouseOver("Btn1")}
-                  className="button tw-flex tw-items-center tw-justify-center tw-text-white tw-h-10 -tw-mr-12"
-                >
-                  <CgScreenWide size={24} color="white" />
-                  <NavDropdown.Item href="https://ogrenci.bogazici.k12.tr">
-                    Öğrenci Girişi
-                  </NavDropdown.Item>
-
-                  <NavDropdown.Item href="https://ogrenci.bogazici.k12.tr/">
-                    Veli Girişi
-                  </NavDropdown.Item>
-
-                  <NavDropdown.Item href="https://asistan.bogazici.k12.tr/">
-                    Öğretmen Girişi
-                  </NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown
-                  title="Boğaziçi Store"
-                  id="collasible-nav-dropdown"
-                  show={showBtn2}
-                  onMouseLeave={() => handleMouseLeave("Btn2")}
-                  onMouseOver={() => handleMouseOver("Btn2")}
-                  className="button tw-flex tw-items-center tw-justify-center tw-text-white tw-h-10"
-                >
-                  <NavDropdown.Item href="https://bogazici.okulavm.com/kullanici/login">
-                    Kitap Satışı
-                  </NavDropdown.Item>
-
-                  <NavDropdown.Item href="https://ogrenci.bogazici.k12.tr/">
-                    Yemek Ödemesi
-                  </NavDropdown.Item>
-                </NavDropdown>
               </div>
-            </div>
-          </Navbar>
+            </Navbar>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };

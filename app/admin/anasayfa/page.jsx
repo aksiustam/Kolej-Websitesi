@@ -1,12 +1,12 @@
 import React from "react";
-import Layout from "../comp/Layout";
+import AdminLayout from "../comp/AdminLayout";
 import AnasayfaClient from "./AnasayfaClient";
 
 const page = () => {
   return (
-    <Layout>
+    <AdminLayout>
       <AnasayfaClient />
-    </Layout>
+    </AdminLayout>
   );
 };
 

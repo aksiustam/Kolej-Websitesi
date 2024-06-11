@@ -23,6 +23,12 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "bogazici.ventedu.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };

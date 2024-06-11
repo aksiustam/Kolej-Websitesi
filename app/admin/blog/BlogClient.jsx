@@ -114,6 +114,16 @@ const BlogClient = (props) => {
   };
   const [cimage, setCImage] = useState([]);
   const onSubmit = async (data) => {
+    if (cimage?.length === 0) {
+      await Swal.fire({
+        icon: "error",
+        title: "Resim Yükleyin",
+        showConfirmButton: false,
+        timer: 700,
+      });
+      return;
+    }
+
     const formData = { ...data, quill: quillValue };
 
     const res = await setBlog(formData);
@@ -350,7 +360,10 @@ const BlogClient = (props) => {
               />
             </div>
 
-            <button className="btn-box-common tw-self-start" type="sumbit">
+            <button
+              className="button tw-self-start tw-text-white tw-w-32"
+              type="sumbit"
+            >
               Kaydet
             </button>
           </div>

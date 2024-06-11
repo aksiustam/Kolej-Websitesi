@@ -9,6 +9,8 @@ import Icon4 from "@/public/assets/Images/WeProvide/Icon4.png";
 import Image from "next/image";
 import "./WeProvidecss.css";
 import { useState } from "react";
+
+import imgbg from "@/public/assets/style/pattern-bogazici.png";
 export default function WeProvide() {
   const [boxes, setBoxes] = useState(0);
 
@@ -65,127 +67,143 @@ export default function WeProvide() {
   };
   return (
     <>
-      <div className="container">
-        <div className="aboutus spacing">
-          <Row className="align-items-center">
-            <Col xl={6} lg={6} md={6} sm={6} xs={12} className="details-icon">
-              <Row>
-                <Col xl={4} lg={4} md={6} sm={6} xs={6}>
-                  <div
-                    className="weProBox tw-flex tw-flex-col tw-items-center tw-justify-center tw-cursor-pointer"
-                    onClick={() => setBoxes(0)}
-                  >
-                    <div className="weProBoxImg">
-                      <Image
-                        src={Icon1}
-                        alt="AboutUs"
-                        width={300}
-                        height={300}
-                        className="img-fluid mx-auto"
-                      />
+      <section
+        className="tw-bg-gray-200 tw-py-5"
+        style={{
+          backgroundImage: `url(${imgbg.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="container">
+          <div className="aboutus spacing">
+            <Row className="align-items-center">
+              <Col xl={6} lg={6} md={6} sm={6} xs={12} className="details-icon">
+                <Row>
+                  <Col xl={4} lg={4} md={6} sm={6} xs={6}>
+                    <div
+                      className="weProBox tw-flex  tw-flex-col tw-items-center tw-justify-center tw-cursor-pointer"
+                      onClick={() => setBoxes(0)}
+                      data-aos="fade-up"
+                    >
+                      <div className="weProBoxImg">
+                        <Image
+                          src={Icon1}
+                          alt="AboutUs"
+                          width={300}
+                          height={300}
+                          className="img-fluid mx-auto"
+                        />
+                      </div>
+                      <div className="weProBoxText tw-text-center">
+                        <h6>1. Bridge</h6>
+                      </div>
                     </div>
-                    <div className="weProBoxText tw-text-center">
-                      <h6>1. Bridge</h6>
+                  </Col>
+                  <Col xl={4} lg={4} md={6} sm={6} xs={6}>
+                    <div
+                      className="weProBox tw-flex tw-flex-col tw-items-center tw-justify-center tw-cursor-pointer"
+                      onClick={() => setBoxes(1)}
+                      data-aos="fade-up"
+                    >
+                      <div className="weProBoxImg">
+                        <Image
+                          src={Icon2}
+                          alt="AboutUs"
+                          width={300}
+                          height={300}
+                          className="img-fluid mx-auto"
+                        />
+                      </div>
+                      <div className="weProBoxText tw-text-center">
+                        <h6>2. Boresis - YETİ</h6>
+                      </div>
                     </div>
-                  </div>
-                </Col>
-                <Col xl={4} lg={4} md={6} sm={6} xs={6}>
-                  <div
-                    className="weProBox tw-flex tw-flex-col tw-items-center tw-justify-center tw-cursor-pointer"
-                    onClick={() => setBoxes(1)}
-                  >
-                    <div className="weProBoxImg">
-                      <Image
-                        src={Icon2}
-                        alt="AboutUs"
-                        width={300}
-                        height={300}
-                        className="img-fluid mx-auto"
-                      />
+                  </Col>
+                  <Col xl={4} lg={4} md={6} sm={6} xs={6}>
+                    <div
+                      className="weProBox tw-flex tw-flex-col tw-items-center tw-justify-center tw-cursor-pointer"
+                      onClick={() => setBoxes(2)}
+                      data-aos="fade-up"
+                    >
+                      <div className="weProBoxImg">
+                        <Image
+                          src={Icon3}
+                          alt="AboutUs"
+                          width={300}
+                          height={300}
+                          className="img-fluid mx-auto"
+                        />
+                      </div>
+                      <div className="weProBoxText tw-text-center">
+                        <h6>3. Global Schools</h6>
+                      </div>
                     </div>
-                    <div className="weProBoxText tw-text-center">
-                      <h6>2. Boresis - YETİ</h6>
+                  </Col>
+                  <Col xl={6} lg={6} md={6} sm={6} xs={6}>
+                    <div
+                      className="weProBox tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-justify-center tw-cursor-pointer"
+                      onClick={() => setBoxes(3)}
+                      data-aos="fade-up"
+                      data-aos-delay="200"
+                    >
+                      <div className="weProBoxImg">
+                        <Image
+                          src={Icon4}
+                          alt="AboutUs"
+                          width={300}
+                          height={300}
+                          className="img-fluid mx-auto"
+                        />
+                      </div>
+                      <div className="weProBoxText tw-text-center">
+                        <h6>4. Bütüncül Eğitim</h6>
+                      </div>
                     </div>
-                  </div>
-                </Col>
-                <Col xl={4} lg={4} md={6} sm={6} xs={6}>
-                  <div
-                    className="weProBox tw-flex tw-flex-col tw-items-center tw-justify-center tw-cursor-pointer"
-                    onClick={() => setBoxes(2)}
-                  >
-                    <div className="weProBoxImg">
-                      <Image
-                        src={Icon3}
-                        alt="AboutUs"
-                        width={300}
-                        height={300}
-                        className="img-fluid mx-auto"
-                      />
+                  </Col>
+                  <Col xl={6} lg={6} md={6} sm={6} xs={6}>
+                    <div
+                      className="weProBox tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-justify-center tw-cursor-pointer"
+                      onClick={() => setBoxes(4)}
+                      data-aos="fade-up"
+                      data-aos-delay="200"
+                    >
+                      <div className="weProBoxImg">
+                        <Image
+                          src={Icon4}
+                          alt="AboutUs"
+                          width={300}
+                          height={300}
+                          className="img-fluid mx-auto"
+                        />
+                      </div>
+                      <div className="weProBoxText tw-text-center">
+                        <h6>5. Endüstri 5.0</h6>
+                      </div>
                     </div>
-                    <div className="weProBoxText tw-text-center">
-                      <h6>3. Global Schools</h6>
-                    </div>
-                  </div>
-                </Col>
-                <Col xl={6} lg={6} md={6} sm={6} xs={6}>
-                  <div
-                    className="weProBox tw-cursor-pointer"
-                    onClick={() => setBoxes(3)}
-                  >
-                    <div className="weProBoxImg">
-                      <Image
-                        src={Icon4}
-                        alt="AboutUs"
-                        width={300}
-                        height={300}
-                        className="img-fluid mx-auto"
-                      />
-                    </div>
-                    <div className="weProBoxText">
-                      <h6>4. Bütüncül Eğitim</h6>
-                    </div>
-                  </div>
-                </Col>
-                <Col xl={6} lg={6} md={6} sm={6} xs={6}>
-                  <div
-                    className="weProBox tw-cursor-pointer"
-                    onClick={() => setBoxes(4)}
-                  >
-                    <div className="weProBoxImg">
-                      <Image
-                        src={Icon4}
-                        alt="AboutUs"
-                        width={300}
-                        height={300}
-                        className="img-fluid mx-auto"
-                      />
-                    </div>
-                    <div className="weProBoxText">
-                      <h6>5. Endüstri 5.0</h6>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-            </Col>
+                  </Col>
+                </Row>
+              </Col>
 
-            <Col
-              xl={6}
-              lg={6}
-              md={6}
-              sm={6}
-              xs={12}
-              data-aos="fade-up"
-              className="details-summary"
-            >
-              <div className="titleFont">
-                <h3>Geleceğe Hazırlayan</h3>
-                <h2>Eğitim Modellerimiz</h2>
-              </div>
-              {renderContent()}
-            </Col>
-          </Row>
+              <Col
+                xl={6}
+                lg={6}
+                md={6}
+                sm={6}
+                xs={12}
+                data-aos="fade-up"
+                className="details-summary"
+              >
+                <div className="titleFont">
+                  <h3>Geleceğe Hazırlayan</h3>
+                  <h2>Eğitim Modellerimiz</h2>
+                </div>
+                {renderContent()}
+              </Col>
+            </Row>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

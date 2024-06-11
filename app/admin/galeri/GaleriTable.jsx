@@ -31,7 +31,9 @@ import { useRouter } from "next/navigation";
 const GaleriTable = (props) => {
   const { galery } = props;
   const router = useRouter();
-  const data = { nodes: galery };
+  const [cat, setCat] = useState("Doğa");
+  const galerydata = galery?.filter((item) => item.category === cat).reverse();
+  const data = { nodes: galerydata };
 
   const materialTheme = getTheme(DEFAULT_OPTIONS);
   const theme = useTheme(materialTheme);
@@ -50,6 +52,8 @@ const GaleriTable = (props) => {
       sortToggleType: SortToggleType.AlternateWithReset,
       sortFns: {
         ID: (array) => array.sort((a, b) => b.id - a.id),
+        NAME: (array) =>
+          array.sort((a, b) => a?.category?.localeCompare(b?.category)),
       },
     }
   );
@@ -70,14 +74,26 @@ const GaleriTable = (props) => {
 
   const [bimage, setBImage] = useState([]);
   const addGalery = async () => {
-    let formData = [];
-    if (bimage.length > 0) {
+    if (bimage === null) {
+      await Swal.fire({
+        icon: "error",
+        title: "Resim Yükleyin",
+        showConfirmButton: false,
+        timer: 700,
+      });
+      return;
+    }
+
+    let galarray = [];
+    if (bimage?.length > 0) {
       const galeri = bimage.map((item) => {
         return { imageid: item.public_id, imageurl: item.secure_url };
       });
-      formData = galeri;
+      galarray = galeri;
     }
+    const formData = { cat: cat, galery: galarray };
     const res = await setGalery(formData);
+    setBImage(null);
     if (res === true) {
       await Swal.fire({
         icon: "success",
@@ -114,6 +130,28 @@ const GaleriTable = (props) => {
   return (
     <div>
       <div className="tw-flex tw-flex-row tw-items-center tw-justify-center tw-gap-5">
+        <div className="tw-flex tw-w-40">
+          <div className="tw-mb-8 tw-w-full">
+            <label
+              htmlFor="Kategori"
+              className="tw-capitalize tw-block tw-text-[12px]"
+            >
+              Kategori Seç*
+            </label>
+            <select
+              name="category"
+              id="category"
+              className="tw-text-sm tw-px-6 tw-text-gray-900 tw-w-full tw-h-full tw-bg-white tw-border-2 tw-border-black"
+              required
+              onChange={(e) => setCat(e.target.value)}
+            >
+              <option value={"Doğa"}>Doğa</option>
+              <option value={"Etkinlik"}>Etkinlik</option>
+              <option value={"Özel Tarihler"}>Özel Tarihler</option>
+              <option value={"Çocuklar"}>Çocuklar</option>
+            </select>
+          </div>
+        </div>
         <div className="tw-flex tw-flex-col tw-gap-2">
           <div className="tw-text-red-600 tw-underline tw-mb-2 tw-text-nowrap">
             *Resmi Yükledikten sonra Lütfen Kaydet e Basınız...
@@ -126,7 +164,7 @@ const GaleriTable = (props) => {
                 return [...data, { ...result?.info }];
               });
             }}
-            uploadPreset="dreamland_galery"
+            uploadPreset="bogazici_galery"
           >
             {({ open }) => {
               function handleOnClick() {
@@ -137,7 +175,7 @@ const GaleriTable = (props) => {
               return (
                 <button
                   type="button"
-                  className="form-control"
+                  className="form-control !tw-bg-sky-400"
                   onClick={handleOnClick}
                 >
                   Galeri Resmi Yükle
@@ -146,7 +184,10 @@ const GaleriTable = (props) => {
             }}
           </CldUploadWidget>
         </div>
-        <button className="btn-box-common" onClick={addGalery}>
+        <button
+          className="button tw-text-white tw-min-w-32"
+          onClick={addGalery}
+        >
           Kaydet
         </button>
       </div>
@@ -159,6 +200,11 @@ const GaleriTable = (props) => {
                   <HeaderCellSort sortKey="ID">
                     <span className="tw-text-sm tw-text-gray-600 tw-text-center">
                       ID (Sıra)
+                    </span>
+                  </HeaderCellSort>
+                  <HeaderCellSort sortKey="NAME">
+                    <span className="tw-text-gray-600 tw-text-center">
+                      Kategori
                     </span>
                   </HeaderCellSort>
                   <HeaderCellSort>
@@ -178,6 +224,9 @@ const GaleriTable = (props) => {
                   return (
                     <Row key={item?.id}>
                       <Cell className="hover:tw-bg-slate-100">#{item?.id}</Cell>
+                      <Cell className="hover:tw-bg-slate-100">
+                        {item?.category}
+                      </Cell>
                       <Cell className="hover:tw-bg-slate-100">
                         <Image
                           src={item?.imageurl}

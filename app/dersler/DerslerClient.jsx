@@ -1,47 +1,40 @@
 "use client";
 
-import { Card, Col, Container, Row } from "react-bootstrap";
-import img1 from "@/public/assets/common/muzik.jpg";
-
-import Image from "next/image";
+import { Col, Container, Row } from "react-bootstrap";
 import Link from "next/link";
-import "./paralel.css";
 import "@/public/css/Portfolio.css";
+import { IoIosArrowForward } from "react-icons/io";
+
 const DerslerClient = () => {
   const dersler = [
     {
       id: 0,
       name: "Din Kültürü",
       slug: "dindersi",
-      url: img1,
       hex: "#008B8B",
     },
-    { id: 1, name: "Fen Bilimleri", slug: "fen", url: img1, hex: "#228B22" },
-    { id: 2, name: "Türkçe", slug: "turkce", url: img1, hex: "#D2691E" },
+    { id: 1, name: "Fen Bilimleri", slug: "fen", hex: "#228B22" },
+    { id: 2, name: "Türkçe", slug: "turkce", hex: "#D2691E" },
     {
       id: 3,
       name: "Sosyal Bilgiler",
       slug: "sosyal",
-      url: img1,
       hex: "#FF8C00",
     },
-    { id: 4, name: "İngilizce", slug: "ingilizce", url: img1, hex: "#C71585" },
+    { id: 4, name: "İngilizce", slug: "ingilizce", hex: "#C71585" },
     {
       id: 5,
       name: "Görsel Sanatlar",
       slug: "resim",
-      url: img1,
       hex: "#B8860B",
     },
-
-    { id: 6, name: "Matematik", slug: "matematik", url: img1, hex: "#9932CC" },
-    { id: 7, name: "Beden Eğitimi", slug: "beden", url: img1, hex: "#8B4513" },
-    { id: 8, name: "Müzik", slug: "muzik", url: img1, hex: "#8B0000" },
+    { id: 6, name: "Matematik", slug: "matematik", hex: "#9932CC" },
+    { id: 7, name: "Beden Eğitimi", slug: "beden", hex: "#8B4513" },
+    { id: 8, name: "Müzik", slug: "muzik", hex: "#8B0000" },
     {
       id: 9,
       name: "Bilişim Teknolojileri ve Yazılım",
       slug: "bilisim",
-      url: img1,
       hex: "#483D8B",
     },
   ];
@@ -54,11 +47,36 @@ const DerslerClient = () => {
       </div>
       <section className="tw-px-6 tw-py-8 tw-bg-slate-100">
         <Container className="tw-my-12">
-          <div className="tw-flex tw-items-center tw-justify-center tw-mb-4">
-            <span className="tw-text-5xl tw-font-extrabold tw-text-shadow-lg"></span>
-          </div>
+          <Row>
+            <Col xl={3} lg={3} md={5} sm={12} xs={12}>
+              <div className="tw-bg-white tw-p-3 tw-rounded-2xl">
+                {dersler?.map((item) => (
+                  <Link
+                    key={item.id}
+                    href={`/dersler/${item?.slug}`}
+                    className="tw-text-inherit tw-decoration-transparent"
+                  >
+                    <div className="tw-mb-3 tw-px-4 tw-py-4 tw-bg-gray-200 tw-rounded-xl   tw-group tw-flex tw-items-center tw-justify-between tw-relative">
+                      <div className="tw-absolute tw-inset-0 tw-bg-blue-800 tw-transform tw-scale-x-0 group-hover:tw-scale-x-100 tw-transition-transform tw-duration-1000 tw-origin-left tw-rounded-xl"></div>
 
-          <div className="SelfDevelopment tw-p-12">
+                      <div className="tw-font-semibold tw-text-[#666666] group-hover:tw-text-white tw-z-10">
+                        {item.name}
+                      </div>
+                      <IoIosArrowForward
+                        size={16}
+                        className="group-hover:tw-text-white  tw-z-10"
+                      />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </Col>
+            <Col xl={8} lg={8} md={7} sm={12} xs={12}>
+              <div>SİDEBAR</div>
+            </Col>
+          </Row>
+
+          {/* <div className="SelfDevelopment tw-p-6">
             <Row>
               {dersler.map((item) => (
                 <Col xl={4} lg={4} md={6} sm={12} className="tw-mb-5">
@@ -95,7 +113,7 @@ const DerslerClient = () => {
                 </Col>
               ))}
             </Row>
-          </div>
+          </div> */}
         </Container>
       </section>
     </>

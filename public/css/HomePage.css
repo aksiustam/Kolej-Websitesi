@@ -3,15 +3,16 @@
   overflow: hidden;
 }
 .bannerContain {
-  position: absolute;
-  top: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   margin: 0 auto;
-  left: 0;
-  right: 0;
   max-width: 55%;
   color: #fff;
 }
-.bannerContain h1 {
+.bannerContain h2 {
   font-size: 70px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -69,9 +70,6 @@
 .weProvideBtnCol {
   text-align: right;
 }
-
-
-
 
 
 /* _________________________________________ Choose Us ________________________________________ */
@@ -307,6 +305,10 @@
 }
 .ourTeamMain img {
   border-radius: 0px 0px 0px 0px;
+}
+.aboutIconMainDivFloat {
+  display: flex;
+  margin: 25px 0px;
 }
 .ourTeamMain .slick-next {
   display: block;
@@ -688,7 +690,7 @@
 @media (min-width: 1200px) and (max-width: 1410px) {
   /* _____________________________navbar_____________________________ */
   /* _____________________________banner_____________________________ */
-  .bannerContain h1 {
+  .bannerContain h2 {
     font-size: 55px;
     line-height: 60px;
   }
@@ -785,7 +787,7 @@
   } */
 
   /* _____________________________banner_____________________________ */
-  .bannerContain h1 {
+  .bannerContain h2 {
     font-size: 46px;
     line-height: 55px;
   }
@@ -1054,7 +1056,7 @@
   }
 
   /* _____________________________banner_____________________________ */
-  .bannerContain h1 {
+  .bannerContain h2 {
     font-size: 32px;
     line-height: 40px;
   }
@@ -1251,7 +1253,7 @@
   }
 
   /* _____________________________banner_____________________________ */
-  .bannerContain h1 {
+  .bannerContain h2 {
     font-size: 25px;
     line-height: 35px;
     margin: 0;
@@ -1681,7 +1683,7 @@ font-weight: 500 !important;
     left: 4%;
     max-width: 100%;
   }
-  .bannerContain h1 {
+  .bannerContain h2 {
     font-size: 15px;
     line-height: 15px;
   }
@@ -1731,7 +1733,7 @@ font-weight: 500 !important;
     left: 4%;
     max-width: 80%;
   }
-  .bannerContain h1 {
+  .bannerContain h2 {
     font-size: 20px;
     line-height: 25px;
     margin-top: 13px;

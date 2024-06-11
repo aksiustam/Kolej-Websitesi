@@ -1008,7 +1008,7 @@
     /* _________________________________________ we Provide ________________________________________ */
     .weProBox {
         min-height: 150px;
-        display: block;
+        
     }
     .weProBoxText h6 {
         font-size: 18px;
@@ -1157,7 +1157,7 @@
     }
     /* _________________________________________ we Provide ________________________________________ */
     .weProBox {
-        display: inline-block;
+       
         padding: 20px;
     }
     .weProBoxImg {
@@ -1406,7 +1406,7 @@
     }
     /* _________________________________________ we Provide ________________________________________ */
     .weProBox {
-        display: block;
+       
         padding: 10px;
         text-align: center;
         min-height: 160px
@@ -1641,7 +1641,7 @@
     }
     /* _________________________________________ we Provide ________________________________________ */
     .weProBox {
-        display: block;
+       
         padding: 20px;
       }
       .weProBoxImg {

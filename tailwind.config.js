@@ -6,6 +6,15 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   prefix: "tw-",
-  theme: {},
+  theme: {
+    extend: {
+      textColor: {
+        inherit: "inherit",
+      },
+      textDecoration: {
+        inherit: "inherit",
+      },
+    },
+  },
   plugins: [require("tailwindcss-textshadow")],
 };

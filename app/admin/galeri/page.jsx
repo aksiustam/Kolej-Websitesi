@@ -1,14 +1,14 @@
 import React from "react";
 import GaleriTable from "./GaleriTable";
-import Layout from "../comp/layout";
+import AdminLayout from "../comp/AdminLayout";
 import getGalery from "@/app/actions/galeri/getGalery";
 const page = async () => {
   const galery = await getGalery();
 
   return (
-    <Layout>
+    <AdminLayout>
       <GaleriTable galery={galery} />
-    </Layout>
+    </AdminLayout>
   );
 };
 

@@ -7,6 +7,7 @@ const ReactPlayer = dynamic(() => import("react-player/youtube"), {
 });
 import "@/public/css/Home.css";
 import "./videocss.css";
+import "@/public/css/Portfolio.css";
 const SiniflarClient = () => {
   const siniflar = [
     {
@@ -82,14 +83,13 @@ const SiniflarClient = () => {
 
   return (
     <>
+      <div className="otherPageBanner portfolioBanner">
+        <div className="text-center title">
+          <h6 className="tw-text-shadow-md"> KULÜPLER</h6>
+        </div>
+      </div>
       <section className="tw-px-6 tw-py-8 tw-bg-slate-100">
         <Container className="tw-my-12">
-          <div className="tw-flex tw-items-center tw-justify-center tw-mb-4">
-            <span className="tw-text-5xl tw-font-extrabold tw-text-shadow-lg">
-              KULÜPLER
-            </span>
-          </div>
-
           <div className="SelfDevelopment tw-p-12">
             <Row>
               {siniflar.map((item) => (
@@ -106,10 +106,10 @@ const SiniflarClient = () => {
                       <div className="CInstrucation-card-img video-container">
                         <ReactPlayer
                           url={item.url}
-                          playing={true}
+                          playing={false}
                           controls={false}
                           loop={true}
-                          volume={1}
+                          volume={0}
                         />
                       </div>
 
@@ -118,7 +118,7 @@ const SiniflarClient = () => {
                           className={`CInstrucation-title parallel tw-text-center tw-py-1 `}
                           style={{ backgroundColor: item?.hex }}
                         >
-                          <h2 className="!tw-text-2xl noparallel !tw-font-extrabold tw-text-slate-200  tw-pt-2 tw-pb-2">
+                          <h2 className="!tw-text-2xl noparallel !tw-font-extrabold !tw-text-slate-200  tw-pt-2 tw-pb-2">
                             {item?.name}
                           </h2>
                         </Card.Title>

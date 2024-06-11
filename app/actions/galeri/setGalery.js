@@ -3,9 +3,10 @@ import prisma from "@/lib/prismadb";
 
 export default async function setGalery(data) {
   try {
-    const promises = data.map((element) =>
+    const promises = data.galery.map((element) =>
       prisma.galery.create({
         data: {
+          category: data.cat,
           imageid: element.imageid,
           imageurl: element.imageurl,
         },

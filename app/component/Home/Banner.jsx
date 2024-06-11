@@ -1,6 +1,5 @@
 "use client";
 import "@/public/css/HomePage.css";
-import Banner from "@/public/assets/Images/Banner/Banner.jpg";
 import Image from "next/image";
 import img1 from "@/public/assets/logo/1.png";
 import img2 from "@/public/assets/logo/2.png";
@@ -12,115 +11,282 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import Slider from "react-slick";
 
 gsap.registerPlugin(ScrollTrigger);
-export default function Home() {
+export default function Home({ ayarlar }) {
   const scrollRef = useRef();
 
   const marker = false;
   useGSAP(
     () => {
-      gsap.to("#box1", {
-        y: -150,
-        duration: 2,
-        scrub: 4,
-        scrollTrigger: {
-          trigger: "#box1",
-          start: "-100% 50%",
-          end: "top 30%",
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 800px)", () => {
+        // desktop setup code here...
+        gsap.to("#box1", {
+          y: -150,
+          duration: 2,
           scrub: 4,
-          markers: marker,
-        },
+          scrollTrigger: {
+            trigger: "#box1",
+            start: "-100% 50%",
+            end: "top 30%",
+            scrub: 4,
+            markers: marker,
+          },
+        });
+        gsap.to("#box2", {
+          y: -200,
+          duration: 2,
+          scrub: 4,
+          scrollTrigger: {
+            trigger: "#box2",
+            start: "-100% 50%",
+            end: "top 30%",
+            scrub: 4,
+            markers: marker,
+          },
+        });
+        gsap.to("#box3", {
+          y: -200,
+          duration: 2,
+          scrub: 4,
+          scrollTrigger: {
+            trigger: "#box3",
+            start: "-100% 50%",
+            end: "top 30%",
+            scrub: 4,
+            markers: marker,
+          },
+        });
+        gsap.to("#box4", {
+          y: -160,
+          duration: 2,
+          scrub: 4,
+          scrollTrigger: {
+            trigger: "#box4",
+            start: "-100% 50%",
+            end: "top 30%",
+            scrub: 4,
+            markers: marker,
+          },
+        });
+        gsap.to("#box5", {
+          y: -220,
+          duration: 2,
+          scrub: 4,
+          scrollTrigger: {
+            trigger: "#box5",
+            start: "-100% 50%",
+            end: "top 30%",
+            scrub: 4,
+            markers: marker,
+          },
+        });
+        gsap.to("#box6", {
+          y: -320,
+          duration: 2,
+          scrub: 4,
+          scrollTrigger: {
+            trigger: "#box6",
+            start: "-100% 50%",
+            end: "top 30%",
+            scrub: 4,
+            markers: marker,
+          },
+        });
       });
-      gsap.to("#box2", {
-        y: -200,
-        duration: 2,
-        scrub: 4,
-        scrollTrigger: {
-          trigger: "#box2",
-          start: "-100% 50%",
-          end: "top 30%",
+
+      mm.add("(max-width: 799px)", () => {
+        // mobile setup code here...
+        gsap.to("#box1", {
+          y: -60,
+          duration: 2,
           scrub: 4,
-          markers: marker,
-        },
-      });
-      gsap.to("#box3", {
-        y: -200,
-        duration: 2,
-        scrub: 4,
-        scrollTrigger: {
-          trigger: "#box3",
-          start: "-100% 50%",
-          end: "top 30%",
+          scrollTrigger: {
+            trigger: "#box1",
+            start: "-90% 45%",
+            end: "top 55%",
+            scrub: 4,
+            markers: marker,
+          },
+        });
+        gsap.to("#box2", {
+          y: -70,
+          duration: 2,
           scrub: 4,
-          markers: marker,
-        },
-      });
-      gsap.to("#box4", {
-        y: -160,
-        duration: 2,
-        scrub: 4,
-        scrollTrigger: {
-          trigger: "#box4",
-          start: "-100% 50%",
-          end: "top 30%",
+          scrollTrigger: {
+            trigger: "#box2",
+            start: "-90% 45%",
+            end: "top 55%",
+            scrub: 4,
+            markers: marker,
+          },
+        });
+        gsap.to("#box3", {
+          y: -80,
+          duration: 2,
           scrub: 4,
-          markers: marker,
-        },
-      });
-      gsap.to("#box5", {
-        y: -220,
-        duration: 2,
-        scrub: 4,
-        scrollTrigger: {
-          trigger: "#box5",
-          start: "-100% 50%",
-          end: "top 30%",
+          scrollTrigger: {
+            trigger: "#box3",
+            start: "-90% 45%",
+            end: "top 55%",
+            scrub: 4,
+            markers: marker,
+          },
+        });
+        gsap.to("#box4", {
+          y: -70,
+          duration: 2,
           scrub: 4,
-          markers: marker,
-        },
-      });
-      gsap.to("#box6", {
-        y: -320,
-        duration: 2,
-        scrub: 4,
-        scrollTrigger: {
-          trigger: "#box6",
-          start: "-100% 50%",
-          end: "top 30%",
+          scrollTrigger: {
+            trigger: "#box4",
+            start: "-90% 45%",
+            end: "top 55%",
+            scrub: 4,
+            markers: marker,
+          },
+        });
+        gsap.to("#box5", {
+          y: -80,
+          duration: 2,
           scrub: 4,
-          markers: marker,
-        },
+          scrollTrigger: {
+            trigger: "#box5",
+            start: "-90% 45%",
+            end: "top 55%",
+            scrub: 4,
+            markers: marker,
+          },
+        });
+        gsap.to("#box6", {
+          y: -90,
+          duration: 2,
+          scrub: 4,
+          scrollTrigger: {
+            trigger: "#box6",
+            start: "-90% 45%",
+            end: "top 55%",
+            scrub: 4,
+            markers: marker,
+          },
+        });
       });
     },
     { scope: scrollRef }
   );
+
+  const checkTrue = () => {
+    const bannerChecks = [
+      ayarlar.banner1.bannerCheck,
+      ayarlar.banner2.bannerCheck,
+      ayarlar.banner3.bannerCheck,
+    ];
+    const trueCount = bannerChecks.filter(Boolean).length;
+    return !(trueCount === 1);
+  };
+
+  const sliderSettings = {
+    dots: false,
+    arrows: false,
+    slidesToShow: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 4000,
+    infinite: checkTrue(),
+  };
+
   return (
     <>
-      <div
-        className="mainBannerDiv tw-relative"
-        style={{
-          backgroundImage: `url(${Banner.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-          height: "100vh", // Adjust the height as needed
-        }}
-      >
-        <div className="container">
-          <div className="bannerContain text-center" data-aos="zoom-in">
-            <h1>Boğaziçi Kolejine Giriş Sınavı</h1>
-            <p>Online Başvuru için</p>
-            <button className="button before:!tw-bg-red-600">
-              <a
-                href="www.bogazici.k12.tr"
-                className="tw-text-slate-100 tw-font-extrabold tw-text-lg tw-px-6"
-              >
-                Başvur
-              </a>
-            </button>
-          </div>
-        </div>
+      <div className="mainBannerDiv tw-relative">
+        <Slider
+          {...sliderSettings}
+          className="tw-h-[30rem] lg:tw-h-screen tw-w-full"
+        >
+          {ayarlar?.banner1?.bannerCheck && (
+            <div className="tw-h-[30rem] lg:tw-h-screen tw-w-full">
+              <Image
+                src={ayarlar?.banner1?.image?.imageurl}
+                alt="Bogaziçi Banner1"
+                fill
+                className="-tw-z-10 tw-object-cover tw-object-center"
+              />
+
+              <div className="container tw-h-full">
+                <div className="bannerContain text-center">
+                  <h2>{ayarlar?.banner1?.bannerUst}</h2>
+                  <p>{ayarlar?.banner1?.bannerAlt}</p>
+                  {ayarlar?.banner1?.bannerBtnCheck && (
+                    <button className="button before:!tw-bg-red-600">
+                      <a
+                        href={ayarlar?.banner1?.bannerBtnUrl}
+                        className="tw-text-slate-100 tw-font-extrabold tw-text-lg tw-px-6"
+                      >
+                        {ayarlar?.banner1?.bannerBtnName}
+                      </a>
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+          {ayarlar?.banner2?.bannerCheck && (
+            <div className="tw-h-[30rem] lg:tw-h-screen tw-w-full">
+              <Image
+                src={ayarlar?.banner2?.image?.imageurl}
+                alt="Bogaziçi Banner2"
+                fill
+                className="-tw-z-10 tw-object-cover tw-object-center"
+              />
+
+              <div className="container tw-h-full">
+                <div className="bannerContain text-center">
+                  <h2>{ayarlar?.banner2?.bannerUst}</h2>
+                  <p>{ayarlar?.banner2?.bannerAlt}</p>
+                  {ayarlar?.banner2?.bannerBtnCheck && (
+                    <button className="button before:!tw-bg-red-600">
+                      <a
+                        href={ayarlar?.banner2?.bannerBtnUrl}
+                        className="tw-text-slate-100 tw-font-extrabold tw-text-lg tw-px-6"
+                      >
+                        {ayarlar?.banner2?.bannerBtnName}
+                      </a>
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+          {ayarlar?.banner3?.bannerCheck && (
+            <div className="tw-h-[30rem] lg:tw-h-screen tw-w-full">
+              <Image
+                src={ayarlar?.banner3?.image?.imageurl}
+                alt="Bogaziçi Banner3"
+                fill
+                className="-tw-z-10 tw-object-cover tw-object-center"
+              />
+
+              <div className="container tw-h-full">
+                <div className="bannerContain text-center">
+                  <h2>{ayarlar?.banner3?.bannerUst}</h2>
+                  <p>{ayarlar?.banner3?.bannerAlt}</p>
+                  {ayarlar?.banner3?.bannerBtnCheck && (
+                    <button className="button before:!tw-bg-red-600">
+                      <a
+                        href={ayarlar?.banner3?.bannerBtnUrl}
+                        className="tw-text-slate-100 tw-font-extrabold tw-text-lg tw-px-6"
+                      >
+                        {ayarlar?.banner3?.bannerBtnName}
+                      </a>
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+        </Slider>
+
         <div className="tw-absolute tw-bottom-0 tw-w-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -140,62 +306,92 @@ export default function Home() {
       </div>
       <div className="tw-flex tw-flex-1 tw-w-full tw-h-full tw-relative">
         <div
-          className="tw-w-full tw-flex tw-flex-auto tw-items-center tw-justify-center tw-gap-8 tw-flex-wrap"
+          className="tw-w-full tw-grid tw-grid-cols-3 md:tw-grid-cols-6 tw-gap-8 tw-mx-12"
           ref={scrollRef}
         >
-          <div className="tw-w-48 tw-h-48 tw-rounded-full tw-z-30" id="box1">
-            <Image
-              src={img1}
-              alt="logo1"
-              width={500}
-              height={500}
-              className="img-fluid mx-auto"
-            />
+          <div className="tw-w-full tw-h-full tw-flex tw-items-center tw-justify-center">
+            <div
+              className="tw-w-24 tw-h-24 lg:tw-w-48 lg:tw-h-48 tw-rounded-full"
+              id="box1"
+            >
+              <Image
+                src={img1}
+                alt="logo1"
+                width={500}
+                height={500}
+                className="img-fluid mx-auto"
+              />
+            </div>
           </div>
-          <div className="tw-w-48 tw-h-48 tw-rounded-full tw-z-30" id="box2">
-            <Image
-              src={img2}
-              alt="logo1"
-              width={500}
-              height={500}
-              className="img-fluid mx-auto"
-            />
+          <div className="tw-w-full tw-h-full tw-flex tw-items-center tw-justify-center">
+            <div
+              className="tw-w-24 tw-h-24 lg:tw-w-48 lg:tw-h-48 tw-rounded-full"
+              id="box2"
+            >
+              <Image
+                src={img2}
+                alt="logo1"
+                width={500}
+                height={500}
+                className="img-fluid mx-auto"
+              />
+            </div>
           </div>
-          <div className="tw-w-48 tw-h-48 tw-rounded-full tw-z-30" id="box3">
-            <Image
-              src={img3}
-              alt="logo1"
-              width={500}
-              height={500}
-              className="img-fluid mx-auto"
-            />
+          <div className="tw-w-full tw-h-full tw-flex tw-items-center tw-justify-center">
+            <div
+              className="tw-w-24 tw-h-24 lg:tw-w-48 lg:tw-h-48 tw-rounded-full"
+              id="box3"
+            >
+              <Image
+                src={img3}
+                alt="logo1"
+                width={500}
+                height={500}
+                className="img-fluid mx-auto"
+              />
+            </div>
           </div>
-          <div className="tw-w-48 tw-h-48 tw-rounded-full tw-z-30" id="box4">
-            <Image
-              src={img4}
-              alt="logo1"
-              width={500}
-              height={500}
-              className="img-fluid mx-auto"
-            />
+          <div className="tw-w-full tw-h-full tw-flex tw-items-center tw-justify-center">
+            <div
+              className="tw-w-24 tw-h-24 lg:tw-w-48 lg:tw-h-48 tw-rounded-full"
+              id="box4"
+            >
+              <Image
+                src={img4}
+                alt="logo1"
+                width={500}
+                height={500}
+                className="img-fluid mx-auto"
+              />
+            </div>
           </div>
-          <div className="tw-w-48 tw-h-48 tw-rounded-full tw-z-30" id="box5">
-            <Image
-              src={img5}
-              alt="logo1"
-              width={500}
-              height={500}
-              className="img-fluid mx-auto"
-            />
+          <div className="tw-w-full tw-h-full tw-flex tw-items-center tw-justify-center">
+            <div
+              className="tw-w-24 tw-h-24 lg:tw-w-48 lg:tw-h-48 tw-rounded-full"
+              id="box5"
+            >
+              <Image
+                src={img5}
+                alt="logo1"
+                width={500}
+                height={500}
+                className="img-fluid mx-auto"
+              />
+            </div>
           </div>
-          <div className="tw-w-48 tw-h-48 tw-rounded-full tw-z-30" id="box6">
-            <Image
-              src={img6}
-              alt="logo1"
-              width={500}
-              height={500}
-              className="img-fluid mx-auto"
-            />
+          <div className="tw-w-full tw-h-full tw-flex tw-items-center tw-justify-center">
+            <div
+              className="tw-w-24 tw-h-24 lg:tw-w-48 lg:tw-h-48 tw-rounded-full"
+              id="box6"
+            >
+              <Image
+                src={img6}
+                alt="logo1"
+                width={500}
+                height={500}
+                className="img-fluid mx-auto"
+              />
+            </div>
           </div>
         </div>
       </div>

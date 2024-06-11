@@ -1,20 +1,20 @@
 "use client";
 import { useEffect, useState } from "react";
 import getInstaPost from "../../actions/insta/getInstaPost";
-
 import Image from "next/image";
 import Slider from "react-slick";
 import { Container } from "react-bootstrap";
 import imglogo from "@/public/assets/common/bogazlogokare.png";
-import Script from "next/script";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import "./InstaArrow.css";
 const InstaPage = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchInsta = async () => {
       const res = await getInstaPost();
 
-      const formData = res.data.filter((item) => item.media_type !== "VIDEO");
-      const formData1 = formData.map((item) => ({
+      const formData = res?.data?.filter((item) => item.media_type !== "VIDEO");
+      const formData1 = formData?.map((item) => ({
         url: item.media_url,
         link: item.permalink,
       }));
@@ -23,6 +23,28 @@ const InstaPage = () => {
     fetchInsta();
   }, []);
 
+  const NextArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <div
+        className="slick-arrow right-arrow tw-bg-slate-400 tw-p-1 tw-rounded-full"
+        onClick={onClick}
+      >
+        <FaChevronRight color="black" size={24} />
+      </div>
+    );
+  };
+  const PrevArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <div
+        className="slick-arrow left-arrow tw-bg-slate-400 tw-p-1 tw-rounded-full"
+        onClick={onClick}
+      >
+        <FaChevronLeft color="black" size={24} />
+      </div>
+    );
+  };
   const settings = {
     dots: true,
     arrows: true,
@@ -30,22 +52,17 @@ const InstaPage = () => {
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
-
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 800,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 700,
         settings: {
           slidesToShow: 1,
         },
@@ -54,18 +71,8 @@ const InstaPage = () => {
   };
   return (
     <>
-      <Script
-        src="https://static.elfsight.com/platform/platform.js"
-        defer={true}
-      ></Script>
-
       <section className="tw-w-full tw-h-full tw-py-12">
         <Container className="tw-bg-gray-100 tw-shadow-2xl tw-shadow-gray-400 tw-rounded-3xl tw-py-6">
-          {/* <div
-            class="elfsight-app-672de046-7baa-4c86-a072-c1da259a6b20"
-            data-elfsight-app-lazy
-          ></div> */}
-
           <div className="tw-w-full tw-flex tw-flex-col tw-items-center tw-justify-center tw-mb-6">
             <h6 className="tw-text-red-600 tw-text-2xl">
               -Sosyal Medyada Konya Boğaziçi-
@@ -101,9 +108,9 @@ const InstaPage = () => {
               </div>
             </div>
           </div>
-          <div className="tw-flex tw-items-center tw-justify-center tw-relative tw-w-full ">
+          <div className="tw-flex tw-items-center tw-justify-center tw-relative tw-w-full tw-px-6">
             <Slider {...settings} className="tw-w-full">
-              {data.map((item, index) => (
+              {data?.map((item, index) => (
                 <div key={index} className=" tw-rounded-3xl">
                   <a href={item.link} className="tw-text-black">
                     <Image
