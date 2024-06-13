@@ -1,13 +1,6 @@
 "use server";
 import prisma from "@/lib/prismadb";
 import slugify from "slugify";
-import { v2 as cloudinary } from "cloudinary";
-
-cloudinary.config({
-  cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
-});
 
 export default async function updateBlog(data) {
   try {
@@ -46,13 +39,19 @@ export default async function updateBlog(data) {
       images: blogs.images,
     };
     if (data.images !== null) {
+      const { v2: cloudinary } = await import("cloudinary");
+
+      cloudinary.config({
+        cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+        api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
+        api_secret: process.env.CLOUDINARY_API_SECRET,
+      });
       for (const item of formData.images) {
         await cloudinary.uploader.destroy(item.imageid);
       }
       formData.images = data.images;
     }
 
-    console.log(formData);
     await prisma.blog.update({
       where: { id: data.id },
       data: formData,

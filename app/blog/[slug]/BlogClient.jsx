@@ -12,7 +12,7 @@ const BlogClient = (props) => {
   const { blog, blogs } = props;
   const settings = {
     dots: false,
-    arrows: true,
+    arrows: false,
     slide: ".slick-slideshow__slide",
     slidesToShow: 2,
     autoplay: true,

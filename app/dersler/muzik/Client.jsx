@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Slider from "react-slick";
 import About1 from "@/public/assets/common/About1.png";
-import image1 from "@/public/assets/common/dersler/chess.jpg";
+import muzik1 from "@/public/assets/dersler/muzik1.jpg";
+import muzik2 from "@/public/assets/dersler/muzik2.jpg";
 
 import "@/public/css/HomePage.css";
 import "slick-carousel/slick/slick.css";
@@ -58,36 +59,21 @@ export default class Client extends Component {
     };
 
     const dersler = [
-      {
-        id: 0,
-        name: "Din Kültürü",
-        slug: "dindersi",
-        hex: "#008B8B",
-      },
+      { id: 0, name: "Matematik", slug: "matematik", hex: "#9932CC" },
       { id: 1, name: "Fen Bilimleri", slug: "fen", hex: "#228B22" },
       { id: 2, name: "Türkçe", slug: "turkce", hex: "#D2691E" },
-      {
-        id: 3,
-        name: "Sosyal Bilgiler",
-        slug: "sosyal",
-        hex: "#FF8C00",
-      },
+      { id: 3, name: "Sosyal Bilgiler", slug: "sosyal", hex: "#FF8C00" },
       { id: 4, name: "İngilizce", slug: "ingilizce", hex: "#C71585" },
+      { id: 5, name: "Görsel Sanatlar", slug: "resim", hex: "#B8860B" },
+      { id: 6, name: "Beden Eğitimi", slug: "beden", hex: "#8B4513" },
+      { id: 7, name: "Müzik", slug: "muzik", hex: "#8B0000" },
       {
-        id: 5,
-        name: "Görsel Sanatlar",
-        slug: "resim",
-        hex: "#B8860B",
-      },
-      { id: 6, name: "Matematik", slug: "matematik", hex: "#9932CC" },
-      { id: 7, name: "Beden Eğitimi", slug: "beden", hex: "#8B4513" },
-      { id: 8, name: "Müzik", slug: "muzik", hex: "#8B0000" },
-      {
-        id: 9,
+        id: 8,
         name: "Bilişim Teknolojileri ve Yazılım",
         slug: "bilisim",
         hex: "#483D8B",
       },
+      { id: 9, name: "Din Kültürü", slug: "dindersi", hex: "#008B8B" },
     ];
     return (
       <>
@@ -136,8 +122,8 @@ export default class Client extends Component {
                       >
                         <div className="aboutUs">
                           <div className="titleFont">
-                            <h2>Müzik</h2>
-                            <p>
+                            <h1>Müzik</h1>
+                            <p className="tw-mb-2 tw-text-lg">
                               Müzik, öncelikle okul ve okul öncesi dönemde
                               çocuğa şarkı ve tekerlemeler yolu ile dil
                               gelişimine katkı sağlar. Bunun yanında müzikal
@@ -161,24 +147,20 @@ export default class Client extends Component {
                       >
                         <div className="aboutSliderDiv">
                           <Slider className="aboutSlider" {...settings}>
-                            <div>
-                              <Image
-                                src={image1}
-                                alt="Oyun Odası Resmi1"
-                                width={500}
-                                height={500}
-                                className="tw-h-96 tw-w-full mx-auto"
-                              />
-                            </div>
-                            <div>
-                              <Image
-                                src={image1}
-                                alt="Oyun Odası Resmi1"
-                                width={500}
-                                height={500}
-                                className="tw-h-96 tw-w-full mx-auto"
-                              />
-                            </div>
+                            <Image
+                              src={muzik1}
+                              alt="Boğaziçi Müzik"
+                              width={500}
+                              height={500}
+                              className="tw-h-96 tw-w-full mx-auto"
+                            />
+                            <Image
+                              src={muzik2}
+                              alt="Boğaziçi Müzik"
+                              width={500}
+                              height={500}
+                              className="tw-h-96 tw-w-full mx-auto"
+                            />
                           </Slider>
                         </div>
                       </Col>
@@ -190,7 +172,7 @@ export default class Client extends Component {
                         xs={12}
                         data-aos="fade-up"
                       >
-                        <div className="aboutUs">
+                        <div className="aboutUs tw-mt-4">
                           <div className="titleFont">
                             <p>
                               Çocuklarımızın bu dönemde hızlı soru çözebilme ve

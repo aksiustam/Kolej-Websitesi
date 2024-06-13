@@ -58,36 +58,21 @@ export default class Client extends Component {
     };
 
     const dersler = [
-      {
-        id: 0,
-        name: "Din Kültürü",
-        slug: "dindersi",
-        hex: "#008B8B",
-      },
+      { id: 0, name: "Matematik", slug: "matematik", hex: "#9932CC" },
       { id: 1, name: "Fen Bilimleri", slug: "fen", hex: "#228B22" },
       { id: 2, name: "Türkçe", slug: "turkce", hex: "#D2691E" },
-      {
-        id: 3,
-        name: "Sosyal Bilgiler",
-        slug: "sosyal",
-        hex: "#FF8C00",
-      },
+      { id: 3, name: "Sosyal Bilgiler", slug: "sosyal", hex: "#FF8C00" },
       { id: 4, name: "İngilizce", slug: "ingilizce", hex: "#C71585" },
+      { id: 5, name: "Görsel Sanatlar", slug: "resim", hex: "#B8860B" },
+      { id: 6, name: "Beden Eğitimi", slug: "beden", hex: "#8B4513" },
+      { id: 7, name: "Müzik", slug: "muzik", hex: "#8B0000" },
       {
-        id: 5,
-        name: "Görsel Sanatlar",
-        slug: "resim",
-        hex: "#B8860B",
-      },
-      { id: 6, name: "Matematik", slug: "matematik", hex: "#9932CC" },
-      { id: 7, name: "Beden Eğitimi", slug: "beden", hex: "#8B4513" },
-      { id: 8, name: "Müzik", slug: "muzik", hex: "#8B0000" },
-      {
-        id: 9,
+        id: 8,
         name: "Bilişim Teknolojileri ve Yazılım",
         slug: "bilisim",
         hex: "#483D8B",
       },
+      { id: 9, name: "Din Kültürü", slug: "dindersi", hex: "#008B8B" },
     ];
     return (
       <>
@@ -127,64 +112,6 @@ export default class Client extends Component {
                   <div className="mainAboutUs">
                     <Row>
                       <Col
-                        xl={5}
-                        lg={5}
-                        md={12}
-                        sm={12}
-                        xs={12}
-                        data-aos="fade-up"
-                      >
-                        <div className="aboutUs">
-                          <div className="titleFont">
-                            <h2 className="tw-mb-4">
-                              Din Kültürü ve Ahlak Bilgisi
-                            </h2>
-                            <p className="tw-mb-4 tw-text-lg">
-                              &nbsp;&nbsp;Din Kültürü ve Ahlak Bilgisi dersinin
-                              genel amacı eğitimin, yaşamın tüm ögeleriyle
-                              uyumlu bir şekilde hayatını devam ettirmeyi
-                              öğrencilerimize öğretip huzurlu ve mutlu bireyler
-                              yetiştirmektir. Eğitimimizin vazifesi, değişen
-                              kültür şartlarına göre daima yeni intibaklar
-                              sağlayacak gençleri değil, fakat değişmelere
-                              müsbet bir yön verme gücünde olan gençler
-                              yetiştirmektir.
-                            </p>
-                          </div>
-                        </div>
-                      </Col>
-                      <Col
-                        xl={7}
-                        lg={7}
-                        md={12}
-                        sm={12}
-                        xs={12}
-                        data-aos="fade-up"
-                      >
-                        <div className="aboutSliderDiv">
-                          <Slider className="aboutSlider" {...settings}>
-                            <div>
-                              <Image
-                                src={image1}
-                                alt="Oyun Odası Resmi1"
-                                width={500}
-                                height={500}
-                                className="tw-h-96 tw-w-full mx-auto"
-                              />
-                            </div>
-                            <div>
-                              <Image
-                                src={image1}
-                                alt="Oyun Odası Resmi1"
-                                width={500}
-                                height={500}
-                                className="tw-h-96 tw-w-full mx-auto"
-                              />
-                            </div>
-                          </Slider>
-                        </div>
-                      </Col>
-                      <Col
                         xl={12}
                         lg={12}
                         md={12}
@@ -194,6 +121,19 @@ export default class Client extends Component {
                       >
                         <div className="aboutUs">
                           <div className="titleFont">
+                            <h1 className="tw-mb-4">
+                              Din Kültürü ve Ahlak Bilgisi
+                            </h1>
+                            <p className="tw-mb-4 tw-text-lg">
+                              Din Kültürü ve Ahlak Bilgisi dersinin genel amacı
+                              eğitimin, yaşamın tüm ögeleriyle uyumlu bir
+                              şekilde hayatını devam ettirmeyi öğrencilerimize
+                              öğretip huzurlu ve mutlu bireyler yetiştirmektir.
+                              Eğitimimizin vazifesi, değişen kültür şartlarına
+                              göre daima yeni intibaklar sağlayacak gençleri
+                              değil, fakat değişmelere müsbet bir yön verme
+                              gücünde olan gençler yetiştirmektir.
+                            </p>
                             <p className="tw-mb-4 tw-mt-2">
                               Okulumuzun Din Kültürü ve Ahlak Bilgisi
                               öğretiminin genel amacı: Temel ve ortaöğretimde

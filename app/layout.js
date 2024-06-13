@@ -10,8 +10,8 @@ import Footer from "./component/layout/Footer";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Next Bogaziçi Kolej",
-  description: "Next Bogaziçi Kolej",
+  title: "Konya Boğaziçi Kolej",
+  description: "Konya Boğaziçi Koleji ",
 };
 
 export default function RootLayout({ children }) {

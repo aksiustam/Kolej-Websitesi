@@ -13,12 +13,14 @@ const InstaPage = () => {
     const fetchInsta = async () => {
       const res = await getInstaPost();
 
-      const formData = res?.data?.filter((item) => item.media_type !== "VIDEO");
-      const formData1 = formData?.map((item) => ({
-        url: item.media_url,
-        link: item.permalink,
-      }));
-      setData(formData1);
+      const formData = res?.data
+        ?.filter((item) => item.media_type !== "VIDEO")
+        .map((item) => ({
+          url: item.media_url,
+          link: item.permalink,
+        }));
+
+      setData(formData);
     };
     fetchInsta();
   }, []);
@@ -71,6 +73,7 @@ const InstaPage = () => {
       },
     ],
   };
+
   return (
     <>
       <section className="tw-w-full tw-h-full tw-py-12">
