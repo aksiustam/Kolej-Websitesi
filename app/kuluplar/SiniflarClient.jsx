@@ -90,22 +90,22 @@ const SiniflarClient = () => {
       </div>
       <section className="tw-px-6 tw-py-8 tw-bg-slate-100">
         <Container className="tw-my-12">
-          <div className="SelfDevelopment tw-p-12">
+          <div className="SelfDevelopment md:tw-p-12">
             <Row>
               {siniflar.map((item) => (
                 <Col
                   xl={4}
                   lg={4}
-                  md={6}
+                  md={12}
                   sm={12}
                   className="tw-mb-5"
-                  key={item.id}
+                  key={item?.id}
                 >
                   <div className="CInstrucation-box ">
                     <Card className="CInstrucation-card tw-px-4 tw-py-2 !tw-bg-slate-50">
                       <div className="CInstrucation-card-img video-container">
                         <ReactPlayer
-                          url={item.url}
+                          url={item?.url}
                           playing={false}
                           controls={false}
                           loop={true}
@@ -118,7 +118,7 @@ const SiniflarClient = () => {
                           className={`CInstrucation-title parallel tw-text-center tw-py-1 `}
                           style={{ backgroundColor: item?.hex }}
                         >
-                          <h2 className="!tw-text-2xl noparallel !tw-font-extrabold !tw-text-slate-200  tw-pt-2 tw-pb-2">
+                          <h2 className="!tw-text-2xl noparallel !tw-font-extrabold !tw-text-slate-200  tw-pt-2 tw-pb-2 tw-text-center">
                             {item?.name}
                           </h2>
                         </Card.Title>

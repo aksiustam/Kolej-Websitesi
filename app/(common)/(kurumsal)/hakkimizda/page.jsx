@@ -14,21 +14,21 @@ const page = () => {
         </div>
       </div>
       <section>
-        <Container className="tw-py-20">
-          <div className="SelfDevelopment tw-p-12">
+        <Container className="tw-py-4 md:tw-py-20">
+          <div className="SelfDevelopment md:tw-p-12 ">
             <Row>
-              <Col xl={4} lg={4} md={4} sm={5} xs={12}>
-                <div>
+              <Col xl={4} lg={4} md={12} sm={12} xs={12}>
+                <div className="tw-h-60 tw-w-60 md:tw-h-full md:tw-w-full">
                   <Image
                     src={img}
                     alt="Hakkimizda"
-                    width={400}
-                    height={400}
+                    width={1200}
+                    height={1200}
                     className="img-fluid mx-auto tw-border-8 tw-border-sky-800 tw-rounded-full"
                   />
                 </div>
               </Col>
-              <Col xl={8} lg={8} md={8} sm={7} xs={12} className="tw-mb-16">
+              <Col xl={8} lg={8} md={12} sm={12} xs={12} className="tw-mb-16">
                 <div className="SelfDevelopment-Content !tw-mt-1">
                   <h5 className="!tw-text-3xl tw-my-3 !tw-text-black !tw-font-extrabold">
                     Tarihçemiz
@@ -56,36 +56,41 @@ const page = () => {
                 </div>
               </Col>
               <Col xl={12} lg={12} md={12} sm={12} xs={12}>
-                <div className="tw-flex tw-items-center tw-justify-center tw-gap-8">
-                  <div className="tw-p-4 tw-border " data-aos="fade-up">
-                    <div className="tw-text-4xl tw-text-red-600 tw-flex tw-items-center tw-gap-3 tw-mb-4">
-                      <FaRegLightbulb size={36} />
-                      Vizyonumuz
+                <Row>
+                  <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+                    {" "}
+                    <div className="tw-p-4 tw-border " data-aos="fade-up">
+                      <div className="tw-text-4xl tw-text-red-600 tw-flex tw-items-center tw-gap-3 tw-mb-4">
+                        <FaRegLightbulb size={36} />
+                        Vizyonumuz
+                      </div>
+                      <p className="!tw-font-bold">
+                        Geleceğin teminatı olan çocuklarımızı çağdaş dünya
+                        insanı şuuruna sahip bireylere dönüştürmek; bilginin
+                        gücüne inanan, bilgisini insanlık yararına kullanan,
+                        hümanist, mutlu, duyarlı gençler yetiştirmek,
+                        öğrencilerimizin ve okulumuzun adını ulusal ve
+                        uluslarası düzeyde duyurmak temel hedefimizdir.
+                      </p>
                     </div>
-                    <p className="!tw-font-bold">
-                      Geleceğin teminatı olan çocuklarımızı çağdaş dünya insanı
-                      şuuruna sahip bireylere dönüştürmek; bilginin gücüne
-                      inanan, bilgisini insanlık yararına kullanan, hümanist,
-                      mutlu, duyarlı gençler yetiştirmek, öğrencilerimizin ve
-                      okulumuzun adını ulusal ve uluslarası düzeyde duyurmak
-                      temel hedefimizdir.
-                    </p>
-                  </div>
-                  <div className="tw-p-4 tw-border " data-aos="fade-up">
-                    <div className="tw-text-4xl tw-text-red-600 tw-flex tw-items-center tw-gap-3 tw-mb-4">
-                      <GiArcheryTarget size={36} />
-                      Misyonumuz
+                  </Col>
+                  <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+                    <div className="tw-p-4 tw-border " data-aos="fade-up">
+                      <div className="tw-text-4xl tw-text-red-600 tw-flex tw-items-center tw-gap-3 tw-mb-4">
+                        <GiArcheryTarget size={36} />
+                        Misyonumuz
+                      </div>
+                      <p className="!tw-font-bold">
+                        Boğaziçi Koleji olarak misyonumuz; zengin geçmişinden
+                        aldığı güçle, kendisine emanet edilen öğrencilerini
+                        sosyal becerileri gelişmiş, etik değerlere saygılı,
+                        çevre sorunlarına duyarlı, insiyatif sahibi, takım
+                        ruhuna sahip, başarılı, mutlu dünya vatandaşı bireylere
+                        dönüştürmek ve geleceğe hazırlamaktır.
+                      </p>
                     </div>
-                    <p className="!tw-font-bold">
-                      Boğaziçi Koleji olarak misyonumuz; zengin geçmişinden
-                      aldığı güçle, kendisine emanet edilen öğrencilerini sosyal
-                      becerileri gelişmiş, etik değerlere saygılı, çevre
-                      sorunlarına duyarlı, insiyatif sahibi, takım ruhuna sahip,
-                      başarılı, mutlu dünya vatandaşı bireylere dönüştürmek ve
-                      geleceğe hazırlamaktır.
-                    </p>
-                  </div>
-                </div>
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </div>

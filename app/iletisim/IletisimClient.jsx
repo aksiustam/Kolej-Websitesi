@@ -101,6 +101,7 @@ const IletisimClient = () => {
                             type="text"
                             name="name"
                             placeholder="Ad Soyad"
+                            maxLength={75}
                           />
                         </span>
                       </div>
@@ -108,14 +109,22 @@ const IletisimClient = () => {
                     <Col xl={6} lg={6} sm={6}>
                       <div className="Form-group">
                         <span>
-                          <input type="email" placeholder="Email" />
+                          <input
+                            type="email"
+                            placeholder="Email"
+                            maxLength={50}
+                          />
                         </span>
                       </div>
                     </Col>
                     <Col xl={12} lg={12} sm={12}>
                       <div className="Form-group">
                         <span>
-                          <input type="text" placeholder="Konu" />
+                          <input
+                            type="text"
+                            placeholder="Konu"
+                            maxLength={75}
+                          />
                         </span>
                       </div>
                     </Col>

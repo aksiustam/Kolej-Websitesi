@@ -10,7 +10,7 @@ export const metadata = {
     follow: false,
   },
 };
-
+export const dynamic = "force-dynamic";
 const page = async () => {
   const User = await getCurrentUser();
   const Auth = User && User.role === "ADMIN" ? true : false;

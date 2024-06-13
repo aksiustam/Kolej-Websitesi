@@ -179,9 +179,14 @@ export default function Home({ ayarlar }) {
 
   const checkTrue = () => {
     const bannerChecks = [
-      ayarlar.banner1.bannerCheck,
-      ayarlar.banner2.bannerCheck,
-      ayarlar.banner3.bannerCheck,
+      ayarlar?.banner1?.bannerCheck,
+      ayarlar?.banner2?.bannerCheck,
+      ayarlar?.banner3?.bannerCheck,
+      ayarlar?.banner4?.bannerCheck,
+      ayarlar?.banner5?.bannerCheck,
+      ayarlar?.banner6?.bannerCheck,
+      ayarlar?.banner7?.bannerCheck,
+      ayarlar?.banner8?.bannerCheck,
     ];
     const trueCount = bannerChecks.filter(Boolean).length;
     return !(trueCount === 1);
@@ -278,6 +283,141 @@ export default function Home({ ayarlar }) {
                         className="tw-text-slate-100 tw-font-extrabold tw-text-lg tw-px-6"
                       >
                         {ayarlar?.banner3?.bannerBtnName}
+                      </a>
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+          {ayarlar?.banner4?.bannerCheck && (
+            <div className="tw-h-[30rem] lg:tw-h-screen tw-w-full">
+              <Image
+                src={ayarlar?.banner4?.image?.imageurl}
+                alt="Bogaziçi Banner4"
+                fill
+                className="-tw-z-10 tw-object-cover tw-object-center"
+              />
+
+              <div className="container tw-h-full">
+                <div className="bannerContain text-center">
+                  <h2>{ayarlar?.banner4?.bannerUst}</h2>
+                  <p>{ayarlar?.banner4?.bannerAlt}</p>
+                  {ayarlar?.banner4?.bannerBtnCheck && (
+                    <button className="button before:!tw-bg-red-600">
+                      <a
+                        href={ayarlar?.banner4?.bannerBtnUrl}
+                        className="tw-text-slate-100 tw-font-extrabold tw-text-lg tw-px-6"
+                      >
+                        {ayarlar?.banner4?.bannerBtnName}
+                      </a>
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+          {ayarlar?.banner5?.bannerCheck && (
+            <div className="tw-h-[30rem] lg:tw-h-screen tw-w-full">
+              <Image
+                src={ayarlar?.banner5?.image?.imageurl}
+                alt="Bogaziçi Banner5"
+                fill
+                className="-tw-z-10 tw-object-cover tw-object-center"
+              />
+
+              <div className="container tw-h-full">
+                <div className="bannerContain text-center">
+                  <h2>{ayarlar?.banner5?.bannerUst}</h2>
+                  <p>{ayarlar?.banner5?.bannerAlt}</p>
+                  {ayarlar?.banner5?.bannerBtnCheck && (
+                    <button className="button before:!tw-bg-red-600">
+                      <a
+                        href={ayarlar?.banner5?.bannerBtnUrl}
+                        className="tw-text-slate-100 tw-font-extrabold tw-text-lg tw-px-6"
+                      >
+                        {ayarlar?.banner5?.bannerBtnName}
+                      </a>
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+          {ayarlar?.banner6?.bannerCheck && (
+            <div className="tw-h-[30rem] lg:tw-h-screen tw-w-full">
+              <Image
+                src={ayarlar?.banner6?.image?.imageurl}
+                alt="Bogaziçi Banner6"
+                fill
+                className="-tw-z-10 tw-object-cover tw-object-center"
+              />
+
+              <div className="container tw-h-full">
+                <div className="bannerContain text-center">
+                  <h2>{ayarlar?.banner6?.bannerUst}</h2>
+                  <p>{ayarlar?.banner6?.bannerAlt}</p>
+                  {ayarlar?.banner6?.bannerBtnCheck && (
+                    <button className="button before:!tw-bg-red-600">
+                      <a
+                        href={ayarlar?.banner6?.bannerBtnUrl}
+                        className="tw-text-slate-100 tw-font-extrabold tw-text-lg tw-px-6"
+                      >
+                        {ayarlar?.banner6?.bannerBtnName}
+                      </a>
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+          {ayarlar?.banner7?.bannerCheck && (
+            <div className="tw-h-[30rem] lg:tw-h-screen tw-w-full">
+              <Image
+                src={ayarlar?.banner7?.image?.imageurl}
+                alt="Bogaziçi Banner7"
+                fill
+                className="-tw-z-10 tw-object-cover tw-object-center"
+              />
+
+              <div className="container tw-h-full">
+                <div className="bannerContain text-center">
+                  <h2>{ayarlar?.banner7?.bannerUst}</h2>
+                  <p>{ayarlar?.banner7?.bannerAlt}</p>
+                  {ayarlar?.banner7?.bannerBtnCheck && (
+                    <button className="button before:!tw-bg-red-600">
+                      <a
+                        href={ayarlar?.banner7?.bannerBtnUrl}
+                        className="tw-text-slate-100 tw-font-extrabold tw-text-lg tw-px-6"
+                      >
+                        {ayarlar?.banner7?.bannerBtnName}
+                      </a>
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+          {ayarlar?.banner8?.bannerCheck && (
+            <div className="tw-h-[30rem] lg:tw-h-screen tw-w-full">
+              <Image
+                src={ayarlar?.banner8?.image?.imageurl}
+                alt="Bogaziçi Banner3"
+                fill
+                className="-tw-z-10 tw-object-cover tw-object-center"
+              />
+
+              <div className="container tw-h-full">
+                <div className="bannerContain text-center">
+                  <h2>{ayarlar?.banner8?.bannerUst}</h2>
+                  <p>{ayarlar?.banner8?.bannerAlt}</p>
+                  {ayarlar?.banner8?.bannerBtnCheck && (
+                    <button className="button before:!tw-bg-red-600">
+                      <a
+                        href={ayarlar?.banner8?.bannerBtnUrl}
+                        className="tw-text-slate-100 tw-font-extrabold tw-text-lg tw-px-6"
+                      >
+                        {ayarlar?.banner8?.bannerBtnName}
                       </a>
                     </button>
                   )}

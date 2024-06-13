@@ -38,7 +38,7 @@ export default async function setBlog(data) {
         name: data.name,
         slug: slug,
         index: parseInt(data.index),
-        images: data.Image,
+        images: data.images,
         quill: data.quill,
       },
     });

@@ -1,8 +1,10 @@
 
+*{
+
+}
 body {
   margin: 0;
   letter-spacing: 0.4px;
-  
 }
 @media (min-width: 1410px) {
   .container {
@@ -1195,7 +1197,7 @@ body {
   .portfolioBanner {
     background-size: cover;
     background-position: center;
-    padding: 150px 0px 80px 0px !important ;
+    padding: 150px 0px 70px 10px !important ;
   }
 
   .Footerbox img {
@@ -1269,7 +1271,7 @@ body {
   .portfolioBanner {
     background-size: cover;
     background-position: center;
-    padding: 80px 0px 30px 0px !important ;
+    padding: 80px 0px 50px 20px !important ;
   }
   .navbar-light .navbar-toggler {
     padding: 0;

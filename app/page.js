@@ -8,6 +8,7 @@ import InstaPage from "./component/Home/InstaPage";
 import BlogPage from "./component/Home/BlogPage";
 import getAyarlar from "@/app/actions/ayarlar/getAyarlar";
 import getBlog from "@/app/actions/blog/getBlog";
+export const dynamic = "force-dynamic";
 export default async function Home() {
   const ayarlar = await getAyarlar();
   const blog = await getBlog();

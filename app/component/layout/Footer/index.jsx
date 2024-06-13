@@ -128,7 +128,14 @@ const Footer = () => {
           <div className="Footer-bottom tw-bg-red-600 tw-px-4 tw-py-4">
             <Container>
               <h6 className="F-copywrite tw-text-white">
-                Copyright © 2024 . AYD TANITIM
+                Copyright © 2024 .
+                <Link
+                  href={"https://aydtanitim.com/"}
+                  className="tw-text-white"
+                >
+                  {" "}
+                  AYD TANITIM
+                </Link>
               </h6>
             </Container>
           </div>

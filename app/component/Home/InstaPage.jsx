@@ -65,6 +65,8 @@ const InstaPage = () => {
         breakpoint: 700,
         settings: {
           slidesToShow: 1,
+          dots: false,
+          arrows: false,
         },
       },
     ],
@@ -78,15 +80,17 @@ const InstaPage = () => {
               -Sosyal Medyada Konya Boğaziçi-
             </h6>
             <p className="tw-text-lg tw-font-bold">Bizi Takip Edin</p>
-            <div className="tw-flex tw-w-full tw-items-center tw-justify-between">
+            <div className="tw-flex tw-w-full tw-items-center tw-justify-between tw-px-6">
               <div className="tw-flex tw-gap-2">
-                <Image
-                  src={imglogo}
-                  alt="instapost"
-                  width={50}
-                  height={50}
-                  className="tw-w-full tw-h-full tw-rounded-full tw-border-2"
-                />
+                <div className="tw-w-12 tw-h-12 md:tw-w-16 md:tw-h-16  tw-overflow-hidden">
+                  <Image
+                    src={imglogo}
+                    alt="instapost"
+                    width={500}
+                    height={500}
+                    className="tw-w-12 tw-h-12 md:tw-w-16 md:tw-h-16 tw-rounded-full tw-border-2"
+                  />
+                </div>
                 <div className="tw-flex tw-flex-col tw-gap-3 tw-justify-center">
                   <div className="tw-text-nowrap tw-text-xs tw-font-bold">
                     Konya Boğaziçi Koleji
@@ -118,7 +122,7 @@ const InstaPage = () => {
                       alt="instapost"
                       width={1200}
                       height={1200}
-                      className="tw-w-[400px] tw-h-[400px]  tw-rounded-3xl"
+                      className="tw-w-[400px] tw-h-[400px]  tw-rounded-3xl tw-px-3"
                     />
                     <div className="tw-absolute tw-bottom-0 tw-bg-slate-100 tw-opacity-70 tw-w-[400px] ">
                       <p className="tw-text-wrap tw-text-sm tw-px-2 tw-py-1">

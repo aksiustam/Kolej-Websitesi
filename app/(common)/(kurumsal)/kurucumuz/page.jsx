@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
 import "@/public/css/Home.css";
-
+import mudur from "@/public/assets/common/mudur.jpg";
 import "@/public/css/Portfolio.css";
 const page = () => {
   return (
@@ -17,31 +17,54 @@ const page = () => {
         <Container className="tw-my-12">
           <div className="SelfDevelopment tw-p-12">
             <Row>
-              <Col xl={4} lg={4} md={4} sm={5} xs={12}>
-                <div></div>
+              <Col xl={4} lg={4} md={12} sm={12} xs={12}>
+                <div>
+                  <Image
+                    src={mudur}
+                    alt="Genel Müdürümüz"
+                    width={1200}
+                    height={1200}
+                    className="tw-object-contain"
+                  />
+                </div>
               </Col>
-              <Col xl={8} lg={8} md={8} sm={7} xs={12}>
+              <Col xl={8} lg={8} md={12} sm={12} xs={12}>
                 <div className="SelfDevelopment-Content !tw-mt-1">
                   <h5 className="!tw-text-3xl tw-my-3 !tw-text-black !tw-font-extrabold">
-                    Kuruluş Müdürü
+                    Kuruluş Müdürümüz
                   </h5>
-                  <p className="!tw-font-bold tw-mb-2 !tw-text-base">
-                    Kurucumuz kendi alanında 26 yıllık bir tecrübeye sahip olup,
-                    Selçuk Üniversitesi Mesleki Eğitim Fakültesi Çocuk Gelişimi
-                    Eğitimi Öğretmenliği ve Toros Üniversitesi İşletme
-                    Bölümlerinden mezun olmuştur. Bitirme tezi olarak okul
-                    öncesi öğretmenlerinin kaynaştırma eğitimindeki
-                    yeterlilikleri hakkında yapmıştır. Ayrıca bu konu hakkında
-                    bir makale yazarak Prag'da Amerikan Angola Üniversitesi'nin
-                    hazırladığı seminerde sunum yapmış ve uluslararası bir bilim
-                    dergisinde yayınlanmıştır.
+                  <p className="!tw-font-semibold tw-mb-4 !tw-text-base">
+                    Bütüncül yaklaşımı ilke kabul edinen Boğaziçi Eğitim
+                    Kurumları; kültürel, sanatsal, sportif ve akademik
+                    çalışmalarını eş güdümlü yürütüyor. Aynı zamanda yabancı dil
+                    bilgisi ile de fark yaratacak nesiller yetiştirme amacıyla
+                    eğitimde emin adımlarla yürüyor.
                   </p>
-                  <p className="!tw-font-bold tw-mb-2 !tw-text-base">
-                    Kendi alanında kişisel eğitimleri için başta Montesorri
-                    eğitmen eğitimi olmak üzere, Reggio Emilio, Waldorf eğitimi,
-                    akıl zeka, dil ve konuşma bozukluğu, oyun terapisi, aile
-                    danışmanlığı, eğitim yönetimi, etkili iletişim gibi
-                    konularda sertifikaların sahibidir.
+                  <p className="!tw-font-semibold tw-mb-4 !tw-text-base">
+                    Her şeyden daha önemli gördüğümüz “mutlu birey”ler
+                    yetiştirme gayesi projelerimizi, etkinliklerimizi
+                    zenginleştiriyor ve daha verimli hale getiriyor. Aynı
+                    zamanda mutlu ve eğitime tutkun bir ekiple çalışıyor olmak
+                    da bizleri daima bir adım öne taşıyor.
+                  </p>
+                  <p className="!tw-font-semibold tw-mb-4 !tw-text-base">
+                    Çalışmanın, çetin yollarda mücadele edebilmenin önemini
+                    mütemadiyen vurgulayan Mustafa Kemal Atatürk’ün hedeflediği
+                    çizgide ilerleyebilmek yegâne ümidimizdir. Nasıl ki zorlu
+                    koşullara rağmen bıkmadan usanmadan; akılla, erdemle,
+                    aidiyetle başarılar elde edilmiş bizler de Boğaziçi ailesi
+                    olarak eğitim adına, bir ülke geleceği adına elimizden ne
+                    geliyorsa yapmaya hazırız. Gereken azme ve inanca sahip
+                    olduğumuzu ifade etmekten asla kaçınmıyor ve bilakis bunu
+                    tüm gücümüzle ve itikadımızla bildirmek istiyoruz.
+                  </p>
+                  <p className="!tw-font-semibold tw-mb-4 !tw-text-base">
+                    Sıkı sıkı tutunduğumuz azme, azmin getirilerine yürekten
+                    inanıyor, istikbale ışık saçan yolculuğumuza heyecanla devam
+                    ediyoruz.
+                  </p>
+                  <p className="!tw-font-extrabold tw-mb-4 !tw-text-base">
+                    Mehmet ÇAYLALI <br /> Kurucu / Genel Müdür
                   </p>
                 </div>
               </Col>

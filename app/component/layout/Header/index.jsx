@@ -5,13 +5,17 @@ import logo from "@/public/assets/common/bogazlogo.png";
 
 import Image from "next/image";
 import Link from "next/link";
-import { CgScreenWide } from "react-icons/cg";
 import { usePathname } from "next/navigation";
+import { PiStudentFill } from "react-icons/pi";
+import { RiParentFill } from "react-icons/ri";
+import { GiTeacher } from "react-icons/gi";
+import { FaBook } from "react-icons/fa";
+import { GiForkKnifeSpoon } from "react-icons/gi";
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showBtn1, setShowBtn1] = useState(false);
   const [showBtn2, setShowBtn2] = useState(false);
-  const timeoutRef = useRef(null);
+  const timeoutRefs = useRef({});
 
   const onToggle = () => {
     document.getElementById("myOverlay").style.display = "block";
@@ -23,42 +27,42 @@ const Header = () => {
     document.getElementById("stamenu").className = "";
   };
 
-  const handleMouseOver = (props) => {
-    clearTimeout(timeoutRef.current);
-    switch (props) {
-      case "Menu1":
-        timeoutRef.current = setTimeout(() => setShowDropdown(true), 100);
-        break;
-      case "Btn1":
-        timeoutRef.current = setTimeout(() => setShowBtn1(true), 100);
-        break;
-      case "Btn2":
-        timeoutRef.current = setTimeout(() => setShowBtn2(true), 100);
-        break;
-
-      default:
-        break;
-    }
+  const handleMouseLeave = (props) => {
+    clearTimeout(timeoutRefs.current[props]);
+    timeoutRefs.current[props] = setTimeout(() => {
+      switch (props) {
+        case "Menu1":
+          setShowDropdown(false);
+          break;
+        case "Btn1":
+          setShowBtn1(false);
+          break;
+        case "Btn2":
+          setShowBtn2(false);
+          break;
+        default:
+          break;
+      }
+    }, 250);
   };
 
-  const handleMouseLeave = (props) => {
-    clearTimeout(timeoutRef.current);
-    switch (props) {
-      case "Menu1":
-        timeoutRef.current = setTimeout(() => setShowDropdown(false), 320);
-        break;
-      case "Btn1":
-        timeoutRef.current = setTimeout(() => setShowBtn1(false), 320);
-
-        break;
-      case "Btn2":
-        timeoutRef.current = setTimeout(() => setShowBtn2(false), 320);
-
-        break;
-
-      default:
-        break;
-    }
+  const handleMouseOver = (props) => {
+    clearTimeout(timeoutRefs.current[props]);
+    timeoutRefs.current[props] = setTimeout(() => {
+      switch (props) {
+        case "Menu1":
+          setShowDropdown(true);
+          break;
+        case "Btn1":
+          setShowBtn1(true);
+          break;
+        case "Btn2":
+          setShowBtn2(true);
+          break;
+        default:
+          break;
+      }
+    }, 100);
   };
 
   const pathname = usePathname();
@@ -71,14 +75,14 @@ const Header = () => {
           <div className="sticky-top " id="stamenu">
             <Navbar expand="lg" collapseOnSelect>
               <div className="container">
-                <div className="inner-header">
+                <div className="inner-header tw-min-h-16">
                   <Navbar.Brand href="/">
                     <Image
                       src={logo}
                       alt="logo"
                       width={130}
                       height={35}
-                      className="img-fluid mx-auto "
+                      className="img-fluid mx-auto tw-hidden md:tw-block"
                     />
                   </Navbar.Brand>
                   <Button
@@ -147,44 +151,76 @@ const Header = () => {
                       </Link>
                     </Nav>
                   </div>
+
+                  <div className="tw-flex tw-items-center tw-justify-center tw-gap-3">
+                    <NavDropdown
+                      title="Boğaziçi Dijital"
+                      id="collasible-nav-dropdown"
+                      show={showBtn1}
+                      onMouseLeave={() => handleMouseLeave("Btn1")}
+                      onMouseOver={() => handleMouseOver("Btn1")}
+                      className="button tw-flex tw-items-center tw-justify-center tw-text-white tw-h-10 -tw-mr-0 md:tw-mr-4"
+                    >
+                      <NavDropdown.Item
+                        href="https://ogrenci.bogazici.k12.tr"
+                        className="!tw-flex tw-gap-3 tw-items-center tw-justify-start"
+                      >
+                        <PiStudentFill size={19} color="blue" />
+                        Öğrenci Girişi
+                      </NavDropdown.Item>
+
+                      <NavDropdown.Item
+                        href="https://ogrenci.bogazici.k12.tr/"
+                        className="!tw-flex tw-gap-3 tw-items-center tw-justify-start"
+                      >
+                        <RiParentFill size={19} color="blue" />
+                        Veli Girişi
+                      </NavDropdown.Item>
+
+                      <NavDropdown.Item
+                        href="https://asistan.bogazici.k12.tr/"
+                        className="!tw-flex tw-gap-3 tw-items-center tw-justify-start"
+                      >
+                        <GiTeacher size={19} color="blue" />
+                        Öğretmen Girişi
+                      </NavDropdown.Item>
+                    </NavDropdown>
+
+                    <NavDropdown
+                      title="Boğaziçi Store"
+                      id="collasible-nav-dropdown"
+                      show={showBtn2}
+                      onMouseLeave={() => handleMouseLeave("Btn2")}
+                      onMouseOver={() => handleMouseOver("Btn2")}
+                      className="button tw-flex tw-items-center tw-justify-center tw-text-white tw-h-10"
+                    >
+                      <NavDropdown.Item
+                        href="https://bogazici.okulavm.com/kullanici/login"
+                        className="!tw-flex tw-gap-3 tw-items-center tw-justify-start"
+                      >
+                        <FaBook size={19} color="blue" />
+                        Kitap Satışı
+                      </NavDropdown.Item>
+
+                      <NavDropdown.Item
+                        href="https://ogrenci.bogazici.k12.tr/"
+                        className="!tw-flex tw-gap-3 tw-items-center tw-justify-start"
+                      >
+                        <GiForkKnifeSpoon size={19} color="blue" />
+                        Yemek Ödemesi
+                      </NavDropdown.Item>
+                    </NavDropdown>
+                  </div>
+                  <Navbar.Brand href="/" className="tw-pr-2">
+                    <Image
+                      src={logo}
+                      alt="logo"
+                      width={90}
+                      height={35}
+                      className="img-fluid mx-auto tw-block md:tw-hidden"
+                    />
+                  </Navbar.Brand>
                   <div className="w3-overlay w3-animate-opacity"></div>
-                  <NavDropdown
-                    title="Boğaziçi Dijital"
-                    id="collasible-nav-dropdown"
-                    show={showBtn1}
-                    onMouseLeave={() => handleMouseLeave("Btn1")}
-                    onMouseOver={() => handleMouseOver("Btn1")}
-                    className="button tw-flex tw-items-center tw-justify-center tw-text-white tw-h-10 -tw-mr-12"
-                  >
-                    <CgScreenWide size={24} color="white" />
-                    <NavDropdown.Item href="https://ogrenci.bogazici.k12.tr">
-                      Öğrenci Girişi
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item href="https://ogrenci.bogazici.k12.tr/">
-                      Veli Girişi
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item href="https://asistan.bogazici.k12.tr/">
-                      Öğretmen Girişi
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown
-                    title="Boğaziçi Store"
-                    id="collasible-nav-dropdown"
-                    show={showBtn2}
-                    onMouseLeave={() => handleMouseLeave("Btn2")}
-                    onMouseOver={() => handleMouseOver("Btn2")}
-                    className="button tw-flex tw-items-center tw-justify-center tw-text-white tw-h-10"
-                  >
-                    <NavDropdown.Item href="https://bogazici.okulavm.com/kullanici/login">
-                      Kitap Satışı
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item href="https://ogrenci.bogazici.k12.tr/">
-                      Yemek Ödemesi
-                    </NavDropdown.Item>
-                  </NavDropdown>
                 </div>
               </div>
             </Navbar>

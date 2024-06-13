@@ -35,6 +35,7 @@ const BilgiAl = () => {
                       type="text"
                       name="name"
                       placeholder="Ad Soyad"
+                      maxLength={75}
                     />
                   </div>
                 </div>
@@ -46,6 +47,7 @@ const BilgiAl = () => {
                       type="text"
                       name="tel"
                       placeholder="Telefon No"
+                      maxLength={15}
                     />
                   </div>
                 </div>

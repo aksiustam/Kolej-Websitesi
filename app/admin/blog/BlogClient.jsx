@@ -20,7 +20,12 @@ import {
   DEFAULT_OPTIONS,
   getTheme,
 } from "@table-library/react-table-library/material-ui";
-import { FaChevronDown, FaChevronUp, FaRegTrashAlt } from "react-icons/fa";
+import {
+  FaChevronDown,
+  FaChevronUp,
+  FaRegEdit,
+  FaRegTrashAlt,
+} from "react-icons/fa";
 
 import { CldUploadWidget } from "next-cloudinary";
 import { useEffect, useState } from "react";
@@ -35,6 +40,7 @@ import dynamic from "next/dynamic";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "./tablecss.css";
 import "react-quill/dist/quill.snow.css";
+import Link from "next/link";
 const BlogClient = (props) => {
   const router = useRouter();
 
@@ -147,7 +153,7 @@ const BlogClient = (props) => {
     const data = cimage.map((item) => {
       return { imageid: item.public_id, imageurl: item.secure_url };
     });
-    setValue(`Image`, data);
+    setValue(`images`, data);
   }, [setValue, cimage]);
 
   return (
@@ -185,22 +191,35 @@ const BlogClient = (props) => {
                   {tableList?.map((item) => {
                     return (
                       <Row key={item?.id}>
-                        <Cell className="hover:tw-bg-slate-100">
-                          #{item?.index}
+                        <Cell className="hover:tw-bg-slate-100 tw-text-blue-500 tw-cursor-pointer">
+                          <Link href={`/admin/blog/${item?.slug}`}>
+                            #{item?.index}{" "}
+                          </Link>
                         </Cell>
-                        <Cell className="hover:tw-bg-slate-100">
-                          {item?.name}
+                        <Cell className="hover:tw-bg-slate-100 tw-text-blue-500 tw-cursor-pointer">
+                          <Link href={`/admin/blog/${item?.slug}`}>
+                            {item?.name}
+                          </Link>
                         </Cell>
-                        <Cell className="hover:tw-bg-slate-100">
-                          <Image
-                            src={item?.images[0]?.imageurl}
-                            alt="image"
-                            width={150}
-                            height={150}
-                            className="tw-object-contain"
-                          />
+                        <Cell className="hover:tw-bg-slate-100 tw-cursor-pointer">
+                          <Link href={`/admin/blog/${item?.slug}`}>
+                            <Image
+                              src={item?.images[0]?.imageurl}
+                              alt="image"
+                              width={150}
+                              height={150}
+                              className="tw-object-contain"
+                            />
+                          </Link>
                         </Cell>
                         <Cell>
+                          <button
+                            onClick={() => {
+                              router.push(`/admin/blog/${item?.slug}`);
+                            }}
+                          >
+                            <FaRegEdit size={26} color="green" />
+                          </button>
                           <button onClick={() => BlogDelete(item)}>
                             <FaRegTrashAlt size={26} color="red" />
                           </button>
@@ -279,6 +298,7 @@ const BlogClient = (props) => {
                   className="tw-w-full tw-border tw-border-black tw-px-4 tw-py-2"
                   placeholder="Blog Adı"
                   {...register("name")}
+                  maxLength={75}
                   required
                 />
               </div>

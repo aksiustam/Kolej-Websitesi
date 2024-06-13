@@ -50,6 +50,11 @@ model Ayarlar {
     banner1      Json?
     banner2      Json?
     banner3      Json?
+    banner4      Json?
+    banner5      Json?
+    banner6      Json?
+    banner7      Json?
+    banner8      Json?
     InstaExpDate DateTime?
     InstaToken   String?
 }

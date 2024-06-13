@@ -110,12 +110,12 @@ export default class Client extends Component {
                       <div className="tw-mb-3 tw-px-4 tw-py-4 tw-bg-gray-200 tw-rounded-xl   tw-group tw-flex tw-items-center tw-justify-between tw-relative">
                         <div className="tw-absolute tw-inset-0 tw-bg-blue-800 tw-transform tw-scale-x-0 group-hover:tw-scale-x-100 tw-transition-transform tw-duration-1000 tw-origin-left tw-rounded-xl"></div>
 
-                        <div className="tw-font-semibold tw-text-[#666666] group-hover:tw-text-white tw-z-10">
+                        <div className="tw-font-semibold tw-text-[#666666] group-hover:tw-text-white  tw-z-[1]">
                           {item.name}
                         </div>
                         <IoIosArrowForward
                           size={16}
-                          className="group-hover:tw-text-white  tw-z-10"
+                          className="group-hover:tw-text-white"
                         />
                       </div>
                     </Link>
@@ -123,7 +123,7 @@ export default class Client extends Component {
                 </div>
               </Col>
               <Col xl={9} lg={9} md={7} sm={12} xs={12}>
-                <div className="container">
+                <div className="container tw-mt-6 md:tw-mt-0">
                   <div className="mainAboutUs">
                     <Row>
                       <Col

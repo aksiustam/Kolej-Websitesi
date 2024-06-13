@@ -86,8 +86,8 @@
     border-radius: 20px;
     overflow: hidden;
     min-height: 200px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .weProBox:hover {
@@ -98,7 +98,7 @@
     padding: 5px;
     transition: 0.4s ease;
     margin: 5px;
-    margin-right: 20px;
+
 }
 
 .weProBox img {
@@ -922,10 +922,7 @@
     .weProBoxText h6 {
         font-size: 17px;
     }
-    .weProBoxText {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+
     /* _________________________________________ What People Say ________________________________________ */
     .peopleDetails p {
         font-size: 15px;
@@ -1641,8 +1638,8 @@
     }
     /* _________________________________________ we Provide ________________________________________ */
     .weProBox {
-       
-        padding: 20px;
+       min-height: 50px;
+        padding: 5px;
       }
       .weProBoxImg {
         margin: 0;

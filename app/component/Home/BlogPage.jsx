@@ -51,6 +51,8 @@ const BlogPage = (props) => {
         breakpoint: 700,
         settings: {
           slidesToShow: 1,
+          dots: false,
+          arrows: false,
         },
       },
     ],

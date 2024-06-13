@@ -13,7 +13,10 @@ function getRandomColor() {
   return color;
 }
 const page = () => {
-  const imageUrls = Array.from({ length: 61 }, (_, i) => `/kadro/${i + 1}.png`);
+  const imageUrls = Array.from(
+    { length: 61 },
+    (_, i) => `/assets/kadro/${i + 1}.png`
+  );
 
   return (
     <>

@@ -4,6 +4,7 @@ import aboutus from "@/public/assets/Images/AboutUs/aboutus.jpg";
 import { Row, Col } from "react-bootstrap";
 
 import Image from "next/image";
+import Link from "next/link";
 export default function AboutUs() {
   return (
     <>
@@ -75,7 +76,11 @@ export default function AboutUs() {
                   </Col>
                 </Row>
               </div>
-              <button className="button tw-text-white">Daha Fazla</button>
+              <button className="button tw-text-white">
+                <Link href={"/egitim-sistemimiz"} className="tw-text-white">
+                  Daha Fazla
+                </Link>
+              </button>
             </Col>
           </Row>
         </div>
