@@ -8,10 +8,16 @@ import { AOSInit } from "./aos";
 import Header from "./component/layout/Header";
 import Footer from "./component/layout/Footer";
 import Script from "next/script";
+import Head from "next/head";
 
 export const metadata = {
   title: "Konya Boğaziçi Kolej",
   description: "Konya Boğaziçi Koleji ",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -23,6 +29,7 @@ export default function RootLayout({ children }) {
         async
       />
       <AOSInit />
+
       <body className={notoSans.className}>
         <Header />
         {children}

@@ -1,6 +1,7 @@
 import React from "react";
 import bgurl from "@/public/assets/style/dot-white-map-01.png";
 import { Col, Container, Row } from "react-bootstrap";
+import Link from "next/link";
 const BilgiAl = () => {
   return (
     <section
@@ -62,13 +63,9 @@ const BilgiAl = () => {
                         name="text"
                       />
                       <label className="form-check-label text-white tw-text-nowrap">
-                        <a
-                          target="_blank"
-                          className="text-white"
-                          href="https://www.bogazici.k12.tr/kvkk-metni"
-                        >
+                        <Link href={"/kvkk-metni"} className="text-white">
                           KVKK Metnini
-                        </a>{" "}
+                        </Link>{" "}
                         okudum ve onaylıyorum
                       </label>
                     </div>

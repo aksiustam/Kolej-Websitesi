@@ -164,7 +164,7 @@ const AdminLayout = ({ children }) => {
                   }
                 >
                   <BiAperture size={24} className={"tw-mr-2 "} />
-                  SİTE AYARLARI
+                  BANNER AYARLARI
                 </Link>
               </li>
               <li className="tw-items-center">

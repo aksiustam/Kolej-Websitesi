@@ -133,7 +133,7 @@ const Header = () => {
                           <NavDropdown.Item>Eğitim Sistemimiz</NavDropdown.Item>
                         </Link>
                       </NavDropdown>
-                      <Link href="/dersler/dindersi" legacyBehavior passHref>
+                      <Link href="/dersler/matematik" legacyBehavior passHref>
                         <Nav.Link className="nav-links">Dersler</Nav.Link>
                       </Link>
                       <Link href="/kuluplar" legacyBehavior passHref>

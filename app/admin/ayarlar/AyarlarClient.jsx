@@ -404,7 +404,7 @@ const AyarlarClient = (props) => {
                         alt="Örnek Baner"
                         width={1250}
                         height={1250}
-                        className="tw-object-cover tw-max-h-28 hover:tw-scale-150 hover:tw-object-contain tw-transition-transform"
+                        className="tw-object-cover tw-max-h-28 "
                       />
                     </div>
                   </div>
@@ -563,7 +563,7 @@ const AyarlarClient = (props) => {
                         alt="Örnek Baner"
                         width={1250}
                         height={1250}
-                        className="tw-object-cover tw-max-h-28 hover:tw-scale-150 hover:tw-object-contain tw-transition-transform"
+                        className="tw-object-cover tw-max-h-28"
                       />
                     </div>
                   </div>
@@ -722,7 +722,7 @@ const AyarlarClient = (props) => {
                         alt="Örnek Baner"
                         width={1250}
                         height={1250}
-                        className="tw-object-cover tw-max-h-28 hover:tw-scale-150 hover:tw-object-contain tw-transition-transform"
+                        className="tw-object-cover tw-max-h-28"
                       />
                     </div>
                   </div>
@@ -881,7 +881,7 @@ const AyarlarClient = (props) => {
                         alt="Örnek Baner"
                         width={1250}
                         height={1250}
-                        className="tw-object-cover tw-max-h-28 hover:tw-scale-150 hover:tw-object-contain tw-transition-transform"
+                        className="tw-object-cover tw-max-h-28"
                       />
                     </div>
                   </div>
@@ -1040,7 +1040,7 @@ const AyarlarClient = (props) => {
                         alt="Örnek Baner"
                         width={1250}
                         height={1250}
-                        className="tw-object-cover tw-max-h-28 hover:tw-scale-150 hover:tw-object-contain tw-transition-transform"
+                        className="tw-object-cover tw-max-h-28"
                       />
                     </div>
                   </div>
@@ -1199,7 +1199,7 @@ const AyarlarClient = (props) => {
                         alt="Örnek Baner"
                         width={1250}
                         height={1250}
-                        className="tw-object-cover tw-max-h-28 hover:tw-scale-150 hover:tw-object-contain tw-transition-transform"
+                        className="tw-object-cover tw-max-h-28"
                       />
                     </div>
                   </div>
@@ -1358,7 +1358,7 @@ const AyarlarClient = (props) => {
                         alt="Örnek Baner"
                         width={1250}
                         height={1250}
-                        className="tw-object-cover tw-max-h-28 hover:tw-scale-150 hover:tw-object-contain tw-transition-transform"
+                        className="tw-object-cover tw-max-h-28"
                       />
                     </div>
                   </div>
@@ -1517,7 +1517,7 @@ const AyarlarClient = (props) => {
                         alt="Örnek Baner"
                         width={1250}
                         height={1250}
-                        className="tw-object-cover tw-max-h-28 hover:tw-scale-150 hover:tw-object-contain tw-transition-transform"
+                        className="tw-object-cover tw-max-h-28"
                       />
                     </div>
                   </div>

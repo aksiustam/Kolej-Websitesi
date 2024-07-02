@@ -66,7 +66,7 @@ const BlogPage = (props) => {
             -Konya Boğaziçi Haberleri-
           </h6>
         </div>
-        <div className="SelfDevelopment tw-p-12">
+        <div className="SelfDevelopment tw-p-4 md:tw-p-12">
           <Row>
             <Slider {...settings} className="tw-w-full">
               {blog?.slice(0, 15).map((item) => (
@@ -108,21 +108,3 @@ const BlogPage = (props) => {
 };
 
 export default BlogPage;
-{
-  /* <div key={index} className=" tw-rounded-3xl">
-                  <a href={item.link} className="tw-text-black">
-                    <Image
-                      src={item?.images[0]?.imageurl}
-                      alt="blogpost"
-                      width={1200}
-                      height={1200}
-                      className="tw-w-[400px] tw-h-[400px]  tw-rounded-3xl"
-                    />
-                    <div className="tw-absolute tw-bottom-0 tw-bg-slate-100 tw-opacity-70 tw-w-[400px] ">
-                      <p className="tw-text-wrap tw-text-sm tw-px-2 tw-py-1">
-                        {item.name}
-                      </p>
-                    </div>
-                  </a>
-                </div> */
-}

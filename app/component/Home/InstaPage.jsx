@@ -125,7 +125,7 @@ const InstaPage = () => {
                       alt="instapost"
                       width={1200}
                       height={1200}
-                      className="tw-w-[400px] tw-h-[400px]  tw-rounded-3xl tw-px-3"
+                      className="tw-w-[400px] tw-h-[400px]  tw-rounded-3xl tw-px-3 tw-object-contain"
                     />
                     <div className="tw-absolute tw-bottom-0 tw-bg-slate-100 tw-opacity-70 tw-w-[400px] ">
                       <p className="tw-text-wrap tw-text-sm tw-px-2 tw-py-1">

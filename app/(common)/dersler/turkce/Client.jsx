@@ -3,23 +3,23 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Slider from "react-slick";
 import About1 from "@/public/assets/common/About1.png";
-import sanat1 from "@/public/assets/dersler/sanat1.jpg";
-import sanat2 from "@/public/assets/dersler/sanat2.jpg";
-import sanat3 from "@/public/assets/dersler/sanat3.jpg";
+import turkce1 from "@/public/assets/dersler/turkce1.jpg";
+import turkce2 from "@/public/assets/dersler/turkce2.jpg";
+import turkce3 from "@/public/assets/dersler/turkce3.jpg";
 
 import "@/public/css/HomePage.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import Link from "next/link";
 import "@/public/css/Portfolio.css";
-import { IoIosArrowForward } from "react-icons/io";
+
+import DersNavbar from "../DersNavbar";
 
 export default class Client extends Component {
   render() {
     const settings = {
       dots: false,
-      arrows: true,
+      arrows: false,
       slide: ".slick-slideshow__slide",
       slidesToShow: 1,
       centerMode: true,
@@ -59,23 +59,6 @@ export default class Client extends Component {
       ],
     };
 
-    const dersler = [
-      { id: 0, name: "Matematik", slug: "matematik", hex: "#9932CC" },
-      { id: 1, name: "Fen Bilimleri", slug: "fen", hex: "#228B22" },
-      { id: 2, name: "Türkçe", slug: "turkce", hex: "#D2691E" },
-      { id: 3, name: "Sosyal Bilgiler", slug: "sosyal", hex: "#FF8C00" },
-      { id: 4, name: "İngilizce", slug: "ingilizce", hex: "#C71585" },
-      { id: 5, name: "Görsel Sanatlar", slug: "resim", hex: "#B8860B" },
-      { id: 6, name: "Beden Eğitimi", slug: "beden", hex: "#8B4513" },
-      { id: 7, name: "Müzik", slug: "muzik", hex: "#8B0000" },
-      {
-        id: 8,
-        name: "Bilişim Teknolojileri ve Yazılım",
-        slug: "bilisim",
-        hex: "#483D8B",
-      },
-      { id: 9, name: "Din Kültürü", slug: "dindersi", hex: "#008B8B" },
-    ];
     return (
       <>
         <div className="otherPageBanner portfolioBanner">
@@ -87,27 +70,7 @@ export default class Client extends Component {
           <Container className="tw-my-12">
             <Row>
               <Col xl={3} lg={3} md={5} sm={12} xs={12}>
-                <div className="tw-bg-white tw-p-3 tw-rounded-2xl">
-                  {dersler?.map((item) => (
-                    <Link
-                      key={item.id}
-                      href={`/dersler/${item?.slug}`}
-                      className="tw-text-inherit tw-decoration-transparent"
-                    >
-                      <div className="tw-mb-3 tw-px-4 tw-py-4 tw-bg-gray-200 tw-rounded-xl   tw-group tw-flex tw-items-center tw-justify-between tw-relative">
-                        <div className="tw-absolute tw-inset-0 tw-bg-blue-800 tw-transform tw-scale-x-0 group-hover:tw-scale-x-100 tw-transition-transform tw-duration-1000 tw-origin-left tw-rounded-xl"></div>
-
-                        <div className="tw-font-semibold tw-text-[#666666] group-hover:tw-text-white  tw-z-[1]">
-                          {item.name}
-                        </div>
-                        <IoIosArrowForward
-                          size={16}
-                          className="group-hover:tw-text-white"
-                        />
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+                <DersNavbar />
               </Col>
               <Col xl={9} lg={9} md={7} sm={12} xs={12}>
                 <div className="container tw-mt-6 md:tw-mt-0">
@@ -123,19 +86,17 @@ export default class Client extends Component {
                       >
                         <div className="aboutUs">
                           <div className="titleFont">
-                            <h1>Görsel Sanatlar Dersi</h1>
-                            <p className="tw-mb-4 tw-text-base">
-                              Görsel Sanatlar eğitiminin temelinde, öğrenciyi
-                              gözle düşünmeye alıştırmak, doğaya, olaylara ve
-                              yaşama bilinçle bakmayı öğretmek vardır. Özellikle
-                              ortaöğretim düzeyindeki öğrencilere kendini ifade
-                              etme ve iletişim kurma imkanı kazandırır. Kısaca
-                              Görsel Sanatlar dersimizde öğreniyor, uyguluyor,
-                              öğretiyor, düşünüyor ve sorguluyoruz. Boğaziçi
-                              Eğitim Kurumları olarak Görsel Sanatlar dersimizde
-                              herkesi sanatçı yapmak için değil, çağdaş dünyanın
-                              bir gereği olarak herkesi sanattan bir parça
-                              anlayabilir hale getirmeyi amaçlıyoruz.
+                            <h1>Türkçe</h1>
+                            <p className="tw-mb-2 tw-text-lg">
+                              Türkçe dersi, çocukta dil becerilerini geliştirme,
+                              anadil bilincini kazandırma, iletişim becerilerini
+                              arttırma, kendini en iyi şekilde ifade edebilme ve
+                              diğer derslerle olan yakın ilişkileri nedeniyle
+                              çok yönlü bir derstir. Özellikle son yıllarda
+                              değişen soru tipleriyle birlikte, okuduğunu anlama
+                              ve yorum yapabilme kabiliyeti tüm dersleri
+                              etkilediğinden Türkçe dersi, çok daha fazla ön
+                              plana çıkmaktadır.
                             </p>
                           </div>
                         </div>
@@ -151,25 +112,25 @@ export default class Client extends Component {
                         <div className="aboutSliderDiv">
                           <Slider className="aboutSlider" {...settings}>
                             <Image
-                              src={sanat1}
-                              alt="Boğaziçi Görsel Sanat"
+                              src={turkce1}
+                              alt="Boğaziçi Türkçe"
                               width={500}
                               height={500}
-                              className="tw-h-96 tw-w-full mx-auto"
+                              className="tw-h-96 tw-w-full mx-auto tw-object-contain"
                             />
                             <Image
-                              src={sanat2}
-                              alt="Boğaziçi Görsel Sanat"
+                              src={turkce2}
+                              alt="Boğaziçi Türkçe"
                               width={500}
                               height={500}
-                              className="tw-h-96 tw-w-full mx-auto"
+                              className="tw-h-96 tw-w-full mx-auto tw-object-contain"
                             />
                             <Image
-                              src={sanat3}
-                              alt="Boğaziçi Görsel Sanat"
+                              src={turkce3}
+                              alt="Boğaziçi Türkçe"
                               width={500}
                               height={500}
-                              className="tw-h-96 tw-w-full mx-auto"
+                              className="tw-h-96 tw-w-full mx-auto tw-object-contain"
                             />
                           </Slider>
                         </div>
@@ -184,20 +145,13 @@ export default class Client extends Component {
                       >
                         <div className="aboutUs tw-mt-4">
                           <div className="titleFont">
-                            <p className="tw-mb-4">
-                              Öğrencilerimizin resim yapmak için çok iyi bir
-                              gözlemci olmalarını, ayrıca sabırlı ve araştırmacı
-                              kimlik kazanmalarını sağlamaktayız. Başarılı olmak
-                              için titiz ve özenli çalışmaları gereken eğitimi
-                              vermekteyiz.
-                            </p>
-                            <p className="tw-mb-4">
-                              Sanat daha yaşanılabilir, barış içinde, mutlu,
-                              huzurlu, sağlıklı ve insanca bir dünya kurmada en
-                              büyük etkenlerden biridir. Bu nedenle toplumların
-                              gelişmesinde öğrenciye verilen görsel sanat
-                              eğitimi, geleceğe ışık tutmakta ve sanata bakış
-                              açısını geliştirmektedir.
+                            <p className="tw-mb-3">
+                              Boğaziçi Kolejinde, bilimsel düşünen, özgüven ve
+                              özsaygısı yüksek, insan haklarına saygılı,
+                              sorunlara çözüm üreten, barışçıl, ileri görüşlü,
+                              entelektüel yönü gelişmiş, Türkçeyi yaşamında
+                              etkin biçimde kullanan bireyler yetiştirmek Türkçe
+                              dersinin amaçları arasındadır.
                             </p>
                           </div>
                           <div className="aboutIconMainDivFloat tw-mt-4">

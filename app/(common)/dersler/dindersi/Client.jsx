@@ -9,15 +9,15 @@ import "@/public/css/HomePage.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import Link from "next/link";
+
 import "@/public/css/Portfolio.css";
-import { IoIosArrowForward } from "react-icons/io";
+import DersNavbar from "../DersNavbar";
 
 export default class Client extends Component {
   render() {
     const settings = {
       dots: false,
-      arrows: true,
+      arrows: false,
       slide: ".slick-slideshow__slide",
       slidesToShow: 1,
       centerMode: true,
@@ -57,23 +57,6 @@ export default class Client extends Component {
       ],
     };
 
-    const dersler = [
-      { id: 0, name: "Matematik", slug: "matematik", hex: "#9932CC" },
-      { id: 1, name: "Fen Bilimleri", slug: "fen", hex: "#228B22" },
-      { id: 2, name: "Türkçe", slug: "turkce", hex: "#D2691E" },
-      { id: 3, name: "Sosyal Bilgiler", slug: "sosyal", hex: "#FF8C00" },
-      { id: 4, name: "İngilizce", slug: "ingilizce", hex: "#C71585" },
-      { id: 5, name: "Görsel Sanatlar", slug: "resim", hex: "#B8860B" },
-      { id: 6, name: "Beden Eğitimi", slug: "beden", hex: "#8B4513" },
-      { id: 7, name: "Müzik", slug: "muzik", hex: "#8B0000" },
-      {
-        id: 8,
-        name: "Bilişim Teknolojileri ve Yazılım",
-        slug: "bilisim",
-        hex: "#483D8B",
-      },
-      { id: 9, name: "Din Kültürü", slug: "dindersi", hex: "#008B8B" },
-    ];
     return (
       <>
         <div className="otherPageBanner portfolioBanner">
@@ -85,27 +68,7 @@ export default class Client extends Component {
           <Container className="tw-my-12">
             <Row>
               <Col xl={3} lg={3} md={5} sm={12} xs={12}>
-                <div className="tw-bg-white tw-p-3 tw-rounded-2xl">
-                  {dersler?.map((item) => (
-                    <Link
-                      key={item.id}
-                      href={`/dersler/${item?.slug}`}
-                      className="tw-text-inherit tw-decoration-transparent"
-                    >
-                      <div className="tw-mb-3 tw-px-4 tw-py-4 tw-bg-gray-200 tw-rounded-xl   tw-group tw-flex tw-items-center tw-justify-between tw-relative">
-                        <div className="tw-absolute tw-inset-0 tw-bg-blue-800 tw-transform tw-scale-x-0 group-hover:tw-scale-x-100 tw-transition-transform tw-duration-1000 tw-origin-left tw-rounded-xl"></div>
-
-                        <div className="tw-font-semibold tw-text-[#666666] group-hover:tw-text-white tw-z-[1]">
-                          {item.name}
-                        </div>
-                        <IoIosArrowForward
-                          size={16}
-                          className="group-hover:tw-text-white"
-                        />
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+                <DersNavbar />
               </Col>
               <Col xl={9} lg={9} md={7} sm={12} xs={12}>
                 <div className="container tw-mt-6 md:tw-mt-0">

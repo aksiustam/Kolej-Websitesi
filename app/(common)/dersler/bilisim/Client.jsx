@@ -3,24 +3,22 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Slider from "react-slick";
 import About1 from "@/public/assets/common/About1.png";
-import fen1 from "@/public/assets/dersler/fen1.jpg";
-import fen2 from "@/public/assets/dersler/fen2.jpg";
-import fen3 from "@/public/assets/dersler/fen3.jpg";
-import fen4 from "@/public/assets/dersler/fen4.jpg";
+import bilisim1 from "@/public/assets/dersler/bilisim1.jpg";
+import bilisim2 from "@/public/assets/dersler/bilisim2.jpg";
+import bilisim3 from "@/public/assets/dersler/bilisim3.jpg";
 
 import "@/public/css/HomePage.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import Link from "next/link";
 import "@/public/css/Portfolio.css";
-import { IoIosArrowForward } from "react-icons/io";
 
+import DersNavbar from "../DersNavbar";
 export default class Client extends Component {
   render() {
     const settings = {
       dots: false,
-      arrows: true,
+      arrows: false,
       slide: ".slick-slideshow__slide",
       slidesToShow: 1,
       centerMode: true,
@@ -60,23 +58,6 @@ export default class Client extends Component {
       ],
     };
 
-    const dersler = [
-      { id: 0, name: "Matematik", slug: "matematik", hex: "#9932CC" },
-      { id: 1, name: "Fen Bilimleri", slug: "fen", hex: "#228B22" },
-      { id: 2, name: "Türkçe", slug: "turkce", hex: "#D2691E" },
-      { id: 3, name: "Sosyal Bilgiler", slug: "sosyal", hex: "#FF8C00" },
-      { id: 4, name: "İngilizce", slug: "ingilizce", hex: "#C71585" },
-      { id: 5, name: "Görsel Sanatlar", slug: "resim", hex: "#B8860B" },
-      { id: 6, name: "Beden Eğitimi", slug: "beden", hex: "#8B4513" },
-      { id: 7, name: "Müzik", slug: "muzik", hex: "#8B0000" },
-      {
-        id: 8,
-        name: "Bilişim Teknolojileri ve Yazılım",
-        slug: "bilisim",
-        hex: "#483D8B",
-      },
-      { id: 9, name: "Din Kültürü", slug: "dindersi", hex: "#008B8B" },
-    ];
     return (
       <>
         <div className="otherPageBanner portfolioBanner">
@@ -88,27 +69,7 @@ export default class Client extends Component {
           <Container className="tw-my-12">
             <Row>
               <Col xl={3} lg={3} md={5} sm={12} xs={12}>
-                <div className="tw-bg-white tw-p-3 tw-rounded-2xl">
-                  {dersler?.map((item) => (
-                    <Link
-                      key={item.id}
-                      href={`/dersler/${item?.slug}`}
-                      className="tw-text-inherit tw-decoration-transparent"
-                    >
-                      <div className="tw-mb-3 tw-px-4 tw-py-4 tw-bg-gray-200 tw-rounded-xl   tw-group tw-flex tw-items-center tw-justify-between tw-relative">
-                        <div className="tw-absolute tw-inset-0 tw-bg-blue-800 tw-transform tw-scale-x-0 group-hover:tw-scale-x-100 tw-transition-transform tw-duration-1000 tw-origin-left tw-rounded-xl"></div>
-
-                        <div className="tw-font-semibold tw-text-[#666666] group-hover:tw-text-white  tw-z-[1]">
-                          {item.name}
-                        </div>
-                        <IoIosArrowForward
-                          size={16}
-                          className="group-hover:tw-text-white"
-                        />
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+                <DersNavbar />
               </Col>
               <Col xl={9} lg={9} md={7} sm={12} xs={12}>
                 <div className="container tw-mt-6 md:tw-mt-0">
@@ -124,18 +85,17 @@ export default class Client extends Component {
                       >
                         <div className="aboutUs">
                           <div className="titleFont">
-                            <h1 className="tw-mb-4">
-                              Fen Bilimleri Eğitiminin Amaç ve Hedefleri
-                            </h1>
-                            <p className="tw-mb-8 tw-text-lg">
-                              Okulumuzda fen bilimleri dersinde amaç kalıcı
-                              öğrenmeyi gerçekleştirmektir. Kalıcı öğrenmenin
-                              sağlanabilmesi için düz anlatım yerine
-                              öğrencilerin aktif olduğu etkinlik ve
-                              uygulamaların yapıldığı bir öğretim ortamı
-                              oluşturulmaktadır. Her ünite sonunda öğrencilerle
-                              konu ile ilgili sınıf içi etkinlikler
-                              yapılmaktadır.
+                            <h1>Bilişim Teknolojileri ve Yazılım</h1>
+                            <p className="tw-mb-4 tw-text-lg">
+                              Boğaziçi Kolejinde Bilişim Teknolojileri ve
+                              Yazılım dersinin amacı, öğrencilere algoritmik ve
+                              hesaplamalı düşünme becerisi kazandırarak
+                              çevrelerini ve dünyayı anlamalarını
+                              kolaylaştırmaktır. Kodlama çalışmaları, matematik
+                              ve fen bilimleriyle yakından ilişkilidir ve bu
+                              alanlardaki gerçek yaşam problemleri, bilgisayar
+                              programları aracılığıyla gerçeğe en yakın
+                              çözümlerle canlandırılır.
                             </p>
                           </div>
                         </div>
@@ -151,32 +111,25 @@ export default class Client extends Component {
                         <div className="aboutSliderDiv">
                           <Slider className="aboutSlider" {...settings}>
                             <Image
-                              src={fen3}
-                              alt="Boğaziçi Fen Bilimleri"
+                              src={bilisim1}
+                              alt="Boğaziçi Bilişim Teknolojisi"
                               width={500}
                               height={500}
-                              className="tw-h-96 tw-w-full mx-auto"
+                              className="tw-h-96 tw-w-full mx-auto tw-object-contain"
                             />
                             <Image
-                              src={fen4}
-                              alt="Boğaziçi Fen Bilimleri"
+                              src={bilisim2}
+                              alt="Boğaziçi Bilişim Teknolojisi"
                               width={500}
                               height={500}
-                              className="tw-h-96 tw-w-full mx-auto"
+                              className="tw-h-96 tw-w-full mx-auto tw-object-contain"
                             />
                             <Image
-                              src={fen2}
-                              alt="Boğaziçi Fen Bilimleri"
+                              src={bilisim3}
+                              alt="Boğaziçi Bilişim Teknolojisi"
                               width={500}
                               height={500}
-                              className="tw-h-96 tw-w-full mx-auto"
-                            />
-                            <Image
-                              src={fen1}
-                              alt="Boğaziçi Fen Bilimleri"
-                              width={500}
-                              height={500}
-                              className="tw-h-96 tw-w-full mx-auto"
+                              className="tw-h-96 tw-w-full mx-auto tw-object-contain"
                             />
                           </Slider>
                         </div>
@@ -191,17 +144,30 @@ export default class Client extends Component {
                       >
                         <div className="aboutUs">
                           <div className="titleFont">
-                            <p>
-                              Konu ile ilgili çeşitli oyunlar hazırlanarak
-                              öğrenciler aktif hale getirilmektedir. Tüm
-                              sınıfların fen bilimleri dersi haricinde
-                              laboratuvar dersleri de mevcuttur. Laboratuvar
-                              derslerinde öğrenilen konularla ilgili deneyler,
-                              maketler yapılarak hem kalıcı öğrenme hem de
-                              öğrencilerin bilimsel yöntemleri kullanarak günlük
-                              yaşantılarda karşılaşılan problemlere çözüm üretme
-                              becerileri geliştirilmektedir. Boğaziçi Koleji ile
-                              feni sever ve yeni şeyler öğreniriz.
+                            <p className="tw-mb-4">
+                              Öğrenciler bu eğitimler aracılığı ile bilgisayar
+                              bilimlerinin temelini kavrayıp, soyutlama ve hayal
+                              gücünü genişleterek, mantık, algoritma ve veri
+                              tanımlarını gerçek hayat problemlerini çözerken de
+                              kullanabilecektir.
+                            </p>
+                            <p className="tw-mb-4">
+                              Öğrenciler problemleri hesaplamalı terimler ile
+                              ifade edebilecek, algoritmalar kurabilecek ve uzun
+                              hesaplamalar ve zaman gerektiren işlemleri
+                              bilgisayarlar aracılığı ile yapabilecektir.
+                            </p>
+                            <p className="tw-mb-4">
+                              Öğrenciler bilgi teknolojilerini daha bilinçli
+                              kullanmayı öğrenirken kullandıkları cihazları
+                              kendi çözümlerine uygun olarak programlamayı
+                              öğreneceklerdir.
+                            </p>
+                            <p className="tw-mb-4">
+                              Öğrenciler bilgi ve iletişim teknolojilerinin
+                              artık yaratıcı birer kullanıcısı olmanın yanında
+                              sorumluluk sahibi, yetkin, kendine güvenen
+                              bireyler olarak eğitimlerine devam edeceklerdir.
                             </p>
                           </div>
                           <div className="aboutIconMainDivFloat tw-mt-4">

@@ -3,22 +3,22 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Slider from "react-slick";
 import About1 from "@/public/assets/common/About1.png";
-import sosyal1 from "@/public/assets/dersler/sosyal1.jpg";
-import sosyal2 from "@/public/assets/dersler/sosyal2.jpg";
+import ingilizce1 from "@/public/assets/dersler/ingilizce1.jpg";
+import ingilizce2 from "@/public/assets/dersler/ingilizce2.jpg";
 
 import "@/public/css/HomePage.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import Link from "next/link";
 import "@/public/css/Portfolio.css";
-import { IoIosArrowForward } from "react-icons/io";
+
+import DersNavbar from "../DersNavbar";
 
 export default class Client extends Component {
   render() {
     const settings = {
       dots: false,
-      arrows: true,
+      arrows: false,
       slide: ".slick-slideshow__slide",
       slidesToShow: 1,
       centerMode: true,
@@ -58,23 +58,6 @@ export default class Client extends Component {
       ],
     };
 
-    const dersler = [
-      { id: 0, name: "Matematik", slug: "matematik", hex: "#9932CC" },
-      { id: 1, name: "Fen Bilimleri", slug: "fen", hex: "#228B22" },
-      { id: 2, name: "Türkçe", slug: "turkce", hex: "#D2691E" },
-      { id: 3, name: "Sosyal Bilgiler", slug: "sosyal", hex: "#FF8C00" },
-      { id: 4, name: "İngilizce", slug: "ingilizce", hex: "#C71585" },
-      { id: 5, name: "Görsel Sanatlar", slug: "resim", hex: "#B8860B" },
-      { id: 6, name: "Beden Eğitimi", slug: "beden", hex: "#8B4513" },
-      { id: 7, name: "Müzik", slug: "muzik", hex: "#8B0000" },
-      {
-        id: 8,
-        name: "Bilişim Teknolojileri ve Yazılım",
-        slug: "bilisim",
-        hex: "#483D8B",
-      },
-      { id: 9, name: "Din Kültürü", slug: "dindersi", hex: "#008B8B" },
-    ];
     return (
       <>
         <div className="otherPageBanner portfolioBanner">
@@ -86,27 +69,7 @@ export default class Client extends Component {
           <Container className="tw-my-12">
             <Row>
               <Col xl={3} lg={3} md={5} sm={12} xs={12}>
-                <div className="tw-bg-white tw-p-3 tw-rounded-2xl">
-                  {dersler?.map((item) => (
-                    <Link
-                      key={item.id}
-                      href={`/dersler/${item?.slug}`}
-                      className="tw-text-inherit tw-decoration-transparent"
-                    >
-                      <div className="tw-mb-3 tw-px-4 tw-py-4 tw-bg-gray-200 tw-rounded-xl   tw-group tw-flex tw-items-center tw-justify-between tw-relative">
-                        <div className="tw-absolute tw-inset-0 tw-bg-blue-800 tw-transform tw-scale-x-0 group-hover:tw-scale-x-100 tw-transition-transform tw-duration-1000 tw-origin-left tw-rounded-xl"></div>
-
-                        <div className="tw-font-semibold tw-text-[#666666] group-hover:tw-text-white  tw-z-[1]">
-                          {item.name}
-                        </div>
-                        <IoIosArrowForward
-                          size={16}
-                          className="group-hover:tw-text-white"
-                        />
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+                <DersNavbar />
               </Col>
               <Col xl={9} lg={9} md={7} sm={12} xs={12}>
                 <div className="container tw-mt-6 md:tw-mt-0">
@@ -122,19 +85,17 @@ export default class Client extends Component {
                       >
                         <div className="aboutUs">
                           <div className="titleFont">
-                            <h1>Sosyal Bilgiler Dersi Amacı</h1>
-                            <p className="tw-mb-3 tw-text-lg">
-                              Öğretmenlerimiz tarafından hazırlanan müfredat
-                              kapsamını destekleyen yayınlar ve ders slaytları,
-                              belgeseller, İnternet aracılığı ile yapılan sanal
-                              müze gezileri ile konular görselleştirilmekte ve
-                              bilgilerin kalıcılığı sağlanmaktadır.
-                            </p>
-                            <p className="tw-mb-2">
-                              İnsan ve toplum hayatında var olan değişim ve
-                              gelişimin sürekliliğini fark ederek buna uyum
-                              sağlayan, değişime açık bireyler olarak
-                              yetişmeleri diğer önemli hedeflerimizdir.
+                            <h1>İngilizce Dersi ve Önemi</h1>
+                            <p className="tw-mb-4 tw-text-lg">
+                              İngilizce, küresel çağın en önemli iletişim
+                              araçlarından bir tanesidir. Eğitim ve ticaret dili
+                              olarak dünyanın her yerinde kullanılmaktadır.
+                              Boğaziçi Kolejinde İngilizce öğretimindeki amaç,
+                              öğrencilerimizin bilgi ve becerilerini en üst
+                              düzeyde tutarak akademik başarılarını artırmaktır.
+                              Ancak ülkemizde sınav gerçeğini de unutmadan
+                              öğrencilerimizin her yönden gelişmesini
+                              sağlamaktır.
                             </p>
                           </div>
                         </div>
@@ -150,18 +111,18 @@ export default class Client extends Component {
                         <div className="aboutSliderDiv">
                           <Slider className="aboutSlider" {...settings}>
                             <Image
-                              src={sosyal1}
-                              alt="Boğaziçi Sosyal Bilgiler"
+                              src={ingilizce1}
+                              alt="Boğaziçi İngilizce"
                               width={500}
                               height={500}
-                              className="tw-h-96 tw-w-full mx-auto"
+                              className="tw-h-96 tw-w-full mx-auto tw-object-contain"
                             />
                             <Image
-                              src={sosyal2}
-                              alt="Boğaziçi Sosyal Bilgiler"
+                              src={ingilizce2}
+                              alt="Boğaziçi İngilizce"
                               width={500}
                               height={500}
-                              className="tw-h-96 tw-w-full mx-auto"
+                              className="tw-h-96 tw-w-full mx-auto tw-object-contain"
                             />
                           </Slider>
                         </div>
@@ -174,23 +135,31 @@ export default class Client extends Component {
                         xs={12}
                         data-aos="fade-up"
                       >
-                        <div className="aboutUs tw-mt-4">
+                        <div className="aboutUs">
                           <div className="titleFont">
-                            <p className="tw-mb-2">
-                              Öğrencilerimizin öğrenme sürecinde yaparak ve
-                              yaşayarak sağlıklı düşünme ortamına ulaşabilmesi
-                              için derslerimizde drama tekniği kullanılmaktadır.
+                            <p className="tw-mb-4">
+                              5. sınıflara 12 saat İngilizce eğitimi verilerek
+                              öğrencilerimizin B1 düzeyine ulaşması
+                              sağlanmaktır. Aynı zamanda 6-7 ve 8. Sınıflara
+                              yönelik aktivitelerle İngilizce dersini sevdirmek
+                              ve yaşamlarında aktif olarak kullanabilme imkanı
+                              sunulmaktadır.
                             </p>
-                            <p className="tw-mb-2">
-                              Öğrencilerimize hayat boyu kullanabilecekleri
-                              yaratıcı ve eleştirel düşünme becerisi
-                              kazandırılmaktadır.
+                            <p className="tw-mb-4">
+                              İngilizce oyun, drama, sunum, şarkı vb. gibi
+                              öğretim teknikleri kullanılarak eğlenceli hale
+                              getirilip sevdirilmektedir. Aynı zamanda
+                              derslerimizde “ Listening, Speaking, Reading,
+                              Writing “ becerileri aktif olarak kullanılıp
+                              öğrencilerimizin her anlamda gelişmesi
+                              sağlanmaktadır.
                             </p>
-                            <p className="tw-mb-2">
-                              Öğrencilerimizin kültürel mirasa sahip çıkmaları
-                              ve kültürel mirası tanımaları için müze eğitimi
-                              çalışmaları yapılmakta, tarihi ve doğal yerlere
-                              geziler düzenlenmektedir.
+                            <p className="tw-mb-4">
+                              Öğrencilerimiz aynı zamanda İngiltere merkezli
+                              sınavlara girerek öğrencilerimizin hem dijital
+                              ortamda sınav olmaları hem de bu dört beceriyi
+                              aktif bir şekilde sınavda görmeleri
+                              sağlanmaktadır.
                             </p>
                           </div>
                           <div className="aboutIconMainDivFloat tw-mt-4">

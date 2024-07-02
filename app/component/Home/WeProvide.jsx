@@ -100,7 +100,14 @@ export default function WeProvide() {
         <div className="container">
           <div className="aboutus spacing">
             <Row className="align-items-center">
-              <Col xl={6} lg={6} md={6} sm={6} xs={12} className="details-icon">
+              <Col
+                xl={6}
+                lg={6}
+                md={6}
+                sm={12}
+                xs={12}
+                className="details-icon"
+              >
                 <Row>
                   <Col xl={4} lg={4} md={6} sm={6} xs={6}>
                     <div

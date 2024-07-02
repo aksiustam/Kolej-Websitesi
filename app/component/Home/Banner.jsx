@@ -14,6 +14,7 @@ import { ScrollTrigger } from "gsap/all";
 import Slider from "react-slick";
 
 gsap.registerPlugin(ScrollTrigger);
+
 export default function Home({ ayarlar }) {
   const scrollRef = useRef();
 
