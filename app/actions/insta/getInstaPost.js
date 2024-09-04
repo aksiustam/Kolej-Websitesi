@@ -6,6 +6,7 @@ import axios from "axios";
 export default async function getInstaPost() {
   try {
     const ayar = await prisma.ayarlar.findFirst();
+    console.log(ayar);
     const later = ayar.InstaExpDate;
     const now = new Date();
 
