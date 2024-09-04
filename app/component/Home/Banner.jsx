@@ -201,6 +201,7 @@ export default function Home({ ayarlar }) {
     speed: 2000,
     autoplaySpeed: 4000,
     infinite: checkTrue(),
+    pauseOnHover: false,
   };
 
   return (
