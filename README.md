@@ -1,8 +1,15 @@
-Bojaziçi Koleji için yaptığım NextJS Websitesi.
+# Next.js Website for Boğaziçi Koleji
 
-Diğer Sitelerden özel İnstagram Entegrasyonu ve Haber sitesinden veri çekme vardır.
+## Website: [konyabogazicikoleji.com.tr](https://konyabogazicikoleji.com.tr/)
 
-Websitesinin .env dosyası hassas bilgiler içerdiğinden şifrelenmiştir.
+## Features:
+- Developed using **Next.js**.
+- Integrated a special **Instagram API** for fetching content from other websites.
+- Implemented a data-fetching system from a news website.
+- The **.env** file is encrypted as it contains sensitive information.
+
+### Live Preview:
+[konyabogazicikoleji.com.tr](https://konyabogazicikoleji.com.tr/)
 
 <p align="center">
   <img src="bogazici1.png" >
